@@ -56,7 +56,10 @@ export PATH=$HOME/bin:$PATH:/usr/local/share/npm/bin
 alias rvm="nocorrect rvm"
 alias be="bundle exec"
 
+# -----------
 # Git aliases
+# -----------
+
 alias g="git status"
 alias gck="git checkout"
 alias gstandup="git log --since yesterday --author `git config user.email` --pretty=short"
@@ -69,14 +72,11 @@ alias gdiff="git diff"
 alias gundo="git reset --soft 'HEAD^'"
 alias gl="git log --graph --decorate --all --oneline"
 
-alias ls='gls --color -lah'
-
 # ------------------------
 # General Unix aliases
 # -----------------------
 
 alias l="ls -la"
-alias rm="rmtrash"
 alias vpn_cygus="sshuttle --dns -vvr cyg.us 0/0"
 
 # To enable syntax highlight in less first you need to brew install source-highlight
@@ -95,14 +95,15 @@ alias docker-stop='docker-machine stop default'
 alias aria2c='aria2c --file-allocation=none -c -x 10 -s 10'
 
 alias s='subl'
-alias vi='nvim'
-alias v='nvim'
 alias edaemon='emacs --daemon'
 alias e='emacsclient --no-wait -c'
 alias et='emacsclient -nw'
 alias emacskill='emacsclient -e "(kill-emacs)"'
 
+# ---------------
 # Pairing aliases
+# ---------------
+
 alias pair_tmux_new='tmux -S /var/tmux/pair_socket new-session -s pair_session'
 alias pair_tmux_attach='tmux -S /var/tmux/pair_socket attach -t pair_session'
 alias pair_adduser='sudo -u pair -i gh-auth add --users '
@@ -115,12 +116,23 @@ jr() {
   jira $(git branch | sed -n '/* /s///p' | sed -n '/PFM/p' | awk -F. '{ print $1 }')
 }
 
+# --------------------
+# OsX specific aliases
+# --------------------
+
+if [[ $platform == 'Darwin' ]]; then
+    alias vi='nvim'
+    alias v='nvim'
+    alias ls='gls --color -lah'
+    alias rm="rmtrash"
+fi
+
 export EDITOR="emacsclient --no-wait -c"
 export VISUAL="emacsclient --no-wait -c"
 
 export NODE_MODULES="/usr/local/lib/node_modules"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Go settings
 export GOPATH=$HOME/Go
