@@ -120,7 +120,7 @@ export VISUAL="emacsclient --no-wait -c"
 
 export NODE_MODULES="/usr/local/lib/node_modules"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 # Go settings
 export GOPATH=$HOME/Go
