@@ -120,7 +120,7 @@ jr() {
 # OsX specific aliases
 # --------------------
 
-if [[ $platform == 'Darwin' ]]; then
+if [[ `uname` == 'Darwin' ]]; then
     alias vi='nvim'
     alias v='nvim'
     alias ls='gls --color -lah'
@@ -152,3 +152,5 @@ export NVM_DIR="/Users/rafael/.nvm"
 [ -f /Users/rafael/.travis/travis.sh ] && source /Users/rafael/.travis/travis.sh
 
 fortune | ponysay
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
