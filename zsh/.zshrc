@@ -77,6 +77,7 @@ alias gl="git log --graph --decorate --all --oneline"
 # -----------------------
 
 alias l="ls -la"
+alias flushdns="sudo killall -HUP mDNSResponder"
 alias vpn_cygus="sshuttle --dns -vvr cyg.us 0/0"
 
 # To enable syntax highlight in less first you need to brew install source-highlight
@@ -99,6 +100,13 @@ alias edaemon='emacs --daemon'
 alias e='emacsclient --no-wait -c'
 alias et='emacsclient -nw'
 alias emacskill='emacsclient -e "(kill-emacs)"'
+
+# ---------------
+# Dokku
+# --------------
+
+alias dokku='bash $HOME/bin/dokku/contrib/dokku_client.sh'
+export DOKKU_HOST=cyg.us
 
 # ---------------
 # Pairing aliases
