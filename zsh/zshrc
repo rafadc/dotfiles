@@ -32,7 +32,10 @@ setopt share_history # share command history data
 
 unsetopt AUTO_NAME_DIRS
 
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh-completions $HOME/.dotfiles/zsh/completions $fpath)
+
+autoload -U compinit
+compinit
 
 # ----------
 # Ruby

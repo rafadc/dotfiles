@@ -1,0 +1,3 @@
+#compdef cookiecutter
+
+_arguments "1: :($(ls ~/.cookiecutters/))"
