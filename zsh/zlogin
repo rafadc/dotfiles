@@ -30,3 +30,12 @@ precmd() {
 local git_status='${vcs_info_msg_0_}'
 
 PROMPT="${current_folder}${git_status}> "
+
+# ----------------------
+# Display list of todos
+# ----------------------
+
+echo ""
+TODO_STRING=`cat ~/Dropbox/org/index.org | grep TODO | sed 's/.* TODO //'`
+echo $TODO_STRING | boxes -d parchment -a c
+echo ""

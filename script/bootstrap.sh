@@ -1,7 +1,7 @@
 mkdir ~/bin
 
 echo "Setting up zsh..."
-brew install zsh
+brew install git zsh boxes figlet
 
 chsh -s $(which zsh)
 
