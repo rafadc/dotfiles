@@ -1,6 +1,14 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+if [ -n "$INSIDE_EMACS" ]; then
+    export TERM=Eterm-color
+    chpwd() { print -P "\033AnSiTc %d" }
+    print -P "\033AnSiTu %n"
+    print -P "\033AnSiTc %d"
+fi
+
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -8,14 +16,7 @@ export LANG=en_US.UTF-8
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-if [ -n "$INSIDE_EMACS" ]; then
-    [[ $EMACS = t ]] && unsetopt zle
-    ZSH_THEME="miloshadzic"
-    export TERM=eterm-color
-else
-    ZSH_THEME="avit"
-    export TERM=xterm-256color
-fi
+ZSH_THEME="theunraveler"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -42,16 +43,12 @@ JIRA_DEFAULT_ACTION="dashboard"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PROMPT='$(_user_host)${_current_dir} $(git_prompt_info) $(_ruby_version)
-👻  ▶  '
 
 [[ -s "/Users/rafael/.rvm/scripts/rvm" ]] && source "/Users/rafael/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 unsetopt sharehistory
 
 fpath=(/usr/local/share/zsh-completions $fpath)
-
-export PATH=$HOME/bin:$PATH:/usr/local/share/npm/bin
 
 alias rvm="nocorrect rvm"
 alias be="bundle exec"
@@ -78,11 +75,8 @@ alias gl="git log --graph --decorate --all --oneline"
 
 alias l="ls -la"
 alias flushdns="sudo killall -HUP mDNSResponder"
-alias vpn_cygus="sshuttle --dns -vvr cyg.us 0/0"
+alias vpn_cygus="sshuttle --dns -vvr deploy@cyg.us 0/0"
 
-# To enable syntax highlight in less first you need to brew install source-highlight
-export LESSOPEN="| src-hilite-lesspipe.sh %s"
-export LESS=" -R "
 alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
 
@@ -106,7 +100,6 @@ alias emacskill='emacsclient -e "(kill-emacs)"'
 # --------------
 
 alias dokku='bash $HOME/bin/dokku/contrib/dokku_client.sh'
-export DOKKU_HOST=cyg.us
 
 # ---------------
 # Pairing aliases
@@ -135,21 +128,16 @@ if [[ `uname` == 'Darwin' ]]; then
     alias rm="rmtrash"
 fi
 
-export EDITOR="emacsclient --no-wait -c"
-export VISUAL="emacsclient --no-wait -c"
-
-export NODE_MODULES="/usr/local/lib/node_modules"
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# Go settings
-export GOPATH=$HOME/Go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
 
 # Tmuxinator
 source ~/.dotfiles/zsh/tmuxinator.zsh
+
+# ----------
+# Android
+# ----------
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 echo
 
@@ -159,6 +147,18 @@ export NVM_DIR="/Users/rafael/.nvm"
 # added by travis gem
 [ -f /Users/rafael/.travis/travis.sh ] && source /Users/rafael/.travis/travis.sh
 
-fortune | ponysay
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+zplug "b4b4r07/enhancd", use:init.sh
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+zplug load --verbose
+
+fortune | ponysay
