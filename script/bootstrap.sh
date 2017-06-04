@@ -1,6 +1,11 @@
 mkdir ~/bin
 
-git checkout git@github.com:dokku/dokku.git ~/bin/dokku
+echo "Setting up zsh..."
+ln -s ~/.dotfiles/zsh/zlogin ~/.zlogin
+ln -s ~/.dotfiles/zsh/zlogout ~/.zlogout
+ln -s ~/.dotfiles/zsh/zprofile ~/.zprofile
+ln -s ~/.dotfiles/zsh/zshenv ~/.zshenv
+ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
 
-ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
+echo "Setting up tmux..."
 ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
