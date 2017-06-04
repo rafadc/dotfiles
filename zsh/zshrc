@@ -1,16 +1,8 @@
 #
 # Executes commands at the start of an interactive session.
 #
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
-# Customize to your needs...
+# Start RVM
 
 [[ -s "/Users/rafael/.rvm/scripts/rvm" ]] && source "/Users/rafael/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -21,12 +13,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 alias rvm="nocorrect rvm"
 alias be="bundle exec"
-
-#-----------
-# Prezto
-#-----------
-
-alias preztoupdate="cd ~/.zprezto && git pull && git submodule update --init --recursive && cd -"
 
 # -----------
 # Git aliases

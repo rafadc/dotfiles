@@ -2,6 +2,9 @@
 # Defines environment variables.
 #
 
+# Secrets in env variables should go to a different file
+source ~/.dotfiles/zsh/zsecrets
+
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
@@ -13,8 +16,6 @@ export LANG=en_US.UTF-8
 export TERM=xterm-256color
 export CLICOLOR=1
 
-export PATH=$HOME/Library/Python/2.7/bin:$PATH
-
 export PATH=$HOME/bin:$PATH:/usr/local/share/npm/bin:$HOME/.rvm/bin:$HOME/.cargo/bin
 
 # To enable syntax highlight in less first you need to brew install source-highlight
@@ -22,18 +23,10 @@ export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=" -R "
 
 # -----------
-# Dokku
-# ------------
-export DOKKU_HOST=cyg.us
-
-
-# -----------
 # Emacs
 # -----------
 export EDITOR="emacsclient --no-wait -c"
 export VISUAL="emacsclient --no-wait -c"
-
-export NODE_MODULES="/usr/local/lib/node_modules"
 
 # -----------
 # Go settings

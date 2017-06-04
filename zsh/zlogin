@@ -14,4 +14,18 @@
   fi
 } &!
 
-fortune | ponysay
+# Prompt
+
+setopt promptsubst
+
+local current_folder='%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} '
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:git*' formats "%{$fg[magenta]%}(%b)%{$reset_color%} "
+
+precmd() {
+    vcs_info
+}
+local git_status='${vcs_info_msg_0_}'
+
+PROMPT="${current_folder}${git_status}> "
