@@ -66,6 +66,7 @@ take ()
     mkdir -p -- "$1" &&
       cd -P -- "$1"
 }
+alias ..="cd .."
 alias l="ls -a"
 alias flushdns="sudo killall -HUP mDNSResponder"
 alias vpn_cygus="sshuttle --dns -vvr deploy@cyg.us 0/0"
