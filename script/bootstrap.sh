@@ -1,6 +1,10 @@
 mkdir ~/bin
 
 echo "Setting up zsh..."
+brew install zsh
+
+chsh -s $(which zsh)
+
 ln -s ~/.dotfiles/zsh/zlogin ~/.zlogin
 ln -s ~/.dotfiles/zsh/zlogout ~/.zlogout
 ln -s ~/.dotfiles/zsh/zprofile ~/.zprofile
