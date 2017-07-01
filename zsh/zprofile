@@ -1,14 +1,14 @@
-#
+# -------------
 # Browser
-#
+# -------------
 
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
 
-#
+# ----------------
 # Language
-#
+# -------------
 
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
@@ -29,6 +29,7 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  /usr/local/opt/opencv3/bin
   $HOME/bin
   $HOME/Library/Python/2.7/bin
   $path
@@ -49,9 +50,9 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-#
+# ----------------
 # Temporary Files
-#
+# ---------------
 
 if [[ ! -d "$TMPDIR" ]]; then
   export TMPDIR="/tmp/$LOGNAME"
@@ -59,7 +60,16 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export JAVA_HOME=/Library/Java/Home
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export JAVA_HOME=/Library/Java/Home
+
+# -----------------------
+# Keybingings
+# -----------------------
+
+# Configure backspace to delete until a slash too
+
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+}
+zle -N backward-kill-dir
+bindkey '^[^?' backward-kill-dir

@@ -36,4 +36,27 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
+# -----------
+# Jira command line
+# -----------
+
 export JIRA_DEFAULT_ACTION="dashboard"
+
+# -----------------------
+# Android
+# -----------------------
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
+export JAVA_HOME=/Library/Java/Home
+export ANDROID_HOME=/usr/local/opt/android-sdk
+export JAVA_HOME=/Library/Java/Home
+
+# -----------------------
+# Libraries
+# -----------------------
+
+PKG_CONFIG_PATH=(
+  /usr/local/opt/opencv3/lib/pkgconfig
+  /usr/local/Cellar/zlib/1.2.8/lib/pkgconfig
+  /usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
+)
