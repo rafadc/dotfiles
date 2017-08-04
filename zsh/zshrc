@@ -57,15 +57,16 @@ alias gundo="git reset --soft 'HEAD^'"
 # -----------------------
 
 # Auto ls when changing dir
+# Aliases and functions do not recur
 chpwd() {
-  l
+  exa -l -G --git --sort=Name --group-directories-first
 }
 
-take ()
-{
+take () {
     mkdir -p -- "$1" &&
       cd -P -- "$1"
 }
+
 alias ..="cd .."
 alias l="exa -l -G --git --sort=Name --group-directories-first"
 alias flushdns="sudo killall -HUP mDNSResponder"
