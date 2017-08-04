@@ -58,7 +58,7 @@ alias gundo="git reset --soft 'HEAD^'"
 
 # Auto ls when changing dir
 chpwd() {
-  ls
+  l
 }
 
 take ()
@@ -67,7 +67,7 @@ take ()
       cd -P -- "$1"
 }
 alias ..="cd .."
-alias l="ls -a"
+alias l="exa -l -G --git --sort=Name --group-directories-first"
 alias flushdns="sudo killall -HUP mDNSResponder"
 alias vpn_cygus="sshuttle --dns -vvr deploy@cyg.us 0/0"
 
