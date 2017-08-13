@@ -29,7 +29,9 @@ precmd() {
 }
 local git_status='${vcs_info_msg_0_}'
 
-PROMPT="${current_folder}${git_status}> "
+local owl='%{$fg[yellow]%}🦉%{$reset_color%}  '
+
+PROMPT="${current_folder}${git_status}${owl}> "
 
 # ----------------------
 # Display list of todos
