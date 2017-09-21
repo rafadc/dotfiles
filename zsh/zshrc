@@ -187,3 +187,9 @@ fi
 ###-tns-completion-end-###
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#--------------------
+# Application aliases
+#--------------------
+
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
