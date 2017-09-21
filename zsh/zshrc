@@ -69,6 +69,7 @@ take () {
 
 alias ..="cd .."
 alias l="exa -l -G --git --sort=Name --group-directories-first"
+alias cat="ccat"
 alias flushdns="sudo killall -HUP mDNSResponder"
 alias vpn_cygus="sshuttle --dns -vvr deploy@cyg.us 0/0"
 
