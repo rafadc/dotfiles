@@ -88,6 +88,8 @@ alias et='emacsclient -nw'
 alias emacskill='emacsclient -e "(kill-emacs)"'
 alias eless='emacs -nw -Q'
 
+alias m='micro'
+
 # ----------
 # Docker
 # ----------
