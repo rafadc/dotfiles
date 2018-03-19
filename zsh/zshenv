@@ -37,6 +37,12 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
 # -----------
+# Rust settings
+# -----------
+
+export PATH=$PATH:$HOME/.cargo/bin
+
+# -----------
 # Jira command line
 # -----------
 
