@@ -67,6 +67,7 @@ alias docker-start='docker-machine start default; eval "$(docker-machine env def
 alias docker-stop='docker-machine stop default'
 alias docker-clean-images='docker rmi $(docker images -a --filter=dangling=true -q)'
 alias docker-clean-ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
+alias docker-compose='NO_PROXY=* docker-compose'
 
 source <(kubectl completion zsh)
 
