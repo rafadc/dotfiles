@@ -92,10 +92,9 @@ jr() {
 # --------------------
 
 if [[ `uname` == 'Darwin' ]]; then
-    alias vi='nvim'
-    alias v='nvim'
+    alias v='vim'
     alias ls='/usr/local/bin/gls --color -a'
-    alias rm="rmtrash"
+#    alias rm="rmtrash"
     alias speedup_backups="sudo sysctl debug.lowpri_throttle_enabled=0"
 fi
 
