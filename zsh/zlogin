@@ -59,6 +59,12 @@ alias eless='emacs -nw -Q'
 
 alias m='micro'
 
+alias c="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+
 # ----------
 # Docker
 # ----------
