@@ -55,7 +55,6 @@ alias edaemon='emacs --daemon'
 alias e='emacsclient --no-wait -c'
 alias et='emacsclient -nw'
 alias emacskill='emacsclient -e "(kill-emacs)"'
-alias eless='emacs -nw -Q'
 
 alias m='micro'
 
@@ -148,7 +147,9 @@ PROMPT="${current_folder}${git_status} > "
 # ----------------------
 
 echo ""
-TODO_STRING=`cat ~/Dropbox/org/index.org | grep TODO | sed 's/.* TODO //'`
-echo $TODO_STRING | boxes -d parchment -a c
+todoist sync
+todoist --csv list| awk -F "," '{ print $6 }' | boxes -d parchment -a c
 echo ""
+
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
