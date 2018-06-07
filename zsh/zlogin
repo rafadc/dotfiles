@@ -40,7 +40,6 @@ alias ..="cd .."
 alias l="exa -l -G --git --sort=Name --group-directories-first"
 alias cat="ccat"
 alias flushdns="sudo killall -HUP mDNSResponder"
-alias vpn_cygus="sshuttle --dns -vvr deploy@cyg.us 0/0"
 
 alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
@@ -56,13 +55,9 @@ alias e='emacsclient --no-wait -c'
 alias et='emacsclient -nw'
 alias emacskill='emacsclient -e "(kill-emacs)"'
 
-alias m='micro'
-
 alias c="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 
-
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
 
 # ----------
 # Docker
@@ -105,7 +100,7 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Tmuxinator
-source ~/.dotfiles/zsh/tmuxinator.zsh
+# source ~/.dotfiles/zsh/tmuxinator.zsh
 
 #--------------------
 # Application aliases
