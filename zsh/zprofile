@@ -32,6 +32,7 @@ path=(
   /usr/local/opt/opencv3/bin
   $HOME/bin
   $HOME/Library/Python/2.7/bin
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
   $path
 )
 
