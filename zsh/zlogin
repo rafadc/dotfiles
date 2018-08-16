@@ -44,7 +44,7 @@ alias flushdns="sudo killall -HUP mDNSResponder"
 alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
 
-alias brewfullupdate="brew update && brew upgrade && brew cleanup"
+alias brewfullupdate="brew update && brew upgrade && brew cleanup -s --prune=1"
 
 alias serve="ruby -run -e httpd . -p 9090"
 
@@ -92,7 +92,9 @@ jr() {
 # --------------------
 
 if [[ `uname` == 'Darwin' ]]; then
-    alias v='vim'
+    alias v='nvim'
+    alias vi = 'nvim'
+    alias vim='nvim'
     alias ls='/usr/local/bin/gls --color -a'
     alias speedup_backups="sudo sysctl debug.lowpri_throttle_enabled=0"
 fi
