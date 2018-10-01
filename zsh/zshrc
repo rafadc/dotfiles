@@ -34,7 +34,7 @@ unsetopt AUTO_NAME_DIRS
 
 fpath=(/usr/local/share/zsh-completions $HOME/.dotfiles/zsh/completions $fpath)
 
-autoload -U compinit
+autoload -U compinit promptinit
 compinit
 
 
