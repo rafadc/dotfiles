@@ -90,6 +90,9 @@ fi
 # Pyenv changes
 eval "$(pyenv init -)"
 
+# Direnv
+eval "$(direnv hook zsh)"
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/rafael/.nvm/versions/node/v8.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/rafael/.nvm/versions/node/v8.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
