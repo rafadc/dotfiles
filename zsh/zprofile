@@ -77,3 +77,10 @@ bindkey '^[^?' backward-kill-dir
 
 bindkey '^[[1;9D' backward-word
 bindkey '^[[1;9C' forward-word
+
+# ---------------------------
+# FZF
+# ---------------------------
+#
+# We make it use ripgreap instead of grep so it is a bit faster
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
