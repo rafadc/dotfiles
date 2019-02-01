@@ -7,6 +7,13 @@
 # ----------
 
 alias be="bundle exec"
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES  # Caused by an issue with Ruby in Mojave. https://blog.phusion.nl/2017/10/13/why-ruby-app-servers-break-on-macos-high-sierra-and-what-can-be-done-about-it/
+
+# ----------
+# Go
+# ----------
+
+alias gtest="go test \$(go list ./... | grep -v /vendor/) -tags=integration"
 
 # ----------
 # Python
