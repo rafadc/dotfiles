@@ -95,7 +95,7 @@ jr() {
 }
 
 # --------------------
-# OsX specific aliases
+# macos specific aliases
 # --------------------
 
 if [[ `uname` == 'Darwin' ]]; then
