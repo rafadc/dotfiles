@@ -31,8 +31,9 @@ path=(
   /usr/local/{bin,sbin}
   /usr/local/opt/opencv3/bin
   $HOME/bin
+  $HOME/bin/flutter/bin
   $HOME/Library/Python/2.7/bin
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
+  /usr/local/opt/gnu-sed/libexec/gnubin
   $path
 )
 
