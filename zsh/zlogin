@@ -146,14 +146,4 @@ local git_status='${vcs_info_msg_0_}'
 
 PROMPT="${current_folder}${git_status} > "
 
-# ----------------------
-# Display list of todos
-# ----------------------
-
-echo ""
-todoist sync
-todoist --csv list| awk -F "," '{ print $6 }' | boxes -d parchment -a c
-echo ""
-
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
