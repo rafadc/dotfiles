@@ -25,8 +25,8 @@ export LESS=" -R "
 # -----------
 # Emacs
 # -----------
-export EDITOR="emacsclient -nw -c"
-export VISUAL="emacsclient -nw -c"
+export EDITOR="emacsclient -n -c"
+export VISUAL="emacsclient -n -c"
 
 # -----------
 # Go settings
