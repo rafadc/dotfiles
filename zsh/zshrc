@@ -93,7 +93,9 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Pyenv changes
+export PATH="/home/rafadc/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # Direnv
 eval "$(direnv hook zsh)"
