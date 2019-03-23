@@ -35,7 +35,7 @@ alias gundo="git reset --soft 'HEAD^'"
 # Auto ls when changing dir
 # Aliases and functions do not recur
 chpwd() {
-  exa -l -G --git --sort=Name --group-directories-first
+  lsd
 }
 
 take () {
@@ -44,9 +44,11 @@ take () {
 }
 
 alias ..="cd .."
-alias l="exa -l -G --git --sort=Name --group-directories-first"
-alias cat="ccat"
-alias flushdns="sudo killall -HUP mDNSResponder"
+alias l="lsd"
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias flushdns="sudo killall -HUP mDNSResponder"
+fi
 
 alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
