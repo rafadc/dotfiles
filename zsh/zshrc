@@ -48,15 +48,20 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 # Node
 # ---------
 
-export NVM_DIR="/Users/rafael/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
 
 # ---------
 # ZPlug
 # ---------
+
+if [[ ! -d ~/.zplug ]]; then
+  git clone https://github.com/zplug/zplug ~/.zplug
+  source ~/.zplug/init.zsh && zplug update --self
+fi
+
+source ~/.zplug/init.zsh
 
 zplug "zplug/zplug"
 zplug "b4b4r07/emoji-cli"
@@ -80,7 +85,7 @@ zplug load --verbose
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 ###-tns-completion-start-###
-if [ -f /Users/rafael/.tnsrc ]; then
+if [ -f ~/.tnsrc ]; then
     source /Users/rafael/.tnsrc
 fi
 ###-tns-completion-end-###
@@ -88,22 +93,17 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Pyenv changes
+export PATH="/home/rafadc/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # Direnv
 eval "$(direnv hook zsh)"
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/rafael/.nvm/versions/node/v8.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/rafael/.nvm/versions/node/v8.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/rafael/.nvm/versions/node/v8.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/rafael/.nvm/versions/node/v8.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/rafael/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/rafael/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/bin/google-cloud-sdk/path.zsh.inc' ]; then source '~/bin/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/rafael/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/rafael/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/bin/google-cloud-sdk/completion.zsh.inc' ]; then source '~/bin/google-cloud-sdk/completion.zsh.inc'; fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

@@ -31,8 +31,10 @@ export VISUAL="emacsclient -n -c"
 # -----------
 # Go settings
 # -----------
-export GOPATH=$HOME/code/Go
-export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/code/go
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export GOROOT=/usr/local/opt/go/libexec
+fi
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
