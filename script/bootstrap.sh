@@ -1,4 +1,6 @@
-mkdir ~/bin
+#!/bin/bash
+
+mkdir -p ~/bin
 
 echo "Setting up zsh..."
 if [[ "$OSTYPE" == "darwin"* ]]; then
