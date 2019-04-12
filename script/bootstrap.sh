@@ -11,6 +11,7 @@ chsh -s $(which zsh)
 
 touch ~/.dotfiles/zsh/zsecrets
 
+ln -fs ~/.dotfiles/zsh/aliases ~/.aliases
 ln -fs ~/.dotfiles/zsh/zlogin ~/.zlogin
 ln -fs ~/.dotfiles/zsh/zlogout ~/.zlogout
 ln -fs ~/.dotfiles/zsh/zprofile ~/.zprofile

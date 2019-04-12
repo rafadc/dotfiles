@@ -2,6 +2,8 @@
 # Executes commands at login post-zshrc.
 #
 
+source ~/.aliases
+
 # ----------
 # Ruby
 # ----------
