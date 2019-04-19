@@ -61,9 +61,8 @@ alias blink='blink1-tool --blink'
 # --------------------
 
 if [[ `uname` == 'Darwin' ]]; then
-    alias v='nvim'
-    alias vi='nvim'
-    alias vim='nvim'
+    alias v='vim'
+    alias vi='vim'
     alias ls='/usr/local/bin/gls --color -a'
     alias speedup_backups="sudo sysctl debug.lowpri_throttle_enabled=0"
 fi
