@@ -19,7 +19,7 @@ ln -fs ~/.dotfiles/zsh/zshrc ~/.zshrc
 ln -fs ~/.dotfiles/ruby/pryrc ~/.pryrc
 
 mkdir -p ~/.config
-ln -fs ~/.dotfiles/karabiner ~/.config/karabiner/
+ln -fs ~/.dotfiles/karabiner ~/.config/karabiner
 
 echo "Setting up tmux..."
 ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
