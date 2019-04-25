@@ -4,7 +4,7 @@ mkdir -p ~/bin
 
 echo "Setting up zsh..."
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    brew install git zsh boxes figlet
+    brew install git zsh boxes figlet tmux lsd fzf
 fi
 
 chsh -s $(which zsh)
