@@ -10,6 +10,10 @@ fbr() {
         git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 
+_gitLogLineToHash="echo {} | grep -o '[a-f0-9]\{7\}' | head -1"
+_viewGitLogLine="$_gitLogLineToHash | xargs -I % sh -c 'git show --color=always % | diff-so-fancy'"
+alias -g glNoGraph='git log --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr% C(auto)%an" "$@"'
+
 fshow() {
     glNoGraph | \
         fzf --no-sort --reverse --tiebreak=index --no-multi \
@@ -18,5 +22,3 @@ fshow() {
             --bind "enter:execute:$_viewGitLogLine   | less -R" \
             --bind "alt-y:execute:$_gitLogLineToHash | xclip"
 }
-
-alias -g glNoGraph='git log --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr% C(auto)%an" "$@"'

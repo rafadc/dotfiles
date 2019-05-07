@@ -5,7 +5,7 @@ mkdir -p ~/bin
 echo "Setting up zsh..."
 if [[ "$OSTYPE" == "darwin"* ]]; then
     brew tap d12frosted/emacs-plus
-    brew install git zsh boxes figlet tmux lsd fzf go-jira emacs-plus vim gnu-sed
+    brew install git zsh boxes figlet tmux lsd fzf go-jira emacs-plus vim gnu-sed diff-so-fancy
 fi
 
 chsh -s $(which zsh)
@@ -24,3 +24,6 @@ ln -fs ~/.dotfiles/karabiner ~/.config/karabiner
 
 echo "Setting up tmux..."
 ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+
+echo "Config for git"
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
