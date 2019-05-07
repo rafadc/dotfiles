@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 alias docker-clean-images='docker rmi $(docker images -a --filter=dangling=true -q)'
 alias docker-clean-ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 alias docker-compose='NO_PROXY=* docker-compose'
