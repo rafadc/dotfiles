@@ -4,7 +4,8 @@ mkdir -p ~/bin
 
 echo "Setting up zsh..."
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    brew install git zsh boxes figlet tmux lsd fzf
+    brew tap d12frosted/emacs-plus
+    brew install git zsh boxes figlet tmux lsd fzf go-jira emacs-plus vim gnu-sed
 fi
 
 chsh -s $(which zsh)
