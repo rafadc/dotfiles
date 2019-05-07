@@ -1,13 +1,14 @@
+#!/usr/bin/env zsh
 take () {
     mkdir -p -- "$1" &&
       cd -P -- "$1"
 }
 
 alias ..="cd .."
-alias l="lsd"
+alias -g l="lsd"
 
 chpwd() {
-  lsd
+  l
 }
 
 j() {
