@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+
 take () {
     mkdir -p -- "$1" &&
       cd -P -- "$1"

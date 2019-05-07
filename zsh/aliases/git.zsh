@@ -1,4 +1,5 @@
 #!/usr/local/bin/zsh
+
 alias gundo="git reset --soft 'HEAD^'"
 
 fbr() {
@@ -18,4 +19,4 @@ fshow() {
             --bind "alt-y:execute:$_gitLogLineToHash | xclip"
 }
 
-alias glNoGraph='git log --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr% C(auto)%an" "$@"'
+alias -g glNoGraph='git log --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr% C(auto)%an" "$@"'
