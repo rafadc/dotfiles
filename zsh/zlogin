@@ -2,6 +2,8 @@
 # Executes commands at login post-zshrc.
 #
 
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 # Aliases
 for f in ~/.dotfiles/zsh/aliases/*; do source $f; done
 
@@ -10,24 +12,6 @@ for f in ~/.dotfiles/zsh/aliases/*; do source $f; done
 # ----------
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES  # Caused by an issue with Ruby in Mojave. https://blog.phusion.nl/2017/10/13/why-ruby-app-servers-break-on-macos-high-sierra-and-what-can-be-done-about-it/
-
-# ------------------------
-# General Unix
-# -----------------------
-
-# Auto ls when changing dir
-# Aliases and functions do not recur
-
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-# ----------
-# Docker
-# ----------
-
-source <(kubectl completion zsh)
-
-
-# Command for going to the current ticket in jira in a stuart project
 
 # Execute code that does not affect the current session in the background.
 {
