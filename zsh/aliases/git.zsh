@@ -2,7 +2,7 @@
 
 alias gundo="git reset --soft 'HEAD^'"
 
-fbr() {
+gck() {
     local branches branch
     branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
         branch=$(echo "$branches" |
