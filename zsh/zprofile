@@ -28,12 +28,13 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  /usr/local/{bin,sbin}
-  /usr/local/opt/opencv3/bin
   $HOME/bin
+  $HOME/bin/percona-toolkit-3.0.13/bin
   $HOME/bin/flutter/bin
   $HOME/Library/Python/2.7/bin
+  /usr/local/{bin,sbin}
   /usr/local/opt/gnu-sed/libexec/gnubin
+  /usr/local/opt/opencv3/bin
   $path
 )
 
