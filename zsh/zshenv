@@ -23,10 +23,10 @@ export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=" -R "
 
 # -----------
-# Emacs
+# Editor for commands 
 # -----------
-export EDITOR="emacsclient -n -c"
-export VISUAL="emacsclient -n -c"
+export EDITOR="vim"
+export VISUAL="vim"
 
 # -----------
 # Go settings
