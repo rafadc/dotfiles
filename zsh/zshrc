@@ -2,6 +2,19 @@
 # Executes commands at the start of an interactive session.
 #
 
+# Profiling
+if [[ -f ~/.profile_zsh_startup ]]; then
+        echo "❗️ Profiling startup..."
+        zmodload zsh/datetime
+        setopt PROMPT_SUBST
+        PS4='+$EPOCHREALTIME %N:%i> '
+
+        logfile=$(mktemp zsh_profile.XXXXXXXX)
+        echo "Logging to $logfile"
+        exec 3>&2 2>$logfile
+
+        setopt XTRACE
+fi
 
 # ------------
 # Configure ZSH
@@ -49,8 +62,7 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 # ---------
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
 
 # ---------
 # ZPlug
@@ -84,6 +96,7 @@ zplug load --verbose
 
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
+
 ###-tns-completion-start-###
 if [ -f ~/.tnsrc ]; then
     source /Users/rafael/.tnsrc
@@ -100,10 +113,19 @@ eval "$(pyenv virtualenv-init -)"
 # Direnv
 eval "$(direnv hook zsh)"
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/bin/google-cloud-sdk/path.zsh.inc' ]; then source '~/bin/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/rafael/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/rafael/bin/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '~/bin/google-cloud-sdk/completion.zsh.inc' ]; then source '~/bin/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/rafael/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/rafael/bin/google-cloud-sdk/completion.zsh.inc'; fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# End of profile
+if [[ -v PROFILE_STARTUP ]]; then
+        unsetopt XTRACE
+        exec 2>&3 3>&-
+        rm ~/.profile_zsh_startup
+fi
