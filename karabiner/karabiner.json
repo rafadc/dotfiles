@@ -238,6 +238,9 @@
                 }
             ],
             "name": "External keyboard",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
             "selected": false,
             "simple_modifications": [
                 {
@@ -505,6 +508,9 @@
                 }
             ],
             "name": "Internal keyboard",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
             "selected": true,
             "simple_modifications": [
                 {
@@ -634,6 +640,9 @@
                 }
             ],
             "name": "No changes",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
             "selected": false,
             "simple_modifications": [],
             "virtual_hid_keyboard": {
