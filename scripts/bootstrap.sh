@@ -7,7 +7,7 @@ ln -s ~/.dotfiles/bin/* ~/bin/
 echo "Setting up zsh..."
 if [[ "$OSTYPE" == "darwin"* ]]; then
     brew tap d12frosted/emacs-plus
-    brew install git zsh boxes figlet tmux lsd fzf go-jira emacs-plus vim gnu-sed diff-so-fancy jq shellcheck
+    brew install git zsh boxes figlet tmux lsd fzf go-jira emacs-plus vim gnu-sed diff-so-fancy jq shellcheck highlight
 fi
 
 chsh -s "$(which zsh)"
@@ -21,9 +21,13 @@ ln -fs ~/.dotfiles/zsh/zshenv ~/.zshenv
 ln -fs ~/.dotfiles/zsh/zshrc ~/.zshrc
 ln -fs ~/.dotfiles/ruby/pryrc ~/.pryrc
 
-echo "Setting up karabiner"
 mkdir -p ~/.config
+
+echo "Setting up karabiner"
 ln -fs ~/.dotfiles/karabiner ~/.config/karabiner
+
+echo "Setting up ranger"
+ln -fs ~/.dotfiles/ranger ~/.config/ranger
 
 echo "Setting up tmux..."
 ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
