@@ -8,7 +8,7 @@ function start_ticket() {
           --bind 'ctrl-o:execute(ISSUE=$(echo {} | cut -d ':' -f 1); jira browse $ISSUE)' \
           --bind 'ctrl-v:execute(jira view $(echo {} | cut -d ':' -f 1)' \
           --preview-window=down:80%)
-  if [ $? -eq 130 ] 
+  if [ $? -eq 130 ]
   then
     return
   fi
@@ -16,7 +16,7 @@ function start_ticket() {
   ISSUE_DESCRIPTION=$(echo $ISSUE_LINE | cut -d ':' -f 2)
   NON_LETTERS_OR_DIGITS="/[^A-Za-z0-9._-]/"
   NORMALIZED_DESCRIPTION=$(echo $ISSUE_DESCRIPTION | awk '{$1=$1};1' | awk '{gsub('$NON_LETTERS_OR_DIGITS',"-");print}')
-  BRANCH=$ISSUE_CODE"-rafa-"$NORMALIZED_DESCRIPTION
+  BRANCH=$($ISSUE_CODE"-rafa-"$NORMALIZED_DESCRIPTION | cut -c1-59)
   git checkout develop && git pull && git branch $BRANCH && git checkout $BRANCH
   jira assign $ISSUE_CODE "r.decastro"
   jira transition --noedit Start $ISSUE_CODE
@@ -30,7 +30,7 @@ function review_ticket() {
           --bind 'ctrl-o:execute(ISSUE=$(echo {} | cut -d ':' -f 1); jira browse $ISSUE)' \
           --bind 'ctrl-v:execute(jira view $(echo {} | cut -d ':' -f 1)' \
           --preview-window=down:80%)
-  if [ $? -eq 130 ] 
+  if [ $? -eq 130 ]
   then
     return
   fi
