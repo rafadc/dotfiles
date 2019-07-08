@@ -23,7 +23,7 @@ export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=" -R "
 
 # -----------
-# Editor for commands 
+# Editor for commands
 # -----------
 export EDITOR="vim"
 export VISUAL="vim"
@@ -55,9 +55,7 @@ export JIRA_DEFAULT_ACTION="dashboard"
 # -----------------------
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
-export JAVA_HOME=/Library/Java/Home
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export JAVA_HOME=/Library/Java/Home
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # -----------------------
 # Libraries
