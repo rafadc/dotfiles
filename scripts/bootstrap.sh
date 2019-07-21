@@ -11,9 +11,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 if [[ "$OSTYPE" == "linux"* ]]; then
    sudo apt-get update
-   sudo apt-get install tmux git zsh fzf vim emacs sed jq shellcheck
+   sudo apt-get install tmux git zsh fzf vim emacs sed jq shellcheck gawk
 fi
-
 
 chsh -s "$(which zsh)"
 
