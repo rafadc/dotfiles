@@ -29,6 +29,7 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/bin
+  $HOME/.local/bin
   $HOME/bin/percona-toolkit-3.0.13/bin
   /Library/TeX/texbin
   $HOME/bin/flutter/bin
