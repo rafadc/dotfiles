@@ -9,6 +9,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     brew tap d12frosted/emacs-plus
     brew install git zsh boxes figlet tmux lsd fzf go-jira emacs-plus vim gnu-sed diff-so-fancy jq shellcheck
 fi
+if [[ "$OSTYPE" == "linux"* ]]; then
+   sudo apt-get update
+   sudo apt-get install tmux git zsh fzf vim emacs sed jq shellcheck
+fi
+
 
 chsh -s "$(which zsh)"
 
