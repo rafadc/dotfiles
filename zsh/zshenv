@@ -55,7 +55,12 @@ export JIRA_DEFAULT_ACTION="dashboard"
 # -----------------------
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+if [[ "$OSTYPE" == "darwin"* ]]; then
+   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+fi
+if [[ "$OSTYPE" == "linux"* ]]; then
+   export JAVA_HOME="/usr/lib/jvm/open-jdk"
+fi
 
 # -----------------------
 # Libraries
