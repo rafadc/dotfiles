@@ -33,5 +33,6 @@ precmd() {
     vcs_info
 }
 local git_status='${vcs_info_msg_0_}'
+local current_host='%{$fg_bold[yellow]%}%m%{$reset_color%}'
 
-PROMPT="${current_folder}${git_status} > "
+PROMPT="→ ${current_host}:${current_folder}${git_status} > "
