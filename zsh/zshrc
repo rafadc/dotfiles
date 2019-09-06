@@ -52,8 +52,11 @@ zplugin light "zdharma/fast-syntax-highlighting"
 zplugin ice as"docker-completion"
 zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
-# zplugin load "docker/compose"
-# zplugin load "docker/machine"
+zplugin ice as"docker-compose-completion"
+zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
+
+zplugin ice as"docker-machine-completion"
+zplugin snippet https://github.com/docker/machine/blob/master/contrib/completion/zsh/_docker-machine
 
 zplugin ice wait'!' lucid atload'true; _p9k_precmd' nocd
 zplugin light romkatv/powerlevel10k
