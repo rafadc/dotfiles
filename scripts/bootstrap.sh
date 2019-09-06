@@ -14,6 +14,12 @@ if [[ "$OSTYPE" == "linux"* ]]; then
    sudo apt-get install tmux git zsh fzf vim emacs sed jq shellcheck gawk
 fi
 
+echo "Installing zplugin"
+rm -rf ~/.zplugin
+mkdir ~/.zplugin
+git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
+
+echo "Changing shell"
 chsh -s "$(which zsh)"
 
 touch ~/.dotfiles/zsh/zsecrets
