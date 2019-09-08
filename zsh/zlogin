@@ -24,3 +24,7 @@ zstyle ':completion:*' menu select=2
 
 zplugin ice wait'!' lucid atload'true; _p9k_precmd' nocd
 zplugin light romkatv/powerlevel10k
+
+# Using bat to handle manpages
+
+export MANPAGER="sh -c 'col -b | bat -l man -p'"

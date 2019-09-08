@@ -18,6 +18,8 @@ alias c="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 
 alias blink='blink1-tool --blink'
 
+alias cat=bat
+
 # --------------------
 # macos specific aliases
 # --------------------
