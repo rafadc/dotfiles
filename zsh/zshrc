@@ -33,7 +33,7 @@ unsetopt AUTO_NAME_DIRS
 
 fpath=(/usr/local/share/zsh-completions $HOME/.dotfiles/zsh/completions $fpath)
 
-source '/Users/rafadc/.zplugin/bin/zplugin.zsh'
+source "$HOME/.zplugin/bin/zplugin.zsh"
 
 zplugin light "b4b4r07/emoji-cli"
 
@@ -89,7 +89,7 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Pyenv changes
-export PATH="/home/rafadc/.pyenv/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
