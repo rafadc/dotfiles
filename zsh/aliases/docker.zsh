@@ -21,3 +21,7 @@ function docker-compose() {
     /usr/local/bin/docker-compose $@
   fi
 }
+
+function docker_stop_all() {
+  docker stop $(docker ps -a -q)
+}
