@@ -25,18 +25,15 @@ export LESS=" -R "
 # -----------
 # Editor for commands
 # -----------
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="kak"
+export VISUAL="kak"
 
 # -----------
 # Go settings
 # -----------
 export GOPATH=$HOME/code/go
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  export GOROOT=/usr/local/opt/go/libexec
-fi
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:/usr/local/go/bin
 
 # -----------
 # Rust settings
