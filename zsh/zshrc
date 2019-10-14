@@ -35,19 +35,14 @@ fpath=(/usr/local/share/zsh-completions $HOME/.dotfiles/zsh/completions $fpath)
 
 source "$HOME/.zplugin/bin/zplugin.zsh"
 
-zplugin light "b4b4r07/emoji-cli"
+zplugin ice wait'0a' lucid blockf
+zplugin load zsh-users/zsh-completions
 
-zplugin ice wait"0" blockf
-zplugin light "zsh-users/zsh-completions"
+zplugin ice wait'2' lucid blockf
+zplugin load "zsh-users/zsh-history-substring-search"
 
-zplugin ice wait"0" atload"_zsh_autosuggest_start"
-zplugin light "zsh-users/zsh-autosuggestions"
-
-zplugin light "zsh-users/zsh-history-substring-search"
-
-zplugin ice wait"0" atinit"zpcompinit; zpcdreplay"
+zplugin ice wait"2" atinit"zpcompinit; zpcdreplay"
 zplugin light "zdharma/fast-syntax-highlighting"
-
 
 zplugin ice as"docker-completion"
 zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
@@ -57,6 +52,10 @@ zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion
 
 zplugin ice as"docker-machine-completion"
 zplugin snippet https://github.com/docker/machine/blob/master/contrib/completion/zsh/_docker-machine
+
+if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 # ----------
 # Android
