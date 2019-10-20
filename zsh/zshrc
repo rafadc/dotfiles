@@ -2,6 +2,13 @@
 # Executes commands at the start of an interactive session.
 #
 
+# instaprompt on p10k. Should be at the beginning
+
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+
 # ------------
 # Configure ZSH
 # -------------
