@@ -22,3 +22,9 @@ fshow() {
             --bind "enter:execute:$_viewGitLogLine   | less -R" \
             --bind "alt-y:execute:$_gitLogLineToHash | xclip"
 }
+
+function git-sync-fork() {
+    git fetch upstream
+    git checkout master
+    git merge upstream/master
+}
