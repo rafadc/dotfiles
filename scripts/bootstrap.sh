@@ -7,11 +7,11 @@ ln -s ~/.dotfiles/bin/* ~/bin/
 echo "Setting up zsh..."
 if [[ "$OSTYPE" == "darwin"* ]]; then
     brew tap d12frosted/emacs-plus
-    brew install git zsh boxes figlet tmux lsd fzf go-jira emacs-plus vim gnu-sed diff-so-fancy jq shellcheck highlight bat
+    brew install git zsh boxes figlet tmux lsd fzf go-jira emacs-plus vim gnu-sed diff-so-fancy jq shellcheck highlight bat graphviz
 fi
 if [[ "$OSTYPE" == "linux"* ]]; then
    sudo apt-get update
-   sudo apt-get install tmux git zsh fzf vim emacs sed jq shellcheck gawk
+   sudo apt-get install tmux git zsh fzf vim emacs sed jq shellcheck gawk graphviz
 fi
 
 echo "Installing zplugin"
