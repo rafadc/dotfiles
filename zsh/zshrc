@@ -70,14 +70,6 @@ fi
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-# ---------
-# Node
-# ---------
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-
-
 #---------
 # Elixir
 #---------
@@ -103,8 +95,16 @@ eval "$(pyenv virtualenv-init -)"
 eval "$(direnv hook zsh)"
 
 # Asdf
-. $(brew --prefix asdf)/asdf.sh
-. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  . $(brew --prefix asdf)/asdf.sh
+  . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+fi
+
+if [[ "$OSTYPE" == "linux"* ]]; then
+  . ~/.asdf/asdf.sh
+  . ~/.asdf/etc/bash_completion.d/asdf.bash
+fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
