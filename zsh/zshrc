@@ -64,12 +64,6 @@ if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
-# ----------
-# Android
-# ----------
-
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
 #---------
 # Elixir
 #---------
