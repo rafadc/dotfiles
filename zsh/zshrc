@@ -48,7 +48,7 @@ zplugin load zsh-users/zsh-completions
 zplugin ice wait'2' lucid blockf
 zplugin load "zsh-users/zsh-history-substring-search"
 
-zplugin ice wait"2" atinit"zpcompinit; zpcdreplay"
+zplugin ice atinit"zpcompinit; zpcdreplay"
 zplugin light "zdharma/fast-syntax-highlighting"
 
 zplugin ice as"docker-completion"
