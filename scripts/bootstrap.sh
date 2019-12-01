@@ -14,6 +14,9 @@ if [[ "$OSTYPE" == "linux"* ]]; then
    sudo apt-get install tmux git zsh fzf vim emacs sed jq shellcheck gawk graphviz
 fi
 
+echo "Configuring pyenv"
+git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+
 echo "Installing zplugin"
 rm -rf ~/.zplugin
 mkdir ~/.zplugin
