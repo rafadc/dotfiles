@@ -22,7 +22,7 @@ zstyle ':completion:*' menu select=2
 
 # Prompt
 
-zplugin light romkatv/powerlevel10k
+zplugin ice depth=1; zplugin light romkatv/powerlevel10k
 
 # Using bat to handle manpages
 
