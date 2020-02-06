@@ -12,6 +12,7 @@ fi
 if [[ "$OSTYPE" == "linux"* ]]; then
    sudo apt-get update
    sudo apt-get install tmux git zsh fzf vim emacs sed jq shellcheck gawk graphviz
+   ln -fs ~/.dotfiles/xinitrc ~/.xinitrc
 fi
 
 echo "Configuring pyenv"
