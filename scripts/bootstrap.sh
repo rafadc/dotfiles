@@ -28,7 +28,6 @@ chsh -s "$(which zsh)"
 
 touch ~/.dotfiles/zsh/zsecrets
 
-ln -fs ~/.dotfiles/alacritty/ ~/.config/
 ln -fs ~/.dotfiles/zsh/zlogin ~/.zlogin
 ln -fs ~/.dotfiles/zsh/zlogout ~/.zlogout
 ln -fs ~/.dotfiles/zsh/zprofile ~/.zprofile
@@ -43,8 +42,9 @@ mkdir -p ~/.config
 echo "Setting up karabiner"
 ln -fs ~/.dotfiles/karabiner ~/.config/karabiner
 
-echo "Setting up ranger"
-ln -fs ~/.dotfiles/ranger ~/.config/ranger
+echo "Setting up application specific configs"
+ln -fs ~/.dotfiles/config/ranger ~/.config/
+ln -fs ~/.dotfiles/config/alacritty/ ~/.config/
 
 echo "Setting up tmux..."
 ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
