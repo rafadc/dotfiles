@@ -6,8 +6,11 @@ ln -s ~/.dotfiles/bin/* ~/bin/
 
 echo "Setting up zsh..."
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    brew tap d12frosted/emacs-plus
-    brew install git zsh boxes figlet tmux lsd fzf go-jira emacs-plus vim gnu-sed diff-so-fancy jq shellcheck highlight bat graphviz
+   brew tap d12frosted/emacs-plus
+   brew install git zsh boxes figlet tmux lsd fzf go-jira emacs-plus vim gnu-sed diff-so-fancy jq shellcheck highlight bat graphviz
+
+   echo "Setting up karabiner"
+   ln -fs ~/.dotfiles/karabiner ~/.config/karabiner
 fi
 if [[ "$OSTYPE" == "linux"* ]]; then
    sudo apt-get update
@@ -38,9 +41,6 @@ ln -fs ~/.dotfiles/zsh/p10k.zsh ~/.p10k.zsh
 ln -fs ~/.dotfiles/ruby/pryrc ~/.pryrc
 
 mkdir -p ~/.config
-
-echo "Setting up karabiner"
-ln -fs ~/.dotfiles/karabiner ~/.config/karabiner
 
 echo "Setting up application specific configs"
 ln -fs ~/.dotfiles/config/ranger ~/.config/
