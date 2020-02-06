@@ -43,7 +43,7 @@ ln -fs ~/.dotfiles/ruby/pryrc ~/.pryrc
 mkdir -p ~/.config
 
 echo "Setting up application specific configs"
-ln -fs ~/.dotfiles/config/ranger ~/.config/
+ln -fs ~/.dotfiles/config/ranger/ ~/.config/
 ln -fs ~/.dotfiles/config/alacritty/ ~/.config/
 
 echo "Setting up tmux..."
