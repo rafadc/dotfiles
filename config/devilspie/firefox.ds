@@ -1,0 +1,5 @@
+(if (is (window_class) "firefox")
+         (begin
+                       (undecorate)
+         )
+)
