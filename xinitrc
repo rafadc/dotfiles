@@ -41,7 +41,7 @@ eval $(ssh-agent -s)
 # Programs for all WM
 udiskie --tray & # USB mounting helper
 nextcloud --background & # Nextcloud client
-zeal & # Coding documentation helper
+# zeal & # Coding documentation helper
 
 # XFCE
 # systemctl --user start xfce4-notifyd
