@@ -1,0 +1,10 @@
+ruby 2.6.5
+elixir 1.9.4-otp-22
+python system
+rust 1.39.0
+clojure 1.10.1
+zig 0.5.0
+flutter 1.9.7-dev
+dart 2.3.2
+lua 5.3.5
+haskell system
