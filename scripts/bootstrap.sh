@@ -33,12 +33,10 @@ rm -rf ~/.zplugin
 mkdir ~/.zplugin
 git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
 
-echo "Changing shell"
+echo "Setting up shell"
 chsh -s "$(which zsh)"
 
 touch ~/.dotfiles/zsh/zsecrets
-
-ln -fs ~/.dotfiles/tool-versions ~/.tool-versions
 
 ln -fs ~/.dotfiles/zsh/zlogin ~/.zlogin
 ln -fs ~/.dotfiles/zsh/zlogout ~/.zlogout
@@ -48,11 +46,15 @@ ln -fs ~/.dotfiles/zsh/zshrc ~/.zshrc
 ln -fs ~/.dotfiles/zsh/fzf.zsh ~/.fzf.zsh
 ln -fs ~/.dotfiles/zsh/p10k.zsh ~/.p10k.zsh
 
+echo "Setting up window management"
+ln -s ~/.dotfiles/wm/xmonad ~/.xmonad/xmonad.hs
+
+echo "Setting up programming config files"
+ln -fs ~/.dotfiles/tool-versions ~/.tool-versions
 ln -fs ~/.dotfiles/ruby/pryrc ~/.pryrc
 
-mkdir -p ~/.config
-
 echo "Setting up application specific configs"
+mkdir -p ~/.config
 ln -fs ~/.dotfiles/config/ranger ~/.config/
 ln -fs ~/.dotfiles/config/alacritty ~/.config/
 ln -fs ~/.dotfiles/config/devilspie ~/.devilspie
