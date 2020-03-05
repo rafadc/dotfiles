@@ -4,6 +4,9 @@ alias docker-clean-ps='docker rm $(docker ps --filter=status=exited --filter=sta
 alias docker-compose='NO_PROXY=* docker-compose'
 alias docker-vm-terminal="screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty"
 
-function docker_stop_all() {
+alias dc='docker-compose'
+alias dcr='docker-compose run --rm'
+
+function docker-stop-all() {
   docker stop $(docker ps -a -q)
 }
