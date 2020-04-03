@@ -39,8 +39,7 @@ eval $(ssh-agent -s)
 #ssh-add
 
 # Programs for all WM
-udiskie --tray & # USB mounting helper
-nextcloud --background & # Nextcloud client
+# udiskie --tray & # USB mounting helper
 # zeal & # Coding documentation helper
 
 # XFCE
@@ -50,7 +49,7 @@ nextcloud --background & # Nextcloud client
 # i3
 # exec i3
 
-# GNOME 
+# GNOME
 devilspie -a &
 exec gnome-session
 
