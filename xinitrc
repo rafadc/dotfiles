@@ -50,8 +50,8 @@ eval $(ssh-agent -s)
 # exec i3
 
 # GNOME
-devilspie -a &
-exec gnome-session
+# devilspie -a &
+# exec gnome-session
 
 # Awesome
 # awesome
@@ -60,7 +60,13 @@ exec gnome-session
 # exec dwm
 
 # Xmonad
-# exec xmonad
+#exec dunst &
+#exec xmonad
 
 # KDE
 # exec startplasma-x11
+
+# QTile
+exec dunst &
+exec qtile
+
