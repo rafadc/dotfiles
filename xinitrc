@@ -60,13 +60,13 @@ eval $(ssh-agent -s)
 # exec dwm
 
 # Xmonad
-#exec dunst &
-#exec xmonad
+exec dunst &
+exec xmonad
 
 # KDE
 # exec startplasma-x11
 
 # QTile
-exec dunst &
-exec qtile
+# exec dunst &
+# exec qtile
 
