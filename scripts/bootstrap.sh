@@ -46,6 +46,9 @@ ln -fs ~/.dotfiles/zsh/zshrc ~/.zshrc
 ln -fs ~/.dotfiles/zsh/fzf.zsh ~/.fzf.zsh
 ln -fs ~/.dotfiles/zsh/p10k.zsh ~/.p10k.zsh
 
+echo "Symlinking binscripts"
+ln -s ~/.dotfiles/bin/arch-news.sh ~/bin/
+
 echo "Setting up window management"
 ln -s ~/.dotfiles/wm/xmonad ~/.xmonad
 
