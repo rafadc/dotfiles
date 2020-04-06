@@ -97,7 +97,6 @@ fi
 
 if [[ "$OSTYPE" == "linux"* ]]; then
   . ~/.asdf/asdf.sh
-  . ~/.asdf/completions/asdf.bash
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
