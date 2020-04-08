@@ -21,8 +21,11 @@ main = do
     , startupHook = myStartupHook
     } `additionalKeysP` myKeys
 
-myKeys = [ ("M-p", spawn "rofi -show run"),
-           ("M-S-p", spawn "dmenu_run") ]
+myKeys = [
+           ("M-p", spawn "rofi -show run"),
+           ("M-S-p", spawn "dmenu_run"),
+           ("M-n", spawn "nautilus")
+         ]
 
 myTerminal :: String
 myTerminal    = "alacritty"
