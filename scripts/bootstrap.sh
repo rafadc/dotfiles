@@ -47,7 +47,8 @@ ln -fs ~/.dotfiles/zsh/fzf.zsh ~/.fzf.zsh
 ln -fs ~/.dotfiles/zsh/p10k.zsh ~/.p10k.zsh
 
 echo "Setting up window management"
-ln -s ~/.dotfiles/wm/xmonad ~/.xmonad
+ln -fs ~/.dotfiles/wm/xmonad ~/.xmonad
+ln -fs ~/.dotfiles/config/dunst ~/.dunst
 
 echo "Setting up programming config files"
 ln -fs ~/.dotfiles/tool-versions ~/.tool-versions
