@@ -2,8 +2,6 @@
 keycode 66 = Control_L
 clear Lock
 add Control = Control_L
-keycode 117 = Caps_Lock
-add Lock = Caps_Lock
 
 ! Exchange left Alt and left Win
 remove mod1 = Alt_L
