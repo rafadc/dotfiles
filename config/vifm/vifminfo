@@ -1,0 +1,89 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/home/rafadc/
+	..
+1586355079
+'b
+	/home/rafadc/bin/
+	..
+1586355079
+'h
+	/home/rafadc/
+	..
+1586355079
+'z
+	/home/rafadc/.config/vifm
+	..
+1586355079
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/rafadc
+	Music
+4
+d/home/rafadc/Music
+	..
+0
+d/home/rafadc
+	Downloads
+3
+d/home/rafadc/Downloads
+	..
+0
+d/home/rafadc
+	Downloads
+3
+d/home/rafadc/Downloads
+	..
+0
+d/home/rafadc
+	Pictures
+5
+d/home/rafadc/Pictures
+	Screenshot from 2020-02-25 02-02-13.png
+5
+d
+
+# Right window history (oldest to newest):
+D/home/rafadc
+	..
+0
+D
+
+# Command line history (oldest to newest):
+:q
+
+# Search history (oldest to newest):
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+
+# State:
+f
+i1
+[.1
+[F
+F
+I1
+].1
+]F
+s0
