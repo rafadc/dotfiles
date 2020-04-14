@@ -3,8 +3,9 @@ import XMonad.Actions.SpawnOn
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
-import XMonad.Hooks.ManageDocks
+import XMonad.Layout.Grid
 import XMonad.Layout.Gaps
+import XMonad.Hooks.ManageDocks
 import XMonad.Util.Dzen
 import XMonad.Util.EZConfig(additionalKeysP)
 
@@ -36,7 +37,7 @@ myModMask     = mod4Mask -- Win key or Super_L
 myBorderWidth :: Dimension
 myBorderWidth = 3
 
-myLayouts = avoidStruts $ spacing 10 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Tall 1 (3/100) (1/2) ||| Full
+myLayouts = avoidStruts $ spacing 10 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Grid ||| Tall 1 (3/100) (1/2) ||| Full
 
 myStartupHook = spawnHere "feh --randomize --bg-fill ~/Pictures/Wallpapers"
 
