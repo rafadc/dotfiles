@@ -5,7 +5,6 @@ take () {
       cd -P -- "$1"
 }
 
-alias ..="cd .."
 alias -g l="lsd"
 
 chpwd() {

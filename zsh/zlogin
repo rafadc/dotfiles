@@ -19,6 +19,7 @@ for f in ~/.dotfiles/zsh/aliases/*; do source $f; done
 # Enable menu for selection
 
 zstyle ':completion:*' menu select=2
+setopt  autocd
 
 # Prompt
 
