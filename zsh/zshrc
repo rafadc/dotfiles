@@ -64,14 +64,6 @@ if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
-#---------
-# Elixir
-#---------
-
-
-test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
-
-
 ###-tns-completion-start-###
 if [ -f ~/.tnsrc ]; then
     source /Users/rafael/.tnsrc
