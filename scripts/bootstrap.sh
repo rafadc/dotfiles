@@ -53,7 +53,7 @@ ln -s ~/.dotfiles/bin/arch-news.sh ~/bin/
 
 echo "Setting up window management"
 ln -fs ~/.dotfiles/wm/xmonad ~/.xmonad
-ln -fs ~/.dotfiles/config/dunst ~/.dunst
+ln -fs ~/.dotfiles/config/dunst ~/.config/dunst
 
 echo "Setting up programming config files"
 ln -fs ~/.dotfiles/tool-versions ~/.tool-versions
