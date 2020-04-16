@@ -1,0 +1,1 @@
+alias agenda='gcalcli agenda --nodeclined'
