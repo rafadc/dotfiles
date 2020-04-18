@@ -25,8 +25,8 @@ export LESS=" -R "
 # -----------
 # Editor for commands
 # -----------
-export EDITOR="kak"
-export VISUAL="kak"
+export EDITOR="vim"
+export VISUAL="vim"
 
 # -----------
 # Go settings
