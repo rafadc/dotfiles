@@ -370,6 +370,10 @@ filextype */
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
     \phistory,fhistory,dirstack,registers,bookmarks,bmarks
 
+" Using only one pane
+
+only
+
 " ------------------------------------------------------------------------------
 
 " Examples of configuring both panels
