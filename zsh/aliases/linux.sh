@@ -8,4 +8,9 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
     alias switch="mplayer tv:// -tv driver=v4l2:width=1920:height=1080:outfmt=mjpg:device=/dev/video0 -fps 60"
     alias xbox="sudo nice -n -20 mplayer tv:// -tv driver=v4l2:width=1920:height=1080:device=/dev/video0:alsa=1:adevice=hw.5 -fps 59.940 -vo gl -lavdopts lowres=1:fast:skiploopfilter=all -framedrop -nocache"
+
+    alias startx-xmonad="cp $HOME/.dotfiles/wm/xmonad/xinitrc $HOME/.xinitrc && startx"
+    alias startx-xfce="cp $HOME/.dotfiles/wm/xfce/xinitrc $HOME/.xinitrc && startx"
+    alias startx-qtile="cp $HOME/.dotfiles/wm/qtile/xinitrc $HOME/.xinitrc && startx"
+    alias startx-gnome="cp $HOME/.dotfiles/wm/gnome/xinitrc $HOME/.xinitrc && startx"
 fi
