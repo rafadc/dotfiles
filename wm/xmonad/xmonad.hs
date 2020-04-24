@@ -25,7 +25,8 @@ main = do
 myKeys = [
            ("M-p", spawn "rofi -show run"),
            ("M-S-p", spawn "dmenu_run"),
-           ("M-n", spawn "alacritty -e vifm ~")
+           ("M-n", spawn "alacritty -e vifm ~"),
+           ("<Print>", spawn "flameshot gui")
          ]
 
 myTerminal :: String

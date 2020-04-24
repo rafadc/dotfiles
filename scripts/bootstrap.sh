@@ -50,6 +50,7 @@ ln -s ~/.dotfiles/xmodmap .Xmodmap
 
 echo "Symlinking binscripts"
 ln -s ~/.dotfiles/bin/arch-news.sh ~/bin/
+ln -s ~/.dotfiles/bin/xstream.sh ~/bin/
 
 echo "Setting up window management"
 ln -fs ~/.dotfiles/wm/xmonad ~/.xmonad
