@@ -26,7 +26,8 @@ myKeys = [
            ("M-p", spawn "rofi -show run"),
            ("M-S-p", spawn "dmenu_run"),
            ("M-n", spawn "alacritty -e vifm ~"),
-           ("<Print>", spawn "flameshot gui")
+           ("<Print>", spawn "flameshot gui"),
+           ("M-e", spawn "rofimoji")
          ]
 
 myTerminal :: String
