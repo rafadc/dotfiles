@@ -14,7 +14,6 @@ main = do
   xmonad $ defaultConfig
     {
       workspaces  = ["1:dev","2:comm","3","4","5","6","7","8","9:stream","0","-","="]
-    , manageHook  = myManageHook <+> manageHook defaultConfig -- uses default too
     , terminal    = myTerminal
     , modMask     = myModMask
     , borderWidth = myBorderWidth
@@ -42,13 +41,3 @@ myBorderWidth = 3
 myLayouts = avoidStruts $ spacing 10 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Grid ||| Tall 1 (3/100) (1/2) ||| Full
 
 myStartupHook = spawnHere "feh --randomize --bg-fill ~/Pictures/Wallpapers"
-
-myManageHook = composeAll
-   [ className =? "emacs"       --> doShift "1:dev"
-   , className =? "slack"       --> doShift "2:comm"
-   , className =? "hexchat"     --> doShift "2:comm"
-   , className =? "discord"     --> doShift "2:comm"
-   , className =? "obs"         --> doShift "9:stream"
-   , className =? "steam"       --> doFloat
-   , manageDocks
-   ]
