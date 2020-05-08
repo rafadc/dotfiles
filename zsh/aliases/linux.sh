@@ -13,4 +13,6 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias startx-xfce="cp $HOME/.dotfiles/wm/xfce/xinitrc $HOME/.xinitrc && startx"
     alias startx-qtile="cp $HOME/.dotfiles/wm/qtile/xinitrc $HOME/.xinitrc && startx"
     alias startx-gnome="cp $HOME/.dotfiles/wm/gnome/xinitrc $HOME/.xinitrc && startx"
+
+    alias airserver="gst-launch-1.0 airplaysrc ! queue ! h264parse ! avdec_h264 max-threads=1 ! xvimagesink"
 fi
