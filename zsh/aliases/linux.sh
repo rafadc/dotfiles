@@ -10,4 +10,13 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias startx-gnome="cp $HOME/.dotfiles/wm/gnome/xinitrc $HOME/.xinitrc && startx"
 
     alias airserver="gst-launch-1.0 airplaysrc ! queue ! h264parse ! avdec_h264 max-threads=1 ! xvimagesink"
+
+    streamset() {
+        obs &
+        streamdeck &
+        Xephyr :1 -screen 1920x1080 -noreset -br &
+        setxkbmap -display :0 -print | xkbcomp - :1
+        DISPLAY=:1 xmonad &
+        airserver &
+    }
 fi
