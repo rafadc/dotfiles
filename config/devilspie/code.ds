@@ -1,5 +1,0 @@
-(if (is (window_class) "code-oss")
-         (begin
-                       (undecorate)
-         )
-)
