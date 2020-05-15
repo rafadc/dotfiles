@@ -8,8 +8,9 @@ import XMonad.Layout.Gaps
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Dzen
 import XMonad.Util.EZConfig(additionalKeysP)
-import XMonad.StackSet as W
+import qualified XMonad.StackSet as W
 import XMonad.Util.NamedScratchpad
+import XMonad.ManageHook
 
 main = do
   xmonad $ defaultConfig
@@ -20,6 +21,7 @@ main = do
     , borderWidth = myBorderWidth
     , layoutHook  = myLayouts
     , startupHook = myStartupHook
+    , manageHook  = namedScratchpadManageHook scratchpads
     } `additionalKeysP` myKeys
 
 myKeys = [
@@ -44,7 +46,7 @@ scratchpads = [
                 NS "slack" "slack" (resource =? "slack") centered
               ]
               where
-                centered = customFloating $ W.RationalRect 0.9 0.9 0.05 0.05
+                centered = customFloating $ W.RationalRect 0.05 0.05 0.9 0.9
                 centeredSmall = customFloating $ W.RationalRect l t w h
                   where
                     h = 0.6       -- height, 60%
