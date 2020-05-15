@@ -55,10 +55,10 @@ scratchpads = [
                     l = (1 - w)/2 -- centered left/right
 
 myTerminal :: String
-myTerminal    = "alacritty"
+myTerminal = "alacritty"
 
 myModMask :: KeyMask
-myModMask     = mod4Mask -- Win key or Super_L
+myModMask = mod4Mask -- Win key or Super_L
 
 myBorderWidth :: Dimension
 myBorderWidth = 3
