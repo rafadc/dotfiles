@@ -34,7 +34,8 @@ myKeys = [
            ("M-t", namedScratchpadAction scratchpads "notes"),
            ("M-S-s", namedScratchpadAction scratchpads "pavucontrol"),
            ("M-i", namedScratchpadAction scratchpads "hexchat"),
-           ("M-s", namedScratchpadAction scratchpads "slack")
+           ("M-s", namedScratchpadAction scratchpads "slack"),
+           ("M-d", namedScratchpadAction scratchpads "dashboard-personal")
          ]
 
 scratchpads :: [NamedScratchpad]
@@ -43,7 +44,8 @@ scratchpads = [
                 NS "notes" "alacritty --class notes -e vim ~/notes.md" (resource =? "notes") centered,
                 NS "pavucontrol" "pavucontrol" (resource =? "pavucontrol") centeredSmall,
                 NS "hexchat" "hexchat" (resource =? "hexchat") centered,
-                NS "slack" "slack" (resource =? "slack") centered
+                NS "slack" "slack" (resource =? "slack") centered,
+                NS "dashboard-personal" "alacritty --class dashboard-personal -e wtfutil --config=~/.dotfiles/config/wtf/personal.yml" (resource =? "dashboard-personal") centered
               ]
               where
                 centered = customFloating $ W.RationalRect 0.05 0.05 0.9 0.9
