@@ -26,7 +26,7 @@ wtf:
     # The "key" is the name of the widget and the type is the actual
     # widget you want to implement.
     europe_time:
-      title: "Europe"
+      title: "⏲"
       type: clocks
       colors:
         rows:
@@ -47,7 +47,7 @@ wtf:
       sort: "alphabetical"
     battery:
       type: power
-      title: "⚡️"
+      title: "⚡"
       enabled: true
       position:
         top: 0
@@ -92,6 +92,7 @@ wtf:
         width: 3
       refreshInterval: 30
     disks:
+      title: "💽"
       type: cmdrunner
       cmd: "df"
       args: ["-h"]
