@@ -11,6 +11,7 @@ import XMonad.Util.EZConfig(additionalKeysP)
 import qualified XMonad.StackSet as W
 import XMonad.Util.NamedScratchpad
 import XMonad.ManageHook
+import XMonad.Hooks.SetWMName
 
 main = do
   xmonad $ defaultConfig
@@ -67,4 +68,6 @@ myBorderWidth = 3
 
 myLayouts = avoidStruts $ spacing 10 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Grid ||| Tall 1 (3/100) (1/2) ||| Full
 
-myStartupHook = spawnHere "feh --randomize --bg-fill ~/Pictures/Wallpapers"
+myStartupHook = do
+  spawnHere "feh --randomize --bg-fill ~/Pictures/Wallpapers"
+  setWMName "LG3D"
