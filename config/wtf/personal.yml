@@ -95,7 +95,7 @@ wtf:
       title: "💽"
       type: cmdrunner
       cmd: "df"
-      args: ["-h"]
+      args: ["-h", "--type", "ext4", "--type", nfs4"]
       enabled: true
       position:
         top: 1
