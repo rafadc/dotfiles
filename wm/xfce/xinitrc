@@ -41,7 +41,6 @@ eval $(ssh-agent -s)
 #ssh-add
 
 udiskie --tray & # USB mounting helper
-zeal & # Coding documentation helper
 
 # XFCE
 systemctl --user start xfce4-notifyd
