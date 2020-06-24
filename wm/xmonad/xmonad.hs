@@ -1,11 +1,13 @@
 import XMonad
 import XMonad.Actions.SpawnOn
+import XMonad.Hooks.ManageDocks
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
 import XMonad.Layout.Grid
 import XMonad.Layout.Gaps
-import XMonad.Hooks.ManageDocks
+import XMonad.Layout.WorkspaceDir
+import XMonad.Prompt
 import XMonad.Util.Dzen
 import XMonad.Util.EZConfig(additionalKeysP)
 import qualified XMonad.StackSet as W
@@ -32,11 +34,12 @@ myKeys = [
            ("M-n", namedScratchpadAction scratchpads "vifm"),
            ("M-S-n", spawn "alacritty -e vifm ~"),
            ("M-e", spawn "rofimoji"),
-           ("M-t", namedScratchpadAction scratchpads "notes"),
+           ("M-c", changeDir def),
            ("M-S-s", namedScratchpadAction scratchpads "pavucontrol"),
            ("M-i", namedScratchpadAction scratchpads "hexchat"),
            ("M-s", namedScratchpadAction scratchpads "slack"),
-           ("M-d", namedScratchpadAction scratchpads "dashboard-personal")
+           ("M-d", namedScratchpadAction scratchpads "dashboard-personal"),
+           ("M-S-d", namedScratchpadAction scratchpads "dashboard-stuart")
          ]
 
 scratchpads :: [NamedScratchpad]
@@ -46,13 +49,14 @@ scratchpads = [
                 NS "pavucontrol" "pavucontrol" (resource =? "pavucontrol") centeredSmall,
                 NS "hexchat" "hexchat" (resource =? "hexchat") centered,
                 NS "slack" "slack" (resource =? "slack") centered,
-                NS "dashboard-personal" "alacritty --class dashboard-personal -e wtfutil --config=~/.dotfiles/config/wtf/personal.yml" (resource =? "dashboard-personal") centered
+                NS "dashboard-personal" "alacritty --class dashboard-personal -e wtfutil --config=~/.dotfiles/config/wtf/personal.yml" (resource =? "dashboard-personal") centered,
+                NS "dashboard-stuart" "alacritty --class dashboard-stuart -e wtfutil --config=~/.dotfiles/config/wtf/stuart.yml" (resource =? "dashboard-stuart") centered
               ]
               where
                 centered = customFloating $ W.RationalRect 0.05 0.05 0.9 0.9
                 centeredSmall = customFloating $ W.RationalRect l t w h
                   where
-                    h = 0.6       -- height, 60%
+                    h = 0.6       -- height, 60%DDD
                     w = 0.6       -- width, 60%
                     t = (1 - h)/2 -- centered top/bottom
                     l = (1 - w)/2 -- centered left/right
@@ -66,7 +70,7 @@ myModMask = mod4Mask -- Win key or Super_L
 myBorderWidth :: Dimension
 myBorderWidth = 3
 
-myLayouts = avoidStruts $ spacing 10 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Grid ||| Tall 1 (3/100) (1/2) ||| Full
+myLayouts = workspaceDir "~" $ avoidStruts $ spacing 10 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Grid ||| Tall 1 (3/100) (1/2) ||| Full
 
 myStartupHook = do
   spawnHere "feh --randomize --bg-fill ~/Pictures/Wallpapers"
