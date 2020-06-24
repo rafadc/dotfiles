@@ -87,7 +87,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    family: Iosevka Nerd Font Mono
+    family: Monego
 
     # The `style` can be specified to pick a specific face.
     style: Bold
