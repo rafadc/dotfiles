@@ -40,7 +40,4 @@ export GDK_BACKEND=x11
 eval $(ssh-agent -s)
 #ssh-add
 
-udiskie --tray & # USB mounting helper
-
-# XFCE
-exec openbox-kde-session
+exec startplasma-x11
