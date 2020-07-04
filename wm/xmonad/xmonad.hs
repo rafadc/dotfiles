@@ -8,7 +8,6 @@ import XMonad.Layout.Grid
 import XMonad.Layout.Gaps
 import XMonad.Layout.WorkspaceDir
 import XMonad.Prompt
-import XMonad.Util.Dzen
 import XMonad.Util.EZConfig(additionalKeysP)
 import qualified XMonad.StackSet as W
 import XMonad.Util.NamedScratchpad
@@ -75,3 +74,33 @@ myLayouts = workspaceDir "~" $ avoidStruts $ spacing 10 $ ThreeColMid 1 (3/100) 
 myStartupHook = do
   spawnHere "feh --randomize --bg-fill ~/Pictures/Wallpapers"
   setWMName "LG3D"
+
+promptConfig = defaultXPConfig
+    { font = "xft:Monego:12"
+    , bgColor  = solbase03
+    , fgColor  = solbase1
+    , bgHLight = solyellow
+    , fgHLight = solbase02
+    , promptBorderWidth = 0
+    , height   = 28
+--    , historyFilter = nub
+    , showCompletionOnTab = True
+    }
+
+-- solarized color pallette
+solbase03  = "#002b36"
+solbase02  = "#073642"
+--solbase01  = "#586e75"
+--solbase00  = "#657b83"
+--solbase0   = "#839496"
+solbase1   = "#93a1a1"
+--solbase2   = "#eee8d5"
+--solbase3   = "#fdf6e3"
+solyellow  = "#b58900"
+--solorange  = "#cb4b16"
+--solred     = "#dc322f"
+--solmagenta = "#d33682"
+--solviolet  = "#6c71c4"
+--solblue    = "#268bd2"
+--solcyan    = "#2aa198"
+--solgreen   = "#859900"
