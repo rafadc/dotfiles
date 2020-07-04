@@ -1,4 +1,6 @@
 import XMonad
+import Data.List (isPrefixOf, nub)
+
 import XMonad.Actions.SpawnOn
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.ThreeColumns
@@ -78,17 +80,18 @@ myStartupHook = do
   setWMName "LG3D"
 
 promptConfig = defaultXPConfig
-    { font = "xft:Monego:14"
+    { font = "xft:Monego:18"
     , bgColor  = solbase03
     , fgColor  = solbase1
     , bgHLight = solyellow
     , fgHLight = solbase02
     , promptBorderWidth = 0
-    , height   = 28
+    , height   = 30
+    , historyFilter = nub
     , showCompletionOnTab = True
     }
 
--- solarized color pallette
+-- solarized color palette
 solbase03  = "#002b36"
 solbase02  = "#073642"
 --solbase01  = "#586e75"
