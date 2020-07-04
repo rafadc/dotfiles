@@ -20,6 +20,8 @@ main = do
       XMonad.workspaces  = ["1:dev","2:comm","3","4","5","6","7","8","9","0","-","="]
     , terminal    = myTerminal
     , modMask     = myModMask
+    , normalBorderColor  = fgColor promptConfig
+    , focusedBorderColor = bgColor promptConfig
     , borderWidth = myBorderWidth
     , layoutHook  = myLayouts
     , startupHook = myStartupHook
@@ -33,7 +35,7 @@ myKeys = [
            ("M-n", namedScratchpadAction scratchpads "vifm"),
            ("M-S-n", spawn "alacritty -e vifm ~"),
            ("M-e", spawn "rofimoji"),
-           ("M-c", changeDir def),
+           ("M-c", changeDir promptConfig),
            ("M-S-s", namedScratchpadAction scratchpads "pavucontrol"),
            ("M-i", namedScratchpadAction scratchpads "hexchat"),
            ("M-s", namedScratchpadAction scratchpads "slack"),
@@ -76,14 +78,13 @@ myStartupHook = do
   setWMName "LG3D"
 
 promptConfig = defaultXPConfig
-    { font = "xft:Monego:12"
+    { font = "xft:Monego:14"
     , bgColor  = solbase03
     , fgColor  = solbase1
     , bgHLight = solyellow
     , fgHLight = solbase02
     , promptBorderWidth = 0
     , height   = 28
---    , historyFilter = nub
     , showCompletionOnTab = True
     }
 
