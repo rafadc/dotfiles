@@ -41,6 +41,7 @@ myKeys = [
            ("M-S-s", namedScratchpadAction scratchpads "pavucontrol"),
            ("M-i", namedScratchpadAction scratchpads "hexchat"),
            ("M-s", namedScratchpadAction scratchpads "slack"),
+           ("M-w", namedScratchpadAction scratchpads "vimwiki"),
            ("M-d", namedScratchpadAction scratchpads "dashboard-personal"),
            ("M-S-d", namedScratchpadAction scratchpads "dashboard-stuart")
          ]
@@ -48,7 +49,7 @@ myKeys = [
 scratchpads :: [NamedScratchpad]
 scratchpads = [
                 NS "vifm" "alacritty --class vifm -e vifm" (resource =? "vifm") centered,
-                NS "notes" "alacritty --class notes -e vim ~/notes.md" (resource =? "notes") centered,
+                NS "vimwiki" "alacritty --class vimwiki -e vim -c ':VimwikiIndex'" (resource =? "vimwiki") centered,
                 NS "pavucontrol" "pavucontrol" (resource =? "pavucontrol") centeredSmall,
                 NS "hexchat" "hexchat" (resource =? "hexchat") centered,
                 NS "slack" "slack" (resource =? "slack") centered,
@@ -73,7 +74,7 @@ myModMask = mod4Mask -- Win key or Super_L
 myBorderWidth :: Dimension
 myBorderWidth = 3
 
-myLayouts = workspaceDir "~" $ avoidStruts $ spacing 10 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Grid ||| Tall 1 (3/100) (1/2) ||| Full
+myLayouts = workspaceDir "~" $ avoidStruts $ spacing 15 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Grid ||| Tall 1 (3/100) (1/2) ||| Full
 
 myStartupHook = do
   spawnHere "feh --randomize --bg-fill ~/Pictures/Wallpapers"
