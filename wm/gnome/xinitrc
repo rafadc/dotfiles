@@ -44,10 +44,6 @@ eval $(ssh-agent -s)
 udiskie --tray & # USB mounting helper
 # zeal & # Coding documentation helper
 
-# XFCE
-systemctl --user start xfce4-notifyd
-exec startxfce4
-
 # i3
 # exec i3
 
