@@ -1,4 +1,4 @@
-alias v='vim'
-alias vi='vim'
+alias v='nvim'
+alias vi='nvim'
 
-alias vimwiki="vim -c ':VimwikiIndex'"
+alias vimwiki="nvim -c ':VimwikiIndex'"
