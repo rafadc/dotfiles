@@ -48,13 +48,13 @@ myKeys = [
 
 scratchpads :: [NamedScratchpad]
 scratchpads = [
-                NS "vifm" "alacritty --class vifm -e vifm" (resource =? "vifm") centered,
-                NS "vimwiki" "alacritty --class vimwiki -e vim -c ':VimwikiIndex'" (resource =? "vimwiki") centered,
+                NS "vifm" "kitty --class vifm vifm" (resource =? "vifm") centered,
+                NS "vimwiki" "kitty --class vimwiki nvim -c ':VimwikiIndex'" (resource =? "vimwiki") centered,
                 NS "pavucontrol" "pavucontrol" (resource =? "pavucontrol") centeredSmall,
                 NS "hexchat" "hexchat" (resource =? "hexchat") centered,
                 NS "slack" "slack" (resource =? "slack") centered,
-                NS "dashboard-personal" "alacritty --class dashboard-personal -e wtfutil --config=~/.dotfiles/config/wtf/personal.yml" (resource =? "dashboard-personal") centered,
-                NS "dashboard-stuart" "alacritty --class dashboard-stuart -e wtfutil --config=~/.dotfiles/config/wtf/stuart.yml" (resource =? "dashboard-stuart") centered
+                NS "dashboard-personal" "kitty --class dashboard-personal wtfutil --config=~/.dotfiles/config/wtf/personal.yml" (resource =? "dashboard-personal") centered,
+                NS "dashboard-stuart" "kitty --class dashboard-stuart wtfutil --config=~/.dotfiles/config/wtf/stuart.yml" (resource =? "dashboard-stuart") centered
               ]
               where
                 centered = customFloating $ W.RationalRect 0.05 0.05 0.9 0.9
@@ -66,7 +66,7 @@ scratchpads = [
                     l = (1 - w)/2 -- centered left/right
 
 myTerminal :: String
-myTerminal = "alacritty"
+myTerminal = "kitty"
 
 myModMask :: KeyMask
 myModMask = mod4Mask -- Win key or Super_L
