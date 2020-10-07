@@ -66,6 +66,7 @@ ln -fs ~/.dotfiles/config/ranger ~/.config/
 ln -fs ~/.dotfiles/config/alacritty ~/.config/
 ln -fs ~/.dotfiles/config/devilspie ~/.devilspie
 ln -fs ~/.dotfiles/config/vifm ~/.config/vifm
+ln -fs ~/.dotfiles/config/kitty ~/.config/kitty
 
 echo "Setting up tmux..."
 ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
