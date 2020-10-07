@@ -55,3 +55,5 @@ function standup() {
         echo "🤖 My Issues\n"
         jira list --query "assignee = 'r.decastro'"
 }
+
+alias ls3='aws s3 --endpoint=http://localhost:5678 --region=""'
