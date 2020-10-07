@@ -34,8 +34,9 @@ wtf:
           odd: "white"
       enabled: true
       locations:
-        GMT: "Etc/GMT"
         Madrid: "Europe/Madrid"
+        UTC: "Etc/UTC"
+        GMT: "Etc/GMT"
         London: "Europe/London"
         Paris: "Europe/Paris"
       position:
