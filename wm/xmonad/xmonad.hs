@@ -41,7 +41,7 @@ myKeys = [
            ("M-S-s", namedScratchpadAction scratchpads "pavucontrol"),
            ("M-i", namedScratchpadAction scratchpads "hexchat"),
            ("M-s", namedScratchpadAction scratchpads "slack"),
-           ("M-w", namedScratchpadAction scratchpads "vimwiki"),
+           ("M-w", namedScratchpadAction scratchpads "notion-app"),
            ("M-d", namedScratchpadAction scratchpads "dashboard-personal"),
            ("M-S-d", namedScratchpadAction scratchpads "dashboard-stuart"),
            ("M-'", namedScratchpadAction scratchpads "atreus")
@@ -50,7 +50,7 @@ myKeys = [
 scratchpads :: [NamedScratchpad]
 scratchpads = [
                 NS "vifm" "kitty --class vifm vifm" (resource =? "vifm") centered,
-                NS "vimwiki" "kitty --class vimwiki nvim -c ':VimwikiIndex'" (resource =? "vimwiki") centered,
+                NS "notion-app" "notion-app" (resource =? "notion") centeredSmall,
                 NS "pavucontrol" "pavucontrol" (resource =? "pavucontrol") centeredSmall,
                 NS "hexchat" "hexchat" (resource =? "hexchat") centered,
                 NS "slack" "slack" (resource =? "slack") centered,
