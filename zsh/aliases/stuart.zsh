@@ -57,3 +57,5 @@ function standup() {
 }
 
 alias ls3='aws s3 --endpoint=http://localhost:5678 --region=""'
+
+alias st-tok-copy="cd ~/code/stuart/stuart-api && source .envrc && stuart-token | pbcopy && notify-send 'Token copied to clipboard'"

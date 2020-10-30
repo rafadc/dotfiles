@@ -43,8 +43,9 @@ myKeys = [
            ("M-s", namedScratchpadAction scratchpads "slack"),
            ("M-w", namedScratchpadAction scratchpads "notion-app"),
            ("M-d", namedScratchpadAction scratchpads "dashboard-personal"),
-           ("M-S-d", namedScratchpadAction scratchpads "dashboard-stuart"),
-           ("M-'", namedScratchpadAction scratchpads "atreus")
+           ("M-S-d", namedScratchpadAction scratchpads "ytop"),
+           ("M-'", namedScratchpadAction scratchpads "atreus"),
+           ("M-t", spawn "zsh --login -c st-tok-copy")
          ]
 
 scratchpads :: [NamedScratchpad]
@@ -55,7 +56,7 @@ scratchpads = [
                 NS "hexchat" "hexchat" (resource =? "hexchat") centered,
                 NS "slack" "slack" (resource =? "slack") centered,
                 NS "dashboard-personal" "kitty --class dashboard-personal wtfutil --config=~/.dotfiles/config/wtf/personal.yml" (resource =? "dashboard-personal") centered,
-                NS "dashboard-stuart" "kitty --class dashboard-stuart wtfutil --config=~/.dotfiles/config/wtf/stuart.yml" (resource =? "dashboard-stuart") centered,
+                NS "ytop" "kitty --class ytop ytop -b -s" (resource =? "ytop") centered,
                 NS "atreus" "feh -x ~/.dotfiles/wm/xmonad/images/atreus.png" (resource =? "feh") centeredSmall
               ]
               where
