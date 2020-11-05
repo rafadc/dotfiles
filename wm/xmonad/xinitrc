@@ -25,6 +25,8 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
+xmonad --output DP-1 --off
+
 jack_control start
 jack_control ds alsa
 jack_control dps period 256
