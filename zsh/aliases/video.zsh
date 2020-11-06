@@ -1,5 +1,5 @@
-alias screen-disable-second='xrandr --output DP-1 --off'
-alias screen-enable-second='xrandr --output DP-1 --mode 1920x1080 --rate 60 --right-of DP-2'
+alias screen-disable-second='xrandr --output DP-1 --off --output DP-2 --mode 3840x1600 --rate 75'
+alias screen-stream='xrandr --output DP-1 --mode 1920x1080 --rate 60 --output DP-2 --mode 1920x1080 --rate 74.91'
 
 alias capture_desktop=$'ffmpeg -video_size $(xdpyinfo |awk \'/dimensions:/{printf $2}\') -framerate 60 -f x11grab -i :0.0 output.mp4'
 
