@@ -10,3 +10,5 @@ alias dcr='docker-compose run --rm'
 function docker-stop-all() {
   docker stop $(docker ps -a -q)
 }
+
+alias docker-restart='sudo systemctl restart docker && docker-stop-all'
