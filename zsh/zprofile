@@ -96,3 +96,5 @@ bindkey '^[[1;9C' forward-word
 #
 # We make it use ripgreap instead of grep so it is a bit faster
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
+
+export PATH="$HOME/.cargo/bin:$PATH"
