@@ -12,18 +12,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
    echo "Setting up karabiner"
    ln -fs ~/.dotfiles/karabiner ~/.config/karabiner
 fi
-if [[ "$OSTYPE" == "linux"* ]]; then
-   $PACKAGES = "tmux git zsh fzf vim emacs sed jq shellcheck gawk graphviz"
-   if grep -q ubuntu "/proc/version"; then
-     sudo apt-get update
-     sudo apt-get install $PACKAGES
-   fi
-   if grep -q arch "/proc/version"; then
-     sudo pacman -Syu
-     sudo pacman -S $PACKAGES
-   fi
-   ln -fs ~/.dotfiles/xinitrc ~/.xinitrc
-fi
 
 echo "Configuring pyenv"
 git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
