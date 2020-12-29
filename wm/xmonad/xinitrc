@@ -8,6 +8,7 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 
 setxkbmap es
+setxkbmap -option altwin:swap_lalt_lwin
 
 if [ -f $sysresources ]; then
     xrdb -merge $sysresources
@@ -24,13 +25,6 @@ fi
 if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
-
-xmonad --output DP-1 --off
-
-jack_control start
-jack_control ds alsa
-jack_control dps period 256
-jack_control dps device hw:USB,0
 
 # start some nice programs
 
@@ -49,4 +43,5 @@ eval $(ssh-agent -s)
 
 # Xmonad
 exec dunst &
+exec vmware-user &
 exec xmonad
