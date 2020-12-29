@@ -21,9 +21,6 @@ rm -rf ~/.zplugin
 mkdir ~/.zplugin
 git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
 
-echo "Setting up shell"
-chsh -s "$(which zsh)"
-
 touch ~/.dotfiles/zsh/zsecrets
 
 ln -fs ~/.dotfiles/zsh/zlogin ~/.zlogin
