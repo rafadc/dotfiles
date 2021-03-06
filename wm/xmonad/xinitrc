@@ -9,6 +9,7 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 setxkbmap es
 setxkbmap -option altwin:swap_lalt_lwin
+setxkbmap -option caps:ctrl_modifier
 
 if [ -f $sysresources ]; then
     xrdb -merge $sysresources
