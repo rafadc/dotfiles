@@ -52,6 +52,7 @@ ln -fs ~/.dotfiles/config/alacritty ~/.config/
 ln -fs ~/.dotfiles/config/devilspie ~/.devilspie
 ln -fs ~/.dotfiles/config/vifm ~/.config/
 ln -fs ~/.dotfiles/config/kitty ~/.config/
+ln -fs ~/.dotfiles/config/broot ~/.config/
 ln -fs ~/.dotfiles/config/rofi ~/.config/
 ln -fs ~/.dotfiles/config/rofimoji.rc ~/.config/rofimoji.rc
 
@@ -60,3 +61,8 @@ ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
 echo "Config for git"
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+
+echo "Downloading vscode font for broot icons"
+mkdir -p ~/.fonts
+wget -O ~/.fonts/vscode.ttf https://github.com/Canop/broot/blob/master/resources/icons/vscode/vscode.ttf
+
