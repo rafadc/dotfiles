@@ -1,5 +1,7 @@
 #!/usr/local/bin/zsh
 
+alias gui=gitui
+
 alias gundo="git reset --soft 'HEAD^'"
 
 gck() {
