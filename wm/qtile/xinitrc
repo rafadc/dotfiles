@@ -8,6 +8,8 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 
 setxkbmap es
+setxkbmap -option altwin:swap_lalt_lwin
+setxkbmap -option caps:ctrl_modifier
 
 if [ -f $sysresources ]; then
     xrdb -merge $sysresources
@@ -38,37 +40,7 @@ export XDG_SESSION_TYPE=x11
 export GDK_BACKEND=x11
 
 eval $(ssh-agent -s)
-#ssh-add
 
-# Programs for all WM
-# udiskie --tray & # USB mounting helper
-# zeal & # Coding documentation helper
-
-# XFCE
-systemctl --user start xfce4-notifyd
-exec startxfce4
-
-# i3
-# exec i3
-
-# GNOME
-# devilspie -a &
-# exec gnome-session
-
-# Awesome
-# awesome
-
-# DWM
-# exec dwm
-
-# Xmonad
-# exec dunst &
-# exec xmonad
-
-# KDE
-# exec startplasma-x11
-
-# QTile
-# exec dunst &
-# exec qtile
-
+exec dunst &
+exec vmware-user &
+exec qtile start -c ~/.dotfiles/wm/qtile/config.py
