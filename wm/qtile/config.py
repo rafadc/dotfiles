@@ -77,7 +77,7 @@ keys = [
 
     Key([mod, "control"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(),
+    Key([mod], "r", lazy.spawn(["rofi", "-show", "run"]),
         desc="Spawn a command using a prompt widget"),
 ]
 
@@ -123,7 +123,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
                 widget.CurrentLayout(),
                 widget.GroupBox(),
@@ -136,8 +136,8 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Systray(),
+                widget.BatteryIcon(),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                widget.QuickExit(),
             ],
             24,
         ),
