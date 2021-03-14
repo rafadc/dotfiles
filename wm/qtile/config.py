@@ -28,6 +28,7 @@ from typing import List  # noqa: F401
 
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile.config import Group, ScratchPad, DropDown, Key
 from libqtile.lazy import lazy
 
 mod = "mod4"
@@ -79,6 +80,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "p", lazy.spawn(["rofi", "-show", "run"]),
         desc="Spawn a command using a prompt widget"),
+    Key([mod], 's', lazy.group['scratchpad'].dropdown_toggle('slack')),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -97,6 +99,12 @@ for i in groups:
         # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
         #     desc="move focused window to group {}".format(i.name)),
     ])
+
+groups.append(ScratchPad("scratchpad", [
+            DropDown("slack", "slack",
+                opacity=0.9, width=0.8, height=0.9,
+                on_focus_lost_hide=True),
+          ]))
 
 layouts = [
     layout.Columns(border_focus_stack='#d75f5f', margin=5),
