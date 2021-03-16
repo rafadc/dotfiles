@@ -40,3 +40,5 @@ fkill() {
 }
 
 alias icat="kitty +kitten icat"
+
+alias cdr="cd `git rev-parse --show-toplevel`"
