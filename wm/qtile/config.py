@@ -81,6 +81,7 @@ keys = [
     Key([mod], "p", lazy.spawn(["rofi", "-show", "run"]),
         desc="Spawn a command using a prompt widget"),
     Key([mod], 's', lazy.group['scratchpad'].dropdown_toggle('slack')),
+    Key([mod], 'd', lazy.group['scratchpad'].dropdown_toggle('wtf-personal')),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -102,6 +103,9 @@ for i in groups:
 
 groups.append(ScratchPad("scratchpad", [
             DropDown("slack", "slack",
+                opacity=0.9, width=0.8, height=0.9,
+                on_focus_lost_hide=True),
+            DropDown("wtf-personal", "kitty wtfutil --config=~/.dotfiles/config/wtf/personal.yml",
                 opacity=0.9, width=0.8, height=0.9,
                 on_focus_lost_hide=True),
           ]))
