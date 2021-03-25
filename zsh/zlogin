@@ -23,8 +23,6 @@ setopt  autocd
 
 # Prompt
 
-zplugin ice depth=1; zplugin light romkatv/powerlevel10k
-
 # Using bat to handle manpages
 
 export MANPAGER="sh -c 'col -b | bat -l man -p'"
