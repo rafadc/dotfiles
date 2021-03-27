@@ -41,6 +41,7 @@ export GDK_BACKEND=x11
 
 eval $(ssh-agent -s)
 
+exec nm-applet &
 exec dunst &
 exec vmware-user &
 exec qtile start -c ~/.dotfiles/wm/qtile/config.py
