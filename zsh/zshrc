@@ -91,5 +91,7 @@ autoload -Uz _zplugin
 
 source /home/rafadc/.config/broot/launcher/bash/br
 
+source ~/.dotfiles/zsh/init/conda.zsh
+
 eval "$(starship init zsh)"
 
