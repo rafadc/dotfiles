@@ -56,6 +56,7 @@ ln -fs ~/.dotfiles/config/broot ~/.config/
 ln -fs ~/.dotfiles/config/rofi ~/.config/
 ln -fs ~/.dotfiles/config/rofimoji.rc ~/.config/rofimoji.rc
 ln -fs ~/.dotfiles/config/starship.toml ~/.config/starship.toml
+ln -fs ~/.dotfiles/config/fish ~/.config/fish
 
 echo "Setting up tmux..."
 ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
