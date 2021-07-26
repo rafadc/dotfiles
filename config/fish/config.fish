@@ -10,4 +10,8 @@ function take
   cd $argv
 end
 
+function docker-stop-all
+  docker stop (docker ps -a -q)
+end
+
 alias docker-restart='sudo systemctl restart docker && docker-stop-all'
