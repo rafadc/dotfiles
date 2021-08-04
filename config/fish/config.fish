@@ -15,3 +15,5 @@ function docker-stop-all
 end
 
 alias docker-restart='sudo systemctl restart docker && docker-stop-all'
+
+alias br=broot
