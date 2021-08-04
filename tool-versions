@@ -9,6 +9,6 @@ flutter 1.9.7-dev
 lua 5.3.5
 haskell system
 golang 1.15.3
-crystal 0.33.0
+crystal 1.1.1
 nodejs 14.16.1
 dart 2.8.4
