@@ -15,5 +15,9 @@ function docker-stop-all
 end
 
 alias docker-restart='sudo systemctl restart docker && docker-stop-all'
+alias dc='docker-compose'
+alias dcr='docker-compose run --rm'
 
 alias br=broot
+
+direnv hook fish | source
