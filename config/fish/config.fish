@@ -20,4 +20,6 @@ alias dcr='docker-compose run --rm'
 
 alias br=broot
 
+alias ssh="kitty +kitten ssh"
+
 direnv hook fish | source
