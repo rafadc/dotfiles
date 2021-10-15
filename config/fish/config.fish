@@ -23,3 +23,6 @@ alias br=broot
 alias ssh="kitty +kitten ssh"
 
 direnv hook fish | source
+
+# Krew
+set -gx PATH $PATH $HOME/.krew/bin
