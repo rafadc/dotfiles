@@ -24,5 +24,8 @@ alias ssh="kitty +kitten ssh"
 
 direnv hook fish | source
 
+alias k="kubectl"
+alias ka="kubectl apply"
+
 # Krew
 set -gx PATH $PATH $HOME/.krew/bin
