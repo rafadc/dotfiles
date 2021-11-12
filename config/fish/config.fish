@@ -1,5 +1,14 @@
 . /usr/share/autojump/autojump.fish
 
+source ~/.asdf/asdf.fish
+
+if test -z (pgrep ssh-agent)
+  eval (ssh-agent -c)
+  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+  set -Ux SSH_AGENT_PID $SSH_AGENT_PID
+  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+end
+
 starship init fish | source
 
 alias gui=gitui
@@ -26,6 +35,8 @@ direnv hook fish | source
 
 alias k="kubectl"
 alias ka="kubectl apply"
+
+set -gx PATH $PATH $HOME/.cargo/bin
 
 # Krew
 set -gx PATH $PATH $HOME/.krew/bin
