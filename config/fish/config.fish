@@ -35,3 +35,6 @@ set -gx PATH $PATH $HOME/.cargo/bin
 
 # Krew
 set -gx PATH $PATH $HOME/.krew/bin
+
+# COnda
+eval $HOME/anaconda3/bin/conda "shell.fish" "hook" $argv | source
