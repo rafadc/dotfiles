@@ -14,4 +14,6 @@ Remember to configure your shell as a login shell. In most linux distributions t
 
 ## Post configuration
 
+My favourite font, Comic Code, is not free so you need to download it from https://www.myfonts.com
+
  - [Firefox](firefox/)
