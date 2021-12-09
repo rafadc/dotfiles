@@ -68,3 +68,6 @@ echo "Downloading vscode font for broot icons"
 mkdir -p ~/.fonts
 wget -O ~/.fonts/vscode.ttf https://github.com/Canop/broot/blob/master/resources/icons/vscode/vscode.ttf
 
+echo "Setting global gitignore"
+ln -fs ~/.dotfiles/global_gitignore ~/.global_gitignore
+git config --global core.excludesfile ~/.global_gitignore
