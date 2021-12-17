@@ -38,6 +38,7 @@ set -gx PATH $PATH $HOME/.krew/bin
 
 # Conda
 eval $HOME/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+conda deactivate
 
 # Nim
 set -gx PATH $PATH $HOME/.nimble/bin
