@@ -43,3 +43,6 @@ set -gx PATH $PATH $HOME/.nimble/bin
 
 # Go
 set -gx PATH $PATH $HOME/go/bin
+
+# Appimages
+set -gx PATH $PATH $HOME/appimages
