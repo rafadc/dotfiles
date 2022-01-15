@@ -24,8 +24,6 @@ alias dcr='docker-compose run --rm'
 
 alias br=broot
 
-alias ssh="kitty +kitten ssh"
-
 direnv hook fish | source
 
 alias k="kubectl"
@@ -42,3 +40,6 @@ conda deactivate
 
 # Nim
 set -gx PATH $PATH $HOME/.nimble/bin
+
+# Go
+set -gx PATH $PATH $HOME/go/bin
