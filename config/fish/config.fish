@@ -46,3 +46,6 @@ set -gx PATH $PATH $HOME/go/bin
 
 # Appimages
 set -gx PATH $PATH $HOME/appimages
+
+# Doom emacs
+set -gx PATH $PATH $HOME/.emacs.d/bin
