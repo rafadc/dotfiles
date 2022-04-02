@@ -6,8 +6,9 @@ set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 starship init fish | source
 
-alias gui=gitui
-alias v=nvim
+abbr --add gui gitui
+abbr --add v nvim
+abbr --add l lsd
 
 function take
   mkdir $argv
@@ -28,6 +29,10 @@ direnv hook fish | source
 
 alias k="kubectl"
 alias ka="kubectl apply"
+
+function k9s
+  docker run --rm -it -v $KUBECONFIG:/root/.kube/config quay.io/derailed/k9s
+end
 
 set -gx PATH $PATH $HOME/.cargo/bin
 
