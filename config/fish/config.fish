@@ -31,7 +31,7 @@ alias k="kubectl"
 alias ka="kubectl apply"
 
 function k9s
-  docker run --rm -it -v $KUBECONFIG:/root/.kube/config quay.io/derailed/k9s
+  docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s
 end
 
 set -gx PATH $PATH $HOME/.cargo/bin
