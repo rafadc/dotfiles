@@ -36,6 +36,9 @@ end
 
 set -gx PATH $PATH $HOME/.cargo/bin
 
+# Google cloud SDK
+set -gx PATH $PATH $HOME/bin/google-cloud-sdk/bin
+
 # Krew
 set -gx PATH $PATH $HOME/.krew/bin
 
@@ -55,3 +58,9 @@ set -gx PATH $PATH $HOME/appimages
 
 # Doom emacs
 set -gx PATH $PATH $HOME/.emacs.d/bin
+
+function gitsyncupstream
+  git fetch upstream
+  git checkout master
+  git rebase upstream/master
+end
