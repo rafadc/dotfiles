@@ -47,6 +47,7 @@ conda deactivate
 set -gx PATH $PATH $HOME/.nimble/bin
 
 # Go
+set -gx GOPATH $HOME/go
 set -gx PATH $PATH $HOME/go/bin
 
 # Appimages
