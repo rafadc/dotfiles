@@ -26,7 +26,7 @@ ln -fs ~/.dotfiles/zsh/zshrc ~/.zshrc
 ln -fs ~/.dotfiles/zsh/fzf.zsh ~/.fzf.zsh
 ln -fs ~/.dotfiles/zsh/p10k.zsh ~/.p10k.zsh
 
-ln -fs ~/.dotfiles/xmodmap .Xmodmap
+ln -fs ~/.dotfiles/xmodmap ~/.Xmodmap
 
 echo "Symlinking binscripts"
 ln -s ~/.dotfiles/bin/arch-news.sh ~/bin/
