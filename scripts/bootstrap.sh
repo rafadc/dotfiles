@@ -16,11 +16,6 @@ fi
 echo "Configuring pyenv"
 git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 
-echo "Installing zplugin"
-rm -rf ~/.zplugin
-mkdir ~/.zplugin
-git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
-
 touch ~/.dotfiles/zsh/zsecrets
 
 ln -fs ~/.dotfiles/zsh/zlogin ~/.zlogin
