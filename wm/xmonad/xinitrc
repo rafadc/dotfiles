@@ -7,7 +7,6 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 # merge in defaults and keymaps
 
-setxkbmap es
 setxkbmap -option altwin:swap_lalt_lwin
 setxkbmap -option caps:ctrl_modifier
 
@@ -44,5 +43,4 @@ eval $(ssh-agent -s)
 
 # Xmonad
 exec dunst &
-exec vmware-user &
 exec xmonad
