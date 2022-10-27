@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_gui:gitui
 SETUVAR _fish_abbr_l:lsd
 SETUVAR _fish_abbr_v:nvim
