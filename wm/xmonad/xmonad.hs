@@ -19,9 +19,9 @@ import XMonad.Hooks.SetWMName
 main = do
   xmonad $ defaultConfig
     {
-      XMonad.workspaces  = ["1:dev","2:comm","3","4","5","6","7","8","9","0","-","="]
+      XMonad.workspaces  = ["1","2","3","4","5","6","7","8","9","0","-","="]
     , terminal    = myTerminal
-    , modMask     = myModMask
+    , modMask     = mod4Mask
     , normalBorderColor  = fgColor promptConfig
     , focusedBorderColor = bgColor promptConfig
     , borderWidth = myBorderWidth
@@ -35,29 +35,20 @@ myKeys = [
            ("M-S-p", spawn "dmenu_run"),
            ("<Print>", spawn "flameshot gui"),
            ("M-n", namedScratchpadAction scratchpads "vifm"),
-           ("M-S-n", spawn "alacritty -e vifm ~"),
+           ("M-S-n", spawn "kitty --class vifm vifm ~"),
            ("M-f", spawn "rofimoji"),
            ("M-c", changeDir promptConfig),
            ("M-S-s", namedScratchpadAction scratchpads "pavucontrol"),
-           ("M-i", namedScratchpadAction scratchpads "hexchat"),
            ("M-s", namedScratchpadAction scratchpads "slack"),
-           ("M-g", namedScratchpadAction scratchpads "notion-app"),
-           ("M-d", namedScratchpadAction scratchpads "dashboard-personal"),
-           ("M-S-d", namedScratchpadAction scratchpads "ytop"),
-           ("M-'", namedScratchpadAction scratchpads "atreus"),
-           ("M-t", spawn "zsh --login -c st-tok-copy")
+           ("M-S-d", namedScratchpadAction scratchpads "ytop")
          ]
 
 scratchpads :: [NamedScratchpad]
 scratchpads = [
                 NS "vifm" "kitty --class vifm vifm" (resource =? "vifm") centered,
-                NS "notion-app" "notion-app" (resource =? "notion") centeredSmall,
                 NS "pavucontrol" "pavucontrol" (resource =? "pavucontrol") centeredSmall,
-                NS "hexchat" "hexchat" (resource =? "hexchat") centered,
                 NS "slack" "slack" (resource =? "slack") centered,
-                NS "dashboard-personal" "kitty --class dashboard-personal wtfutil --config=~/.dotfiles/config/wtf/personal.yml" (resource =? "dashboard-personal") centered,
-                NS "ytop" "kitty --class ytop ytop -b -s" (resource =? "ytop") centered,
-                NS "atreus" "feh -x ~/.dotfiles/wm/xmonad/images/atreus.png" (resource =? "feh") centeredSmall
+                NS "ytop" "kitty --class ytop ytop -b -s" (resource =? "ytop") centered
               ]
               where
                 centered = customFloating $ W.RationalRect 0.05 0.05 0.9 0.9
@@ -70,9 +61,6 @@ scratchpads = [
 
 myTerminal :: String
 myTerminal = "kitty"
-
-myModMask :: KeyMask
-myModMask = mod4Mask -- Win key or Super_L
 
 myBorderWidth :: Dimension
 myBorderWidth = 3
