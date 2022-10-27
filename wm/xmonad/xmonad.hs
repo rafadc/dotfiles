@@ -35,7 +35,7 @@ myKeys = [
            ("M-S-p", spawn "dmenu_run"),
            ("<Print>", spawn "flameshot gui"),
            ("M-n", namedScratchpadAction scratchpads "vifm"),
-           ("M-S-n", spawn "kitty --class vifm vifm ~"),
+           ("M-S-n", spawn "wezterm start --class vifm vifm ~"),
            ("M-f", spawn "rofimoji"),
            ("M-c", changeDir promptConfig),
            ("M-S-s", namedScratchpadAction scratchpads "pavucontrol"),
@@ -45,10 +45,10 @@ myKeys = [
 
 scratchpads :: [NamedScratchpad]
 scratchpads = [
-                NS "vifm" "kitty --class vifm vifm" (resource =? "vifm") centered,
+                NS "vifm" "wezterm start --class vifm vifm" (resource =? "vifm") centered,
                 NS "pavucontrol" "pavucontrol" (resource =? "pavucontrol") centeredSmall,
                 NS "slack" "slack" (resource =? "slack") centered,
-                NS "ytop" "kitty --class ytop ytop -b -s" (resource =? "ytop") centered
+                NS "ytop" "wezterm start --class ytop ytop -b -s" (resource =? "ytop") centered
               ]
               where
                 centered = customFloating $ W.RationalRect 0.05 0.05 0.9 0.9
@@ -60,7 +60,7 @@ scratchpads = [
                     l = (1 - w)/2 -- centered left/right
 
 myTerminal :: String
-myTerminal = "kitty"
+myTerminal = "wezterm"
 
 myBorderWidth :: Dimension
 myBorderWidth = 3
@@ -68,8 +68,9 @@ myBorderWidth = 3
 myLayouts = workspaceDir "~" $ avoidStruts $ spacing 15 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Grid ||| Tall 1 (3/100) (1/2) ||| Full
 
 myStartupHook = do
-  spawnHere "feh --randomize --bg-fill ~/Pictures/Wallpapers"
+  spawnHere "feh --bg-fill ~/Pictures/Wallpapers/beautiful-arrangement.jpg"
   setWMName "LG3D"
+  spawnHere "dunst"
 
 promptConfig = defaultXPConfig
     { font = "xft:Monego:18"
