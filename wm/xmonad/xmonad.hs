@@ -32,6 +32,7 @@ main = do
 
 myKeys = [
            ("M-p", spawn "rofi -show run"),
+           ("C-<space>", spawn "rofi -show run"),
            ("M-S-p", spawn "dmenu_run"),
            ("<Print>", spawn "flameshot gui"),
            ("M-n", namedScratchpadAction scratchpads "xplr"),
@@ -40,7 +41,8 @@ myKeys = [
            ("M-c", changeDir promptConfig),
            ("M-S-s", namedScratchpadAction scratchpads "pavucontrol"),
            ("M-s", namedScratchpadAction scratchpads "slack"),
-           ("M-S-d", namedScratchpadAction scratchpads "ytop")
+           ("M-S-d", namedScratchpadAction scratchpads "ytop"),
+           ("M-b", namedScratchpadAction scratchpads "bitwarden")
          ]
 
 scratchpads :: [NamedScratchpad]
@@ -48,7 +50,8 @@ scratchpads = [
                 NS "xplr" "wezterm start --class xplr xplr" (resource =? "xplr") centered,
                 NS "pavucontrol" "pavucontrol" (resource =? "pavucontrol") centeredSmall,
                 NS "slack" "slack" (resource =? "slack") centered,
-                NS "ytop" "wezterm start --class ytop ytop -b -s" (resource =? "ytop") centered
+                NS "ytop" "wezterm start --class ytop ytop -b -s" (resource =? "ytop") centered,
+                NS "bitwarden" "bitwarden" (resource =? "bitwarden") centered
               ]
               where
                 centered = customFloating $ W.RationalRect 0.05 0.05 0.9 0.9
