@@ -42,12 +42,6 @@ ln -fs ~/.dotfiles/ruby/pryrc ~/.pryrc
 
 echo "Setting up application specific configs"
 mkdir -p ~/.config
-ln -fs ~/.dotfiles/config/ranger ~/.config/
-ln -fs ~/.dotfiles/config/alacritty ~/.config/
-ln -fs ~/.dotfiles/config/devilspie ~/.devilspie
-ln -fs ~/.dotfiles/config/vifm ~/.config/
-ln -fs ~/.dotfiles/config/kitty ~/.config/
-ln -fs ~/.dotfiles/config/broot ~/.config/
 ln -fs ~/.dotfiles/config/rofi ~/.config/
 ln -fs ~/.dotfiles/config/rofimoji.rc ~/.config/rofimoji.rc
 ln -fs ~/.dotfiles/config/starship.toml ~/.config/starship.toml
