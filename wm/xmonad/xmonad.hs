@@ -34,8 +34,8 @@ myKeys = [
            ("M-p", spawn "rofi -show run"),
            ("M-S-p", spawn "dmenu_run"),
            ("<Print>", spawn "flameshot gui"),
-           ("M-n", namedScratchpadAction scratchpads "vifm"),
-           ("M-S-n", spawn "wezterm start --class vifm vifm ~"),
+           ("M-n", namedScratchpadAction scratchpads "xplr"),
+           ("M-S-n", spawn "wezterm start --class xplr xplr ~"),
            ("M-f", spawn "rofimoji"),
            ("M-c", changeDir promptConfig),
            ("M-S-s", namedScratchpadAction scratchpads "pavucontrol"),
@@ -45,7 +45,7 @@ myKeys = [
 
 scratchpads :: [NamedScratchpad]
 scratchpads = [
-                NS "vifm" "wezterm start --class vifm vifm" (resource =? "vifm") centered,
+                NS "xplr" "wezterm start --class xplr xplr" (resource =? "xplr") centered,
                 NS "pavucontrol" "pavucontrol" (resource =? "pavucontrol") centeredSmall,
                 NS "slack" "slack" (resource =? "slack") centered,
                 NS "ytop" "wezterm start --class ytop ytop -b -s" (resource =? "ytop") centered
