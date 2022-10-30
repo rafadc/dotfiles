@@ -17,7 +17,7 @@ import XMonad.ManageHook
 import XMonad.Hooks.SetWMName
 
 main = do
-  xmonad $ defaultConfig
+  xmonad $ def
     {
       XMonad.workspaces  = ["1","2","3","4","5","6","7","8","9","0","-","="]
     , terminal    = myTerminal
@@ -71,11 +71,11 @@ myBorderWidth = 3
 myLayouts = workspaceDir "~" $ avoidStruts $ spacing 15 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Grid ||| Tall 1 (3/100) (1/2) ||| Full
 
 myStartupHook = do
-  spawnHere "feh --bg-fill ~/Pictures/Wallpapers/beautiful-arrangement.jpg"
+  spawnHere "feh --bg-fill ~/.xmonad/images/wallpaper.webp"
   setWMName "LG3D"
   spawnHere "dunst"
 
-promptConfig = defaultXPConfig
+promptConfig = def
     { font = "xft:Monego:18"
     , bgColor  = solbase03
     , fgColor  = solbase1
