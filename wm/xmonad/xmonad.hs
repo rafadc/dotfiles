@@ -17,7 +17,7 @@ import XMonad.ManageHook
 import XMonad.Hooks.SetWMName
 
 main = do
-  xmonad $ def
+  xmonad $ docks $ def
     {
       XMonad.workspaces  = ["1","2","3","4","5","6","7","8","9","0","-","="]
     , terminal    = myTerminal
