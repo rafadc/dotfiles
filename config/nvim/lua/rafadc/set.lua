@@ -16,3 +16,4 @@ vim.opt.wrap = false
 
 vim.g.mapleader = " "
 
+vim.opt.clipboard = "unnamedplus"
