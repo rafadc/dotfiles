@@ -48,6 +48,7 @@ ln -fs ~/.dotfiles/config/rofimoji.rc ~/.config/rofimoji.rc
 ln -fs ~/.dotfiles/config/starship.toml ~/.config/starship.toml
 ln -fs ~/.dotfiles/config/fish ~/.config/fish
 ln -fs ~/.dotfiles/config/wezterm ~/.config/wezterm
+ln -fs ~/.dotfiles/config/nvim ~/.config/nvim
 
 echo "Setting up tmux..."
 ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
