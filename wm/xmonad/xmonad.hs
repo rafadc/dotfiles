@@ -74,6 +74,7 @@ myStartupHook = do
   spawnHere "feh --bg-fill ~/.xmonad/images/wallpaper.webp"
   setWMName "LG3D"
   spawnHere "dunst"
+  spawnHere "sh ~/.xmonad/polybar.sh"
 
 promptConfig = def
     { font = "xft:Monego:18"
