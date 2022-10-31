@@ -46,6 +46,9 @@ ln -fs ~/.dotfiles/config/fish ~/.config/fish
 ln -fs ~/.dotfiles/config/wezterm ~/.config/wezterm
 ln -fs ~/.dotfiles/config/nvim ~/.config/nvim
 
+echo "Creating user services. They are not enabled by default"
+ln -fs ~/.dotfiles/systemd/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
+
 echo "Setting up tmux..."
 ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
