@@ -24,7 +24,6 @@ ln -fs ~/.dotfiles/zsh/zprofile ~/.zprofile
 ln -fs ~/.dotfiles/zsh/zshenv ~/.zshenv
 ln -fs ~/.dotfiles/zsh/zshrc ~/.zshrc
 ln -fs ~/.dotfiles/zsh/fzf.zsh ~/.fzf.zsh
-ln -fs ~/.dotfiles/zsh/p10k.zsh ~/.p10k.zsh
 
 ln -fs ~/.dotfiles/xmodmap ~/.Xmodmap
 
