@@ -28,6 +28,9 @@ echo "Symlinking binscripts"
 ln -s ~/.dotfiles/bin/arch-news.sh ~/bin/
 ln -s ~/.dotfiles/bin/xstream.sh ~/bin/
 
+echo "Symlinking ssh config"
+ln -s ~/.dotfiles/ssh.config ~/.ssh/config
+
 echo "Setting up window management"
 ln -fs ~/.dotfiles/wm/xmonad ~/.xmonad
 ln -fs ~/.dotfiles/config/dunst ~/.config/dunst
