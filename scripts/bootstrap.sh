@@ -28,6 +28,10 @@ echo "Symlinking binscripts"
 ln -s ~/.dotfiles/bin/arch-news.sh ~/bin/
 ln -s ~/.dotfiles/bin/xstream.sh ~/bin/
 
+echo "Installing pulseaudio control script"
+curl https://raw.githubusercontent.com/marioortizmanero/polybar-pulseaudio-control/master/pulseaudio-control.bash --output ~/bin/pulseaudio-control
+chmod +x ~/bin/pulseaudio-control
+
 echo "Symlinking ssh config"
 ln -s ~/.dotfiles/ssh.config ~/.ssh/config
 
