@@ -1,4 +1,4 @@
-Pry.editor = 'e'
+Pry.editor = 'v'
 
 begin
   require 'ap'
