@@ -14,6 +14,9 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
+vim.opt.scrolloff = 5
+
 vim.g.mapleader = " "
 
 vim.opt.clipboard = "unnamedplus"
+
