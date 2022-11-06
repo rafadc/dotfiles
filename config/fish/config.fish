@@ -8,6 +8,7 @@ starship init fish | source
 
 abbr --add gui gitui
 abbr --add v nvim
+alias vim="nvim"
 abbr --add l lsd
 
 function take
@@ -23,8 +24,6 @@ alias docker-restart='sudo systemctl restart docker && docker-stop-all'
 alias dc='docker-compose'
 alias dcr='docker-compose run --rm'
 
-alias br=broot
-
 direnv hook fish | source
 
 alias k="kubectl"
@@ -37,10 +36,6 @@ set -gx PATH $PATH $HOME/bin/google-cloud-sdk/bin
 
 # Krew
 set -gx PATH $PATH $HOME/.krew/bin
-
-# Conda
-eval $HOME/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-conda deactivate
 
 # Nim
 set -gx PATH $PATH $HOME/.nimble/bin
