@@ -16,6 +16,8 @@ return require('packer').startup(function(use)
     run = ':TSUpdate'
   }
   use 'ray-x/go.nvim'
+
+  use 'ThePrimeagen/vim-be-good'
 end)
 
 
