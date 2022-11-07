@@ -79,6 +79,7 @@ myStartupHook = do
   setWMName "LG3D"
   spawnHere "dunst"
   spawnHere "sh ~/.xmonad/polybar.sh"
+  spawnHere "nm-applet"
 
 promptConfig = def
     { font = "xft:Monego:18"
