@@ -68,7 +68,11 @@ myTerminal = "wezterm"
 myBorderWidth :: Dimension
 myBorderWidth = 3
 
-myLayouts = workspaceDir "~" $ avoidStruts $ spacing 15 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Grid ||| Tall 1 (3/100) (1/2) ||| Full
+spacingHomogeneous bs = spacingRaw True (uniformBorder bs) True (uniformBorder bs) True
+    where
+        uniformBorder n = Border n n n n
+
+myLayouts = workspaceDir "~" $ avoidStruts $ spacingHomogeneous 15 $ ThreeColMid 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| Grid ||| Tall 1 (3/100) (1/2) ||| Full
 
 myStartupHook = do
   spawnHere "feh --bg-fill ~/.xmonad/images/wallpaper.webp"
