@@ -5,6 +5,14 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'Shatur/neovim-ayu'
 
+  -- Navigation
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  -- Programming language support
+
   -- If it is a fresh install treesitter does not install. Try with this instead
   --  use {
   --      'nvim-treesitter/nvim-treesitter',
@@ -17,7 +25,10 @@ return require('packer').startup(function(use)
   }
   use 'ray-x/go.nvim'
 
+  -- Learning Vim
   use 'ThePrimeagen/vim-be-good'
+
+
 end)
 
 
