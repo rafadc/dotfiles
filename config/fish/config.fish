@@ -6,6 +6,8 @@ set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 starship init fish | source
 
+alias cp=xcp
+
 abbr --add gui gitui
 abbr --add v nvim
 alias vim="nvim"
