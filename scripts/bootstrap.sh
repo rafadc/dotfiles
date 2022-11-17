@@ -42,6 +42,7 @@ ln -fs ~/.dotfiles/config/dunst ~/.config/dunst
 echo "Setting up programming config files"
 ln -fs ~/.dotfiles/tool-versions ~/.tool-versions
 ln -fs ~/.dotfiles/ruby/pryrc ~/.pryrc
+ln -fs ~/.dotfiles/jetbrains/ideavimrc ~/.ideavimrc
 
 echo "Setting up application specific configs"
 mkdir -p ~/.config

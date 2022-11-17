@@ -1,0 +1,28 @@
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+set relativenumber
+set number 
+
+let mapleader=" "
+
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+
+" Meta utils
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+" Navigation
+set incsearch
+
+nnoremap <s-TAB> :action PreviousTab<CR>
+nnoremap <TAB> :action NextTab<CR>
+
+nnoremap <leader>b :action ShowNavBar<CR>
+nnoremap <leader>f :action GotoFile<CR>
+
+" Code
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap <leader>zc :action CollapseAllRegions<CR>
+nnoremap <leader>zo :action ExpandAllRegions<CR>
