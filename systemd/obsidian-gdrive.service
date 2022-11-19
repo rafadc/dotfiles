@@ -1,0 +1,11 @@
+[Unit]
+Description=Obsidian GDrive Sync
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=rclone bisync -v --drive-skip-shortcuts rafadecastro:Apps/Obsidian ~/Documents/obsidian/                    
+
+[Install]
+WantedBy=timers.target

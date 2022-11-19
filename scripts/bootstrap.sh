@@ -57,6 +57,8 @@ ln -fs ~/.dotfiles/config/nvim ~/.config/nvim
 
 echo "Creating user services. They are not enabled by default"
 ln -fs ~/.dotfiles/systemd/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
+ln -fs ~/.dotfiles/systemd/obsidian-gdrive.service ~/.config/systemd/user/obsidian-gdrive.service
+ln -fs ~/.dotfiles/systemd/obsidian-gdrive.timer ~/.config/systemd/user/obsidian-gdrive.timer
 
 echo "Setting up tmux..."
 ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
