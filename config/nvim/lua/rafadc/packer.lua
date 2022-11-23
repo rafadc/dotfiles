@@ -25,6 +25,17 @@ return require('packer').startup(function(use)
   }
   use 'ray-x/go.nvim'
 
+  -- Haskell
+  use {
+    'MrcJkb/haskell-tools.nvim',
+    requires = {
+      'neovim/nvim-lspconfig',
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim', -- optional
+    },
+    -- tag = 'x.y.z' -- [^1]
+  }
+
   -- Learning Vim
   use 'ThePrimeagen/vim-be-good'
 

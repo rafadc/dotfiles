@@ -33,4 +33,8 @@ systemctl --user enable obsidian-gdrive.timer
 systemctl --user enable obsidian-gdrive.service
 ```
 
+Also RClone requires a first resync
 
+```
+rclone bisync --resync --drive-skip-shortcuts rafadecastro:Apps/Obsidian ~/Documents/obsidian/
+```
