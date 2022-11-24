@@ -38,6 +38,9 @@ set fzf_fd_opts --hidden --exclude=.git
 alias k="kubectl"
 alias ka="kubectl apply"
 
+# Haskell
+fish_add_path $HOME/.cabal/bin
+fish_add_path $HOME/.ghcup/bin
 
 # Rust
 set -gx PATH $PATH $HOME/.cargo/bin
