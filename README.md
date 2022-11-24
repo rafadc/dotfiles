@@ -18,6 +18,14 @@ My vimfiles are also here to keep everythin gon the same repo
 
 ## Post configuration
 
+### Fish
+
+Some packages for fish
+
+```
+fisher install PatrickF1/fzf.fish
+```
+
 ### Fonts
 
 My favourite font, Comic Code, is not free so you need to download it from https://www.myfonts.com

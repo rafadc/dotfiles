@@ -28,9 +28,18 @@ alias dcr='docker-compose run --rm'
 
 direnv hook fish | source
 
+# FZF
+alias fd=fdfind # In Ubuntu
+fzf_configure_bindings
+set fzf_fd_opts --hidden --exclude=.git
+
+# Kubernetes
+
 alias k="kubectl"
 alias ka="kubectl apply"
 
+
+# Rust
 set -gx PATH $PATH $HOME/.cargo/bin
 
 # Google cloud SDK
