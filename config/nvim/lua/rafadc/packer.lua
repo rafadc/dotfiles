@@ -23,6 +23,8 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+
+  -- Go
   use 'ray-x/go.nvim'
 
   -- Haskell
