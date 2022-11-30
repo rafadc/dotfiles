@@ -6,5 +6,6 @@ require("rafadc.navigation")
 -- Programming languages
 require("rafadc.treesitter")
 require("rafadc.go")
+require("rafadc.ruby")
 require("rafadc.haskell")
 
