@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=rclone bisync -v --drive-skip-shortcuts rafadecastro:Apps/Obsidian ~/Documents/obsidian/                    
+ExecStart=/usr/bin/rclone bisync -v --drive-skip-shortcuts rafadecastro:Apps/Obsidian %h/Documents/obsidian/
 
 [Install]
 WantedBy=timers.target
