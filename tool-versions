@@ -1,8 +1,5 @@
-ruby 3.1.2
-elixir 1.11.2-otp-23
-erlang 23.1.4
+ruby 3.1.3
 python system
-rust 1.39.0
 clojure 1.10.1
 zig 0.5.0
 flutter 1.9.7-dev
