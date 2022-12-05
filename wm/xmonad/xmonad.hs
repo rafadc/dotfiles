@@ -82,6 +82,7 @@ myStartupHook = do
   spawnHere "dunst"
   spawnHere "sh ~/.xmonad/polybar.sh"
   spawnHere "nm-applet"
+  spawnHere "setxkbmap -layout us -variant intl"
 
 promptConfig = def
     { font = "xft:Monego:18"
