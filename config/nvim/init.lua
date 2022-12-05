@@ -2,6 +2,7 @@ require("rafadc.set")
 require("rafadc.remap")
 
 require("rafadc.navigation")
+require("rafadc.completion")
 
 -- Programming languages
 require("rafadc.treesitter")

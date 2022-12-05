@@ -22,3 +22,6 @@ vim.keymap.set('n', '<leader>rf', function()
 end, def_opts)
 vim.keymap.set('n', '<leader>rq', ht.repl.quit, def_opts)
 
+require('lspconfig')['hls'].setup {
+    capabilities = capabilities
+}
