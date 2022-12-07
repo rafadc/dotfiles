@@ -30,7 +30,6 @@ direnv hook fish | source
 
 # FZF
 alias fd=fdfind # In Ubuntu
-fzf_configure_bindings
 set fzf_fd_opts --hidden --exclude=.git
 
 # Kubernetes
