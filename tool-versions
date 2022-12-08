@@ -1,4 +1,5 @@
 ruby 3.1.3
+nodejs 18.12.1
 python system
 clojure 1.10.1
 zig 0.5.0
@@ -7,5 +8,4 @@ lua 5.3.5
 haskell system
 golang 1.17.3
 crystal 1.1.1
-nodejs 14.16.1
 dart 2.8.4
