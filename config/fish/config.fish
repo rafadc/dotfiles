@@ -1,3 +1,5 @@
+set fish_greeting
+
 . /usr/share/autojump/autojump.fish
 
 source ~/.asdf/asdf.fish
