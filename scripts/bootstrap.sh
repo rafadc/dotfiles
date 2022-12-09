@@ -33,6 +33,7 @@ curl https://raw.githubusercontent.com/marioortizmanero/polybar-pulseaudio-contr
 chmod +x ~/bin/pulseaudio-control
 
 echo "Symlinking ssh config"
+mkdir -p ~/.ssh
 ln -s ~/.dotfiles/ssh.config ~/.ssh/config
 
 echo "Setting up window management"
