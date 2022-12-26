@@ -6,3 +6,4 @@ xmonad-x86_64-linux
 prompt-history
 config/nvim/plugin/packer_compiled.lua
 config/fish/fish_variables
+dist-newstyle
