@@ -30,6 +30,8 @@ alias dcr='docker-compose run --rm'
 
 direnv hook fish | source
 
+fish_add_path $HOME/.local/bin/
+
 # FZF
 alias fd=fdfind # In Ubuntu
 set fzf_fd_opts --hidden --exclude=.git
@@ -44,26 +46,26 @@ fish_add_path $HOME/.cabal/bin
 fish_add_path $HOME/.ghcup/bin
 
 # Rust
-set -gx PATH $PATH $HOME/.cargo/bin
+fish_add_path $HOME/.cargo/bin
 
 # Google cloud SDK
-set -gx PATH $PATH $HOME/bin/google-cloud-sdk/bin
+fish_add_path $HOME/bin/google-cloud-sdk/bin
 
 # Krew
-set -gx PATH $PATH $HOME/.krew/bin
+fish_add_path $HOME/.krew/bin
 
 # Nim
-set -gx PATH $PATH $HOME/.nimble/bin
+fish_add_path $HOME/.nimble/bin
 
 # Go
 set -gx GOPATH $HOME/go
-set -gx PATH $PATH $HOME/go/bin
+fish_add_path $HOME/go/bin
 
 # Appimages
-set -gx PATH $PATH $HOME/appimages
+fish_add_path $HOME/appimages
 
 # Doom emacs
-set -gx PATH $PATH $HOME/.emacs.d/bin
+fish_add_path $HOME/.emacs.d/bin
 
 function gitsyncupstream
   git fetch upstream
