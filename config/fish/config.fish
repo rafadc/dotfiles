@@ -11,7 +11,7 @@ starship init fish | source
 alias cp=xcp
 
 abbr --add gui gitui
-abbr --add v nvim
+abbr --add v lvim
 alias vim="nvim"
 abbr --add l lsd
 
