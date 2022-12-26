@@ -37,9 +37,9 @@ alias fd=fdfind # In Ubuntu
 set fzf_fd_opts --hidden --exclude=.git
 
 # Kubernetes
-
 alias k="kubectl"
 alias ka="kubectl apply"
+fish_add_path $HOME/.krew/bin
 
 # Haskell
 fish_add_path $HOME/.cabal/bin
