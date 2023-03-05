@@ -5,6 +5,7 @@ set fish_greeting
 if test -e ~/.asdf/asdf.fish
   source ~/.asdf/asdf.fish
 else
+  source /opt/asdf-vm/asdf.fish
   source /usr/share/fish/vendor_completions.d/asdf.fish
 end
 
