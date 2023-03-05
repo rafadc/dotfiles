@@ -2,7 +2,11 @@ set fish_greeting
 
 . /usr/share/autojump/autojump.fish
 
-source ~/.asdf/asdf.fish
+if test -e ~/.asdf/asdf.fish
+  source ~/.asdf/asdf.fish
+else
+  source /usr/share/fish/vendor_completions.d/asdf.fish
+end
 
 set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 
