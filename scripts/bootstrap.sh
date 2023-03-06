@@ -68,6 +68,7 @@ ln -fs ~/.dotfiles/config/starship.toml ~/.config/starship.toml
 ln -fs ~/.dotfiles/config/fish ~/.config/fish
 ln -fs ~/.dotfiles/config/wezterm ~/.config/wezterm
 ln -fs ~/.dotfiles/config/nvim ~/.config/nvim
+ln -fs ~/.dotfiles/config/hypr ~/.config/hypr
 
 echo "Creating user services. They are not enabled by default"
 ln -fs ~/.dotfiles/systemd/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
