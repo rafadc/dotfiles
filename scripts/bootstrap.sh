@@ -67,6 +67,7 @@ ln -fs ~/.dotfiles/config/rofimoji.rc ~/.config/rofimoji.rc
 ln -fs ~/.dotfiles/config/starship.toml ~/.config/starship.toml
 ln -fs ~/.dotfiles/config/fish ~/.config/fish
 ln -fs ~/.dotfiles/config/wezterm ~/.config/wezterm
+ln -fs ~/.dotfiles/config/kitty ~/.config/kitty
 ln -fs ~/.dotfiles/config/nvim ~/.config/nvim
 ln -fs ~/.dotfiles/config/hypr ~/.config/hypr
 
@@ -84,6 +85,9 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 echo "Downloading vscode font for broot icons"
 mkdir -p ~/.fonts
 wget -O ~/.fonts/vscode.ttf https://github.com/Canop/broot/blob/master/resources/icons/vscode/vscode.ttf
+
+echo "Creating feh config file"
+ln -fs ~/.dotfiles/fehrc ~/.fehrc
 
 echo "Setting global gitignore"
 ln -fs ~/.dotfiles/global_gitignore ~/.global_gitignore
