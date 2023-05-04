@@ -49,6 +49,9 @@ alias k="kubectl"
 alias ka="kubectl apply"
 fish_add_path $HOME/.krew/bin
 
+# Ruby
+alias be="bundle exec"
+
 # Haskell
 fish_add_path $HOME/.cabal/bin
 fish_add_path $HOME/.ghcup/bin
