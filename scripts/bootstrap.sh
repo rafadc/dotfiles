@@ -70,6 +70,7 @@ ln -fs ~/.dotfiles/config/wezterm ~/.config/wezterm
 ln -fs ~/.dotfiles/config/kitty ~/.config/kitty
 ln -fs ~/.dotfiles/config/nvim ~/.config/nvim
 ln -fs ~/.dotfiles/config/hypr ~/.config/hypr
+ln -fs ~/.dotfiles/config/paru ~/.config/paru
 
 echo "Creating user services. They are not enabled by default"
 ln -fs ~/.dotfiles/systemd/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
