@@ -71,6 +71,7 @@ ln -fs ~/.dotfiles/config/kitty ~/.config/kitty
 ln -fs ~/.dotfiles/config/nvim ~/.config/nvim
 ln -fs ~/.dotfiles/config/hypr ~/.config/hypr
 ln -fs ~/.dotfiles/config/paru ~/.config/paru
+ln -fs ~/.dotfiles/config/feh ~/.config/feh
 
 echo "Creating user services. They are not enabled by default"
 ln -fs ~/.dotfiles/systemd/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
@@ -87,8 +88,6 @@ echo "Downloading vscode font for broot icons"
 mkdir -p ~/.fonts
 wget -O ~/.fonts/vscode.ttf https://github.com/Canop/broot/blob/master/resources/icons/vscode/vscode.ttf
 
-echo "Creating feh config file"
-ln -fs ~/.dotfiles/fehrc ~/.fehrc
 
 echo "Setting global gitignore"
 ln -fs ~/.dotfiles/global_gitignore ~/.global_gitignore
