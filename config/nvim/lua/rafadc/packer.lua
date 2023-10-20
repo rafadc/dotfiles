@@ -1,13 +1,10 @@
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
-
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Navigation
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', 
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -37,9 +34,13 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
+  use 'neovim/nvim-lspconfig'
+  use 'mfussenegger/nvim-dap'
 
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
+  
+  use 'aspeddro/gitui.nvim'
 
   -- Go
   use 'ray-x/go.nvim'
@@ -48,9 +49,7 @@ return require('packer').startup(function(use)
   use {
     'MrcJkb/haskell-tools.nvim',
     requires = {
-      'neovim/nvim-lspconfig',
       'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope.nvim', -- optional
     },
     version = '^2', 
     ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
