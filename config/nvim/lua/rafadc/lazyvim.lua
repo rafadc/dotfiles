@@ -12,13 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  { "catppuccin/nvim", as = "catppuccin" }
+  { "catppuccin/nvim", as = "catppuccin" },
 
   -- Navigation
   {
     'nvim-telescope/telescope.nvim', 
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+    dependencies = { {'nvim-lua/plenary.nvim'} }
+  },
 
   {
     "folke/which-key.nvim",
@@ -26,45 +26,42 @@ require("lazy").setup({
       vim.o.timeout = true
       vim.o.timeoutlen = 300
     end
-  }
+  },
 
   {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
-  }
+  },
   
-  { 'p00f/nvim-ts-rainbow', requires = { 'nvim-treesitter/nvim-treesitter' }} 
+  { 'p00f/nvim-ts-rainbow', requires = { 'nvim-treesitter/nvim-treesitter' }},
   
-  { 'hrsh7th/cmp-nvim-lsp' }
-  { 'hrsh7th/cmp-buffer' }
-  { 'hrsh7th/cmp-path' }
-  { 'hrsh7th/cmp-cmdline' }
-  { 'hrsh7th/nvim-cmp' }
-  { 'neovim/nvim-lspconfig' }
-  { 'mfussenegger/nvim-dap' }
+  { 'hrsh7th/cmp-nvim-lsp' },
+  { 'hrsh7th/cmp-buffer' },
+  { 'hrsh7th/cmp-path' },
+  { 'hrsh7th/cmp-cmdline' },
+  { 'hrsh7th/nvim-cmp' },
+  { 'neovim/nvim-lspconfig' },
+  { 'mfussenegger/nvim-dap' },
 
-  { 'hrsh7th/cmp-vsnip' }
-  { 'hrsh7th/vim-vsnip' }
+  { 'hrsh7th/cmp-vsnip' },
+  { 'hrsh7th/vim-vsnip' },
   
-  { 'aspeddro/gitui.nvim' }
+  { 'aspeddro/gitui.nvim' },
 
   -- Go
-  { 'ray-x/go.nvim' }
+  { 'ray-x/go.nvim' },
 
   -- Haskell
   {
     'MrcJkb/haskell-tools.nvim',
-    requires = {
+    dependencies = {
       'nvim-lua/plenary.nvim',
     },
-    config = require(
-  }
+  },
 
   -- Learning Vim
-  'ThePrimeagen/vim-be-good'
+  { 'ThePrimeagen/vim-be-good' },
 })
-
-
 
 
 
