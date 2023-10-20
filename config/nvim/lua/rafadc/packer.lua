@@ -52,7 +52,8 @@ return require('packer').startup(function(use)
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope.nvim', -- optional
     },
-    -- tag = 'x.y.z' -- [^1]
+    version = '^2', 
+    ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
   }
 
   -- Learning Vim

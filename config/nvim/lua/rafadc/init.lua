@@ -8,5 +8,5 @@ require("rafadc.completion")
 require("rafadc.treesitter")
 require("rafadc.go")
 require("rafadc.ruby")
---require("rafadc.haskell")
+require("rafadc.haskell")
 
