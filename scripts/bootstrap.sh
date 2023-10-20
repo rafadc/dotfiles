@@ -60,7 +60,6 @@ ln -fs ~/.dotfiles/jetbrains/ideavimrc ~/.ideavimrc
 
 echo "Setting up application specific configs"
 mkdir -p ~/.config
-ln -fs ~/.dotfiles/config/eww-1920 ~/.config/eww
 ln -fs ~/.dotfiles/config/polybar ~/.config/polybar
 ln -fs ~/.dotfiles/config/rofi ~/.config/
 ln -fs ~/.dotfiles/config/rofimoji.rc ~/.config/rofimoji.rc
