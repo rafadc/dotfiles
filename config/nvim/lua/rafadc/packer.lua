@@ -3,7 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'Shatur/neovim-ayu'
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Navigation
   use {
@@ -14,10 +14,18 @@ return require('packer').startup(function(use)
   -- Programming language support
 
   -- If it is a fresh install treesitter does not install. Try with this instead
-  --  use {
+  -- use {
   --      'nvim-treesitter/nvim-treesitter',
   --      run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  --  }
+  --}
+
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end
+  }
 
   use {
     'nvim-treesitter/nvim-treesitter',
