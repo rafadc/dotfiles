@@ -1,9 +1,9 @@
 import Custom.MyPolybar (myPolybar)
 import Custom.MyLayouts (myLayout)
+import Custom.MyStartupHook (myStartupHook)
 
 import XMonad
 
-import XMonad.Util.SpawnOnce ( spawnOnce )
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.StatusBar
 import XMonad.Util.NamedScratchpad (scratchpadWorkspaceTag)
@@ -19,15 +19,6 @@ defaults = def
     , borderWidth = 3
     , layoutHook = avoidStruts myLayout
     }
-
-myStartupHook :: X ()
-myStartupHook = do
-  spawnOnce "feh --bg-scale ~/Pictures/Wallpapers/download.jpeg"
-  spawnOnce "dunst"
-  spawnOnce "telegram-desktop"
-  spawnOnce "flameshot"
-  spawnOnce "~/bin/overGrive-3.5.2-x86_64.AppImage"
-
 
 main :: IO ()
 main = xmonad 
