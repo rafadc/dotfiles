@@ -10,6 +10,7 @@ whichkey.register({
   s = { name = 'search' },
   a = { name = 'navigate' },
   g = { name = 'git' },
+  u = { name = 'undotree' },
 }, { prefix = '<leader>' })
 
 
