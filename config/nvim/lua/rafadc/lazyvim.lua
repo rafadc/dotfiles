@@ -28,6 +28,8 @@ require("lazy").setup({
     end
   },
 
+  { 'mbbill/undotree' },
+
   {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -36,18 +38,12 @@ require("lazy").setup({
   { 'p00f/nvim-ts-rainbow', requires = { 'nvim-treesitter/nvim-treesitter' }},
   { 'chentoast/marks.nvim' },
 
-  
-  { 'hrsh7th/cmp-nvim-lsp' },
-  { 'hrsh7th/cmp-buffer' },
-  { 'hrsh7th/cmp-path' },
-  { 'hrsh7th/cmp-cmdline' },
-  { 'hrsh7th/nvim-cmp' },
-  { 'neovim/nvim-lspconfig' },
-  { 'mfussenegger/nvim-dap' },
+  {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+  {'neovim/nvim-lspconfig'},
+  {'hrsh7th/cmp-nvim-lsp'},
+  {'hrsh7th/nvim-cmp'},
+  {'L3MON4D3/LuaSnip'}, 
 
-  { 'hrsh7th/cmp-vsnip' },
-  { 'hrsh7th/vim-vsnip' },
-  
   { 'aspeddro/gitui.nvim' },
 
   -- Go

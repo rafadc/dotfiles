@@ -1,3 +1,9 @@
+require('lspconfig')['hls'].setup{
+  filetypes = { 'haskell', 'lhaskell', 'cabal' },
+}
+
+require'lspconfig'.hls.setup{}
+
 local ht = require('haskell-tools')
 local bufnr = vim.api.nvim_get_current_buf()
 local def_opts = { noremap = true, silent = true, buffer = bufnr, }
