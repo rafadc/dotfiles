@@ -4,6 +4,7 @@ require("rafadc.set")
 require("rafadc.whichkey")
 
 require("rafadc.navigation")
+require("rafadc.marks")
 require("rafadc.completion")
 
 require("rafadc.git")

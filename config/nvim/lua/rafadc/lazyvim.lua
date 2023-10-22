@@ -34,6 +34,8 @@ require("lazy").setup({
   },
   
   { 'p00f/nvim-ts-rainbow', requires = { 'nvim-treesitter/nvim-treesitter' }},
+  { 'chentoast/marks.nvim' },
+
   
   { 'hrsh7th/cmp-nvim-lsp' },
   { 'hrsh7th/cmp-buffer' },
