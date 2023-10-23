@@ -1,3 +1,5 @@
+module Custom.MyStartupHook where
+
 import XMonad
 import XMonad.Util.SpawnOnce ( spawnOnce )
 
@@ -8,6 +10,7 @@ myStartupHook = do
   spawnOnce "telegram-desktop -startintray"
   spawnOnce "flameshot"
   spawnOnce "~/bin/overGrive-3.5.2-x86_64.AppImage"
+  spawnOnce "nm-applet"
 
 
 
