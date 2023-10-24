@@ -65,17 +65,13 @@ ln -fs ~/.dotfiles/config/rofi ~/.config/
 ln -fs ~/.dotfiles/config/rofimoji.rc ~/.config/rofimoji.rc
 ln -fs ~/.dotfiles/config/starship.toml ~/.config/starship.toml
 ln -fs ~/.dotfiles/config/fish ~/.config/fish
-ln -fs ~/.dotfiles/config/wezterm ~/.config/wezterm
 ln -fs ~/.dotfiles/config/kitty ~/.config/kitty
 ln -fs ~/.dotfiles/config/nvim ~/.config/nvim
-ln -fs ~/.dotfiles/config/hypr ~/.config/hypr
 ln -fs ~/.dotfiles/config/paru ~/.config/paru
 ln -fs ~/.dotfiles/config/feh ~/.config/feh
 
 echo "Creating user services. They are not enabled by default"
 ln -fs ~/.dotfiles/systemd/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
-ln -fs ~/.dotfiles/systemd/obsidian-gdrive.service ~/.config/systemd/user/obsidian-gdrive.service
-ln -fs ~/.dotfiles/systemd/obsidian-gdrive.timer ~/.config/systemd/user/obsidian-gdrive.timer
 
 echo "Setting up tmux..."
 ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
