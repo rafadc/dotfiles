@@ -3,12 +3,13 @@ import Custom.MyLayouts (myLayout)
 import Custom.MyStartupHook (myStartupHook)
 import Custom.MyKeys (myKeys)
 import Custom.MyRescreen (rescreenCfg)
+import Custom.MyScratchpads (myScratchpads, myScratchpadKeys)
 
 import XMonad
 
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.StatusBar
-import XMonad.Util.NamedScratchpad (scratchpadWorkspaceTag)
+import XMonad.Util.NamedScratchpad (scratchpadWorkspaceTag, namedScratchpadManageHook)
 import XMonad.Util.WorkspaceCompare (filterOutWs)
 import XMonad.Util.Hacks as Hacks
 import XMonad.Hooks.ManageDocks (avoidStruts, docks)
@@ -21,7 +22,8 @@ defaults = def
     , startupHook        = myStartupHook   
     , borderWidth = 3
     , layoutHook = avoidStruts myLayout
-    } `additionalKeysP` myKeys
+    , manageHook = namedScratchpadManageHook myScratchpads
+    } `additionalKeysP` myKeys ++ myScratchpadKeys
 
 main :: IO ()
 main = xmonad 

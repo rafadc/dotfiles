@@ -1,6 +1,6 @@
 module Custom.MyKeys where
 
-import XMonad
+import XMonad (spawn, X, sendMessage)
 import XMonad.Layout.ToggleLayouts (ToggleLayout(..), toggleLayouts)
 
 myKeys :: [(String, X ())]
