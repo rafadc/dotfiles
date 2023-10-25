@@ -10,11 +10,13 @@
   "nvim": { "branch": "main", "commit": "dcef0a062de380885193fb0f919217d58b979753" },
   "nvim-cmp": { "branch": "main", "commit": "d3a3056204e1a9dbb7c7fe36c114dc43b681768c" },
   "nvim-lspconfig": { "branch": "master", "commit": "38da5bbe1eaab2394056109e48c7e195bdb8fdfe" },
+  "nvim-nyctophilia": { "branch": "master", "commit": "76c42e2a70490dce18abb90d91a5a77b054f9e5e" },
+  "nvim-soil": { "branch": "master", "commit": "9c2c4930a02dd2d824903443f474fa6b17673a15" },
   "nvim-treesitter": { "branch": "master", "commit": "6cb93819c9d7107f5e1ff704eb35d230858ec698" },
   "nvim-ts-rainbow": { "branch": "master", "commit": "ef95c15a935f97c65a80e48e12fe72d49aacf9b9" },
   "plenary.nvim": { "branch": "master", "commit": "50012918b2fc8357b87cff2a7f7f0446e47da174" },
   "telescope.nvim": { "branch": "master", "commit": "74ce793a60759e3db0d265174f137fb627430355" },
   "undotree": { "branch": "master", "commit": "0e11ba7325efbbb3f3bebe06213afa3e7ec75131" },
-  "vim-be-good": { "branch": "master", "commit": "c290810728a4f75e334b07dc0f3a4cdea908d351" },
+  "vim-ormolu": { "branch": "master", "commit": "edbeb0135692345b088182963e9b229fe2235ac0" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
 }

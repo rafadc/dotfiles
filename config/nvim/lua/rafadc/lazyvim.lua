@@ -56,9 +56,19 @@ require("lazy").setup({
       'nvim-lua/plenary.nvim',
     },
   },
+  { 'sdiehl/vim-ormolu' },
 
-  -- Learning Vim
-  { 'ThePrimeagen/vim-be-good' },
+  -- Plant UML
+  { 
+    'javiorfo/nvim-soil',
+    lazy = true,
+    ft = "plantuml",
+    config = function()
+        -- If you want to change default configurations
+    end
+  },
+
+  { 'javiorfo/nvim-nyctophilia' }
 })
 
 
