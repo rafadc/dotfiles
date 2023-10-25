@@ -22,3 +22,8 @@ vim.keymap.set('n', '<leader>rf', function()
   ht.repl.toggle(vim.api.nvim_buf_get_name(0))
 end, def_opts)
 vim.keymap.set('n', '<leader>rq', ht.repl.quit, opts)
+
+
+-- Workaround over stack ormolu version
+-- https://github.com/sdiehl/vim-ormolu/issues/14
+vim.g.ormolu_options = { "--no-cabal" } 
