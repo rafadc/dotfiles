@@ -2,7 +2,7 @@ module Custom.MyDecorations where
 
 import Custom.MyCatppuccin
 import XMonad (xK_Escape)
-import XMonad qualified
+import qualified XMonad 
 import XMonad.Actions.EasyMotion
 import XMonad.Layout.ShowWName
 import XMonad.Layout.Tabbed

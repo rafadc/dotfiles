@@ -10,7 +10,7 @@ library:
   source-dirs: lib
 
 executables:
-  xmonad-exe:
+  xmonad:
     main: ./xmonad.hs
     ghc-options:
       - -O2

@@ -42,7 +42,8 @@ packages:
 #
 extra-deps:
 - xmonad-0.17.2
-- xmonad-contrib-0.17.1
+- git: https://github.com/xmonad/xmonad-contrib
+  commit: c176a752ded399ae371d8566b829d8f7852f777e
 
 # Override default flag values for local packages and extra-deps
 # flags: {}

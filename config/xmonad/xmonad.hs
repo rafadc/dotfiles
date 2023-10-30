@@ -7,7 +7,7 @@ import Custom.MyScratchpads (myScratchpads, myScratchpadKeys)
 
 import XMonad
 
-import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.EwmhDesktops (disableEwmhManageDesktopViewport, ewmh, addEwmhWorkspaceSort)
 import XMonad.Hooks.StatusBar
 import XMonad.Util.NamedScratchpad (scratchpadWorkspaceTag, namedScratchpadManageHook)
 import XMonad.Util.WorkspaceCompare (filterOutWs)

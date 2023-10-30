@@ -29,7 +29,7 @@ library
     , xmonad-contrib >=0.17
   default-language: Haskell2010
 
-executable xmonad-exe
+executable xmonad
   main-is: ./xmonad.hs
   other-modules:
       Paths_xmonad_config_rafadc

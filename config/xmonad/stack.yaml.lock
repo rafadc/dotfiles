@@ -12,12 +12,16 @@ packages:
   original:
     hackage: xmonad-0.17.2
 - completed:
-    hackage: xmonad-contrib-0.17.1@sha256:df50cc15569c0bb4bc79cd031f7283f20760ae453887785f4689ab09ecb28935,21951
+    commit: c176a752ded399ae371d8566b829d8f7852f777e
+    git: https://github.com/xmonad/xmonad-contrib
+    name: xmonad-contrib
     pantry-tree:
-      sha256: e5c991ae33c3a09cf40d09cc18ebf42dd6b0992fd5d6acca94650926f7984377
-      size: 22735
+      sha256: 24da1955bb725d70c9e502e6d4970fe1de5af711a7a6f66bbdbc97c321b83963
+      size: 24504
+    version: 0.17.1.9
   original:
-    hackage: xmonad-contrib-0.17.1
+    commit: c176a752ded399ae371d8566b829d8f7852f777e
+    git: https://github.com/xmonad/xmonad-contrib
 snapshots:
 - completed:
     sha256: 1d663bec402f77fa09fa3e8cf288c3c7eb18a1f28a5e0c331ac47adeacd21346
