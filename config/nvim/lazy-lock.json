@@ -4,7 +4,7 @@
   "gitui.nvim": { "branch": "main", "commit": "6595bef945ad53c3e8410edec2e86f36b3f8971e" },
   "go.nvim": { "branch": "master", "commit": "694af9c0ee3a1d11bdb312ec67eebde74b6a4bbe" },
   "haskell-tools.nvim": { "branch": "master", "commit": "aad70be96b10ffd198b400eab9e78ccebaef5f0a" },
-  "lazy.nvim": { "branch": "main", "commit": "9788a19ec0b4036028e78aec702634b4b89d3470" },
+  "lazy.nvim": { "branch": "main", "commit": "16603c6917435d8446f7357cb61095138a417085" },
   "lsp-zero.nvim": { "branch": "v3.x", "commit": "22d2186bee730d68f6fd3bb2d19a389784c37a96" },
   "marks.nvim": { "branch": "master", "commit": "76aca5069c5ce5c0099e30168649e6393e494f26" },
   "nvim": { "branch": "main", "commit": "dcef0a062de380885193fb0f919217d58b979753" },
