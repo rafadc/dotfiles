@@ -41,8 +41,8 @@ packages:
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
 extra-deps:
-- xmonad
-- xmonad-contrib
+- xmonad-0.17.2
+- xmonad-contrib-0.17.1
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
@@ -51,7 +51,7 @@ extra-deps:
 # extra-package-dbs: []
 
 # Control whether we use the GHC we find on the path
-# system-ghc: true
+system-ghc: true
 #
 # Require a specific version of Stack, using version ranges
 # require-stack-version: -any # Default
