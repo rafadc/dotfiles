@@ -41,7 +41,6 @@ fish_add_path $HOME/bin/
 fish_add_path $HOME/.local/bin/
 
 # FZF
-alias fd=fdfind # In Ubuntu
 set fzf_fd_opts --hidden --exclude=.git
 
 # Kubernetes
@@ -74,9 +73,6 @@ fish_add_path $HOME/go/bin
 
 # Appimages
 fish_add_path $HOME/appimages
-
-# Doom emacs
-fish_add_path $HOME/.emacs.d/bin
 
 function gitsyncupstream
   git fetch upstream
