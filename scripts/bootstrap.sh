@@ -72,6 +72,8 @@ ln -fs ~/.dotfiles/config/feh ~/.config/feh
 
 echo "Creating user services. They are not enabled by default"
 ln -fs ~/.dotfiles/systemd/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
+systemctl --user enable ssh-agent
+systemctl --user start ssh-agent
 
 echo "Setting up tmux..."
 ln -fs ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
