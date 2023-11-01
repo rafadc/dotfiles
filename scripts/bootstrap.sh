@@ -51,6 +51,7 @@ ln -s ~/.dotfiles/ssh.config ~/.ssh/config
 
 echo "Setting up window management"
 ln -fs ~/.dotfiles/config/xmonad ~/.xmonad
+sudo ln -fs ~/.dotfiles/config/xmonad/xmonad-custom.desktop /usr/share/xsessions/
 ln -fs ~/.dotfiles/config/dunst ~/.config/dunst
 
 echo "Setting up programming config files"

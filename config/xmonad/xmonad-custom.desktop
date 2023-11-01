@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=xmonad-custom
+Comment=This session logs you into a Xmonad
+Exec=/home/rafadc/.local/bin/xmonad
+TryExec=/home/rafadc/.local/bin/xmonad
+Type=Application
+DesktopNames=XMonad
+#X-GDM-SessionRegisters=true
