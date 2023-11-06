@@ -3,18 +3,20 @@
 module Custom.MyScratchpads where
 
 import XMonad.Core (X)
-import XMonad.Util.NamedScratchpad
-import XMonad.StackSet qualified as W
 import XMonad.ManageHook
+import XMonad.StackSet qualified as W
+import XMonad.Util.NamedScratchpad
 
 myScratchpads :: [NamedScratchpad]
-myScratchpads = 
-  [ NS "obsidian" "obsidian" (className =? "obsidian") myCenter
-  ] 
+myScratchpads =
+  [ NS "obsidian" "obsidian" (className =? "obsidian") myCenter,
+    NS "obs" "obs" (className =? "obs") myCenter
+  ]
 
 myScratchpadKeys :: [(String, XMonad.Core.X ())]
-myScratchpadKeys = 
-  [ ("M-o", namedScratchpadAction myScratchpads "obsidian")
+myScratchpadKeys =
+  [ ("M-o", namedScratchpadAction myScratchpads "obsidian"),
+    ("M-s", namedScratchpadAction myScratchpads "obs")
   ]
 
 myCenter = customFloating $ W.RationalRect fromLeft fromTop width height

@@ -1,7 +1,7 @@
 module Custom.MyStartupHook where
 
 import XMonad
-import XMonad.Util.SpawnOnce ( spawnOnce )
+import XMonad.Util.SpawnOnce (spawnOnce)
 
 myStartupHook :: X ()
 myStartupHook = do
@@ -11,6 +11,6 @@ myStartupHook = do
   spawnOnce "flameshot"
   spawnOnce "~/bin/overGrive-3.5.2-x86_64.AppImage"
   spawnOnce "nm-applet"
-
-
-
+  spawnOnce "blueman-applet"
+  spawnOnce "obs --startvirtualcam"
+  spawnOnce "companion"
