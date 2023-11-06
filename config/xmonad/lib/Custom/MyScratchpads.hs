@@ -10,7 +10,7 @@ import XMonad.Util.NamedScratchpad
 myScratchpads :: [NamedScratchpad]
 myScratchpads =
   [ NS "obsidian" "obsidian" (className =? "obsidian") myCenter,
-    NS "obs" "obs" (className =? "obs") myCenter
+    NS "obs" "obs --startvirtualcam" (className =? "obs") myCenter
   ]
 
 myScratchpadKeys :: [(String, XMonad.Core.X ())]
