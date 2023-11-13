@@ -20,5 +20,5 @@ vim.g.mapleader = " "
 
 vim.opt.clipboard = "unnamedplus"
 
-vim.o.completeopt="menuone,noinsert,noselect"
+vim.o.completeopt="menu,menuone,noinsert,noselect"
 
