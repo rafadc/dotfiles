@@ -16,7 +16,7 @@ require("lazy").setup({
 
   -- Navigation
   {
-    'nvim-telescope/telescope.nvim', 
+    'nvim-telescope/telescope.nvim',
     dependencies = { {'nvim-lua/plenary.nvim'} }
   },
 
@@ -28,13 +28,15 @@ require("lazy").setup({
     end
   },
 
+  { 'ThePrimeagen/harpoon' },
+
   { 'mbbill/undotree' },
 
   {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   },
-  
+
   { 'p00f/nvim-ts-rainbow', requires = { 'nvim-treesitter/nvim-treesitter' }},
   { 'chentoast/marks.nvim' },
 
@@ -45,9 +47,10 @@ require("lazy").setup({
   {'hrsh7th/cmp-buffer'},
   {'hrsh7th/cmp-path'},
   {'hrsh7th/cmp-cmdline'},
-  {'L3MON4D3/LuaSnip'}, 
-  {'saadparwaiz1/cmp_luasnip'}, 
+  {'L3MON4D3/LuaSnip'},
+  {'saadparwaiz1/cmp_luasnip'},
 
+  -- Git
   { 'aspeddro/gitui.nvim' },
 
   -- Go
@@ -63,7 +66,7 @@ require("lazy").setup({
   { 'sdiehl/vim-ormolu' },
 
   -- Plant UML
-  { 
+  {
     'javiorfo/nvim-soil',
     lazy = true,
     ft = "plantuml",
