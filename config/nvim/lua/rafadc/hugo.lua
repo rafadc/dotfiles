@@ -9,13 +9,19 @@ local function getFilenameWithNoExtension(filename)
   return filename:match("[^/]*.md$")
 end
 
+local function getPathForServing(path)
+  return path:gsub("static/", "/")
+end
+
 local copyAndLinkImage = function (absoluteFilename)
   local currentFileName = getFilenameWithNoExtension(vim.fn.expand('%'))
   local assetFolderName = "static/posts/" .. currentFileName:match "(.+)%..+"
   os.execute("mkdir -p " .. assetFolderName)
   os.execute("cp " .. absoluteFilename .. " " .. assetFolderName)
 
-  vim.api.nvim_put({ "![](" .. assetFolderName .. "/" .. getFilenameFromPath(absoluteFilename) .. ")" }, "c", true, true)
+  local imageURL = getPathForServing(assetFolderName) .. "/" .. getFilenameFromPath(absoluteFilename) 
+
+  vim.api.nvim_put({ "![](" .. imageURL .. ")" }, "c", true, true)
 end
 
 local imagePicker = function()
