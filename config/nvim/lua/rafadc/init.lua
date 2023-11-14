@@ -9,6 +9,8 @@ require("rafadc.completion")
 
 require("rafadc.git")
 
+require("rafadc.hugo")
+
 -- Programming languages
 require("rafadc.treesitter")
 
