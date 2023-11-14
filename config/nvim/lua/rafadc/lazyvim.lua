@@ -28,7 +28,12 @@ require("lazy").setup({
     end
   },
 
-  { 'ThePrimeagen/harpoon' },
+  {
+    'ThePrimeagen/harpoon',
+     dependencies = {
+       'nvim-lua/plenary.nvim',
+     },
+  },
 
   { 'mbbill/undotree' },
 

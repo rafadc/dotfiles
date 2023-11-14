@@ -1,5 +1,4 @@
 require("rafadc.lazyvim")
-
 require("rafadc.set")
 require("rafadc.whichkey")
 
@@ -8,6 +7,7 @@ require("rafadc.marks")
 require("rafadc.completion")
 
 require("rafadc.git")
+require("rafadc.harpoon")
 
 require("rafadc.hugo")
 
