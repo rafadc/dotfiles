@@ -19,7 +19,7 @@ local copyAndLinkImage = function (absoluteFilename)
   os.execute("mkdir -p " .. assetFolderName)
   os.execute("cp " .. absoluteFilename .. " " .. assetFolderName)
 
-  local imageURL = getPathForServing(assetFolderName) .. "/" .. getFilenameFromPath(absoluteFilename) 
+  local imageURL = getPathForServing(assetFolderName) .. "/" .. getFilenameFromPath(absoluteFilename)
 
   vim.api.nvim_put({ "![](" .. imageURL .. ")" }, "c", true, true)
 end
@@ -44,4 +44,12 @@ local showImagePicker = function(_)
 end
 
 vim.api.nvim_create_user_command('HugoCopyImage', showImagePicker, { desc = "Copy an image to my Hugo folder structure" })
+
+vim.keymap.set('n', '<leader>hi', showImagePicker, {})
+
+local function insertLink()
+  vim.api.nvim_put({ "[]()" }, "c", true, true)
+end
+
+vim.keymap.set('n', '<leader>hl', insertLink, {})
 

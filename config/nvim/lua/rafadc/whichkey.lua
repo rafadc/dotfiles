@@ -1,16 +1,25 @@
 local whichkey = require("which-key")
 
 whichkey.register({
-  f = { 
+  f = {
     name = 'file',
     f = { 'find' },
     r = { 'recent' },
   },
   p = { name = 'project' },
-  s = { name = 'search' },
+  s = {
+    name = 'search',
+    g = 'grep',
+    h = 'help',
+  },
   a = { name = 'navigate' },
   g = { name = 'git' },
   u = { name = 'undotree' },
+  h = {
+    name = 'hugo',
+    i = { 'image' },
+    l = { 'link' },
+  },
 }, { prefix = '<leader>' })
 
 
