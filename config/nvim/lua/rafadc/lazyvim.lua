@@ -58,6 +58,9 @@ require("lazy").setup({
   -- Git
   { 'aspeddro/gitui.nvim' },
 
+  -- Copilot
+  { 'github/copilot.vim' },
+
   -- Go
   { 'ray-x/go.nvim' },
 

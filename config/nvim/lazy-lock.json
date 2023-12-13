@@ -1,11 +1,17 @@
 {
+<<<<<<< HEAD
   "LuaSnip": { "branch": "master", "commit": "1f4ad8bb72bdeb60975e98652636b991a9b7475d" },
+=======
+  "LuaSnip": { "branch": "master", "commit": "80a8528f084a97b624ae443a6f50ff8074ba486b" },
+>>>>>>> 81f877b (Added copilot.vim)
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-cmdline": { "branch": "main", "commit": "8ee981b4a91f536f52add291594e89fb6645e451" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "44b16d11215dce86f253ce0c30949813c0a90765" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
+  "copilot.vim": { "branch": "release", "commit": "309b3c803d1862d5e84c7c9c5749ae04010123b8" },
   "gitui.nvim": { "branch": "main", "commit": "6595bef945ad53c3e8410edec2e86f36b3f8971e" },
+<<<<<<< HEAD
   "go.nvim": { "branch": "master", "commit": "15bf9aea885d09b38027beb31e6fb5fd1fda9583" },
   "harpoon": { "branch": "master", "commit": "c1aebbad9e3d13f20bedb8f2ce8b3a94e39e424a" },
   "haskell-tools.nvim": { "branch": "master", "commit": "3076ac21d6ffc6d0100eb5878a1b77c6a53d8871" },
@@ -18,10 +24,23 @@
   "nvim-nyctophilia": { "branch": "master", "commit": "e07a3e1db305d6ad7ebd12249a5d33326aa6d759" },
   "nvim-soil": { "branch": "master", "commit": "4d7c9d77d48245b31a14ded773f54e73baba60a6" },
   "nvim-treesitter": { "branch": "master", "commit": "c0da2013d1cef768c00f3f0b7f365fe19a10bca3" },
+=======
+  "go.nvim": { "branch": "master", "commit": "694af9c0ee3a1d11bdb312ec67eebde74b6a4bbe" },
+  "haskell-tools.nvim": { "branch": "master", "commit": "aad70be96b10ffd198b400eab9e78ccebaef5f0a" },
+  "lazy.nvim": { "branch": "main", "commit": "16603c6917435d8446f7357cb61095138a417085" },
+  "lsp-zero.nvim": { "branch": "v3.x", "commit": "22d2186bee730d68f6fd3bb2d19a389784c37a96" },
+  "marks.nvim": { "branch": "master", "commit": "76aca5069c5ce5c0099e30168649e6393e494f26" },
+  "nvim": { "branch": "main", "commit": "dcef0a062de380885193fb0f919217d58b979753" },
+  "nvim-cmp": { "branch": "main", "commit": "d3a3056204e1a9dbb7c7fe36c114dc43b681768c" },
+  "nvim-lspconfig": { "branch": "master", "commit": "38da5bbe1eaab2394056109e48c7e195bdb8fdfe" },
+  "nvim-nyctophilia": { "branch": "master", "commit": "76c42e2a70490dce18abb90d91a5a77b054f9e5e" },
+  "nvim-soil": { "branch": "master", "commit": "9c2c4930a02dd2d824903443f474fa6b17673a15" },
+  "nvim-treesitter": { "branch": "master", "commit": "6cb93819c9d7107f5e1ff704eb35d230858ec698" },
+>>>>>>> 81f877b (Added copilot.vim)
   "nvim-ts-rainbow": { "branch": "master", "commit": "ef95c15a935f97c65a80e48e12fe72d49aacf9b9" },
   "plenary.nvim": { "branch": "master", "commit": "50012918b2fc8357b87cff2a7f7f0446e47da174" },
-  "telescope.nvim": { "branch": "master", "commit": "20bf20500c95208c3ac0ef07245065bf94dcab15" },
-  "undotree": { "branch": "master", "commit": "36ff7abb6b60980338344982ad4cdf03f7961ecd" },
+  "telescope.nvim": { "branch": "master", "commit": "74ce793a60759e3db0d265174f137fb627430355" },
+  "undotree": { "branch": "master", "commit": "0e11ba7325efbbb3f3bebe06213afa3e7ec75131" },
   "vim-ormolu": { "branch": "master", "commit": "edbeb0135692345b088182963e9b229fe2235ac0" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
 }
