@@ -24,8 +24,7 @@ defaults =
       layoutHook = avoidStruts myLayout,
       manageHook = namedScratchpadManageHook myScratchpads
     }
-    `additionalKeysP` myKeys
-    ++ myScratchpadKeys
+    `additionalKeysP` ( myKeys ++ myScratchpadKeys )
 
 myEwmh =
   addEwmhWorkspaceSort (pure (filterOutWs [scratchpadWorkspaceTag]))
