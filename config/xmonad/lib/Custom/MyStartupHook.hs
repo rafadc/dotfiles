@@ -13,3 +13,5 @@ myStartupHook = do
   spawnOnce "nm-applet"
   spawnOnce "blueman-applet"
   spawnOnce "companion"
+  spawnOnce "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+
