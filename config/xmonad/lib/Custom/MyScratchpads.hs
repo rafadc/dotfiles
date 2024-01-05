@@ -9,14 +9,12 @@ import XMonad.Util.NamedScratchpad
 
 myScratchpads :: [NamedScratchpad]
 myScratchpads =
-  [ NS "obsidian" "obsidian" (className =? "obsidian") myCenter,
-    NS "obs" "obs --startvirtualcam" (className =? "obs") myCenter
+  [ NS "obsidian" "obsidian" (className =? "obsidian") myCenter
   ]
 
 myScratchpadKeys :: [(String, XMonad.Core.X ())]
 myScratchpadKeys =
-  [ ("M-o", namedScratchpadAction myScratchpads "obsidian"),
-    ("M-s", namedScratchpadAction myScratchpads "obs")
+  [ ("M-o", namedScratchpadAction myScratchpads "obsidian")
   ]
 
 myCenter = customFloating $ W.RationalRect fromLeft fromTop width height

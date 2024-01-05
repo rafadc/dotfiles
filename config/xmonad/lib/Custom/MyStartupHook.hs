@@ -6,6 +6,7 @@ import XMonad.Util.SpawnOnce (spawnOnce)
 myStartupHook :: X ()
 myStartupHook = do
   spawnOnce "feh --bg-scale ~/Pictures/Wallpapers/download.jpeg"
+  spawnOnce "obs --startvirtualcam"
   spawnOnce "dunst"
   spawnOnce "telegram-desktop -startintray"
   spawnOnce "flameshot"
