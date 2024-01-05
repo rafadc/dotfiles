@@ -20,6 +20,7 @@ import XMonad.Layout.SimplestFloat
 import XMonad.Layout.Spacing
 import XMonad.Layout.SubLayouts
 import XMonad.Layout.Tabbed
+import XMonad.Layout.ToggleLayouts (ToggleLayout(..), toggleLayouts)
 import XMonad.Layout.WindowNavigation
 
 mySpacing i = spacingRaw False (Border 10 10 30 30) True (Border i i i i) True
@@ -73,7 +74,11 @@ full = renamed [XLR.Replace "Full"] $ noBorders Full
 
 sf = renamed [XLR.Replace "Float"] $ noBorders simplestFloat
 
-myLayout = boringWindows (ifWider 1080 (tall ||| bsp) (column ||| accordion) ||| sf ||| full)
+myLayout = toggleLayouts (noBorders Full) (myTiled ||| myTabbed)
+  where
+    myTiled = boringWindows
+      (ifWider 1080 (tall ||| bsp) (column ||| accordion) ||| sf ||| full)
+    myTabbed = noBorders $ tabbedAlways shrinkText myTabConfig
 
 myLayoutHook =
   showWName' myShowWNameConfig $
