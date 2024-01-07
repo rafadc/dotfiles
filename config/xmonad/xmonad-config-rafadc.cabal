@@ -18,6 +18,7 @@ library
       Custom.MyRescreen
       Custom.MyScratchpads
       Custom.MyStartupHook
+      Custom.MyManageHook
       Hosts.Zeus
   other-modules:
       Paths_xmonad_config_rafadc

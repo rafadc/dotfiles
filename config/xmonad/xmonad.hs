@@ -2,8 +2,9 @@ import Custom.MyKeys (myKeys)
 import Custom.MyLayouts (myLayout)
 import Custom.MyPolybar (myPolybar)
 import Custom.MyRescreen (rescreenCfg)
-import Custom.MyScratchpads (myScratchpadKeys, myScratchpads)
 import Custom.MyStartupHook (myStartupHook)
+import Custom.MyManageHook (myManageHook)
+import Custom.MyScratchpads (myScratchpadKeys)
 
 import XMonad
 import XMonad.Hooks.EwmhDesktops
@@ -12,7 +13,7 @@ import XMonad.Hooks.Rescreen (rescreenHook)
 import XMonad.Hooks.StatusBar
 import XMonad.Util.EZConfig (additionalKeysP)
 import XMonad.Util.Hacks as Hacks
-import XMonad.Util.NamedScratchpad (namedScratchpadManageHook, scratchpadWorkspaceTag)
+import XMonad.Util.NamedScratchpad (scratchpadWorkspaceTag)
 import XMonad.Util.WorkspaceCompare (filterOutWs)
 
 defaults =
@@ -22,7 +23,7 @@ defaults =
       startupHook = myStartupHook,
       borderWidth = 3,
       layoutHook = avoidStruts myLayout,
-      manageHook = namedScratchpadManageHook myScratchpads
+      manageHook = myManageHook
     }
     `additionalKeysP` ( myKeys ++ myScratchpadKeys )
 
