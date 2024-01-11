@@ -21,6 +21,7 @@ abbr --add g gitui
 abbr --add v nvim
 alias vim="nvim"
 abbr --add l lsd
+abbr --add b bat
 
 function take
   mkdir $argv

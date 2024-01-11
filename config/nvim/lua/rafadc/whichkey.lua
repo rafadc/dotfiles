@@ -5,6 +5,7 @@ whichkey.register({
     name = 'file',
     f = { 'find' },
     r = { 'recent' },
+    t = { 'neotree' },
   },
   p = { name = 'project' },
   s = {
