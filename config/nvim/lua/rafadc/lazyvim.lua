@@ -66,14 +66,21 @@ require("lazy").setup({
   {'L3MON4D3/LuaSnip'},
   {'saadparwaiz1/cmp_luasnip'},
 
+  { "folke/neodev.nvim", opts = {} },
+
   -- Git
   { 'aspeddro/gitui.nvim' },
 
   -- Copilot
   { 'github/copilot.vim' },
 
+  -- Debugging
+  { "mfussenegger/nvim-dap" },
+  { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} },
+
   -- Go
   { 'ray-x/go.nvim' },
+  { 'leoluz/nvim-dap-go' },
 
   -- Haskell
   {
