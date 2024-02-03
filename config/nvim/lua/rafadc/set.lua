@@ -22,6 +22,8 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.o.completeopt="menu,menuone,noinsert,noselect"
 
+vim.opt.conceallevel = 1 -- Required for Obsidian
+
 -- Cleaning trailing whitespace
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     pattern = {"*"},
