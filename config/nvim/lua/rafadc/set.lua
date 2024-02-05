@@ -12,9 +12,10 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
--- Search
+-- Search and replace
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.inccommand = "split" -- Shows a preview of the replace at the bottom
 
 vim.opt.smartindent = true
 
