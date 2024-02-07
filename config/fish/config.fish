@@ -70,6 +70,7 @@ fish_add_path $HOME/.nimble/bin
 
 # Go
 set -gx GOPATH $HOME/go
+set -gx GOBIN $HOME/go/bin
 fish_add_path $HOME/go/bin
 
 # Appimages
