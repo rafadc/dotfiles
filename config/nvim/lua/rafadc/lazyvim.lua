@@ -13,7 +13,11 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   { "catppuccin/nvim", as = "catppuccin" },
+  { "shatur/neovim-ayu", as = "ayu" },
 
+  -- UI
+  { 'ray-x/guihua.lua', run = 'cd lua/fzy && make'},
+  { 'theHamsta/nvim-dap-virtual-text' },
   -- Navigation
   {
     'nvim-telescope/telescope.nvim',
