@@ -1,4 +1,6 @@
-set fish_greeting
+function fish_greeting
+  habito list
+end
 
 . /usr/share/autojump/autojump.fish
 
@@ -22,6 +24,7 @@ abbr --add v nvim
 alias vim="nvim"
 abbr --add l lsd
 abbr --add b bat
+abbr --add hc habito checkin
 
 function take
   mkdir $argv
