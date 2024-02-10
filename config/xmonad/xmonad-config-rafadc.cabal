@@ -14,11 +14,11 @@ library
       Custom.MyDecorations
       Custom.MyKeys
       Custom.MyLayouts
+      Custom.MyManageHook
       Custom.MyPolybar
       Custom.MyRescreen
       Custom.MyScratchpads
       Custom.MyStartupHook
-      Custom.MyManageHook
       Hosts.Zeus
   other-modules:
       Paths_xmonad_config_rafadc
