@@ -5,8 +5,9 @@ import XMonad.Util.SpawnOnce (spawnOnce)
 
 myStartupHook :: X ()
 myStartupHook = do
+  spawnOnce "picom"
   spawnOnce "feh --bg-scale ~/Pictures/Wallpapers/download.jpeg"
-  spawnOnce "~/.dotfiles/xppen.sh"
+  spawnOnce "~/.dotfiles/xppen.sh || true"
   spawnOnce "obs --startvirtualcam"
   spawnOnce "dunst"
   spawnOnce "telegram-desktop -startintray"
@@ -14,6 +15,6 @@ myStartupHook = do
   spawnOnce "~/bin/overGrive-3.5.2-x86_64.AppImage"
   spawnOnce "nm-applet"
   spawnOnce "blueman-applet"
-  spawnOnce "companion"
+  spawnOnce "companion || true"
   spawnOnce "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
