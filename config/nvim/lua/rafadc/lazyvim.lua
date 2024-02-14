@@ -18,6 +18,8 @@ require("lazy").setup({
   -- UI
   { 'ray-x/guihua.lua', run = 'cd lua/fzy && make'},
   { 'theHamsta/nvim-dap-virtual-text' },
+
+  { 'goolord/alpha-nvim' },
   -- Navigation
   {
     'nvim-telescope/telescope.nvim',

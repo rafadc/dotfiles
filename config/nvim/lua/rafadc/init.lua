@@ -1,5 +1,8 @@
 require("rafadc.lazyvim")
 require("rafadc.set")
+
+require("rafadc.alphanvim")
+
 require("rafadc.whichkey")
 
 require("rafadc.navigation")
