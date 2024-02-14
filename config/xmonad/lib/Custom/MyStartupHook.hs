@@ -6,8 +6,8 @@ import XMonad.Util.SpawnOnce (spawnOnce)
 myStartupHook :: X ()
 myStartupHook = do
   spawnOnce "picom"
-  spawnOnce "feh --bg-scale ~/Pictures/Wallpapers/download.jpeg"
-  spawnOnce "~/.dotfiles/xppen.sh || true"
+  spawn "feh --bg-scale ~/Pictures/Wallpapers/download.jpeg"
+  spawn "~/.dotfiles/xppen.sh"
   spawnOnce "obs --startvirtualcam"
   spawnOnce "dunst"
   spawnOnce "telegram-desktop -startintray"
