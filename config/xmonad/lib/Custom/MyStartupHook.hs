@@ -17,4 +17,5 @@ myStartupHook = do
   spawnOnce "blueman-applet"
   spawnOnce "companion || true"
   spawnOnce "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+  spawnOnce "discord"
 
