@@ -33,6 +33,7 @@
   "obsidian.nvim": { "branch": "main", "commit": "8b10f0c377ee6f8f45aaeb59a6eb8a8ce28c5a43" },
   "plenary.nvim": { "branch": "master", "commit": "4f71c0c4a196ceb656c824a70792f3df3ce6bb6d" },
   "telescope.nvim": { "branch": "master", "commit": "236083884cfe6c874e03e6cb4e7cb08809c1333c" },
+  "trouble.nvim": { "branch": "main", "commit": "f1168feada93c0154ede4d1fe9183bf69bac54ea" },
   "undotree": { "branch": "master", "commit": "7df3be7a261ea31b528aa442b494fcb458f3d968" },
   "vim-ormolu": { "branch": "master", "commit": "edbeb0135692345b088182963e9b229fe2235ac0" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }

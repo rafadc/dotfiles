@@ -18,6 +18,8 @@ require("rafadc.harpoon")
 
 require("rafadc.hugo")
 
+require("rafadc.trouble")
+
 -- Programming languages
 require("rafadc.treesitter")
 

@@ -70,6 +70,12 @@ require("lazy").setup({
   {'hrsh7th/cmp-path'},
   {'hrsh7th/cmp-cmdline'},
 
+  {
+   "folke/trouble.nvim",
+   dependencies = { "nvim-tree/nvim-web-devicons" },
+   opts = {},
+  },
+
   { "folke/neodev.nvim", opts = {} },
 
   {
