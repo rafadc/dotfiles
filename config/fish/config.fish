@@ -2,6 +2,8 @@ function fish_greeting
   habito list
 end
 
+zoxide init fish | source
+
 . /usr/share/autojump/autojump.fish
 
 if test -e ~/.asdf/asdf.fish
