@@ -1,5 +1,5 @@
 function fish_greeting
-  habito list
+  cat ~/.dotfiles/terminal_welcome.txt | lolcat -f | boxes -d parchment
 end
 
 zoxide init fish | source
