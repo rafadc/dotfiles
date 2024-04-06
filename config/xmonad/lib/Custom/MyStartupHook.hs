@@ -18,4 +18,5 @@ myStartupHook = do
   spawnOnce "companion"
   spawnOnce "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
   spawnOnce "discord --start-minimized"
+  spawnOnce "solaar --window=hide"
 
