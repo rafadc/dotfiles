@@ -26,7 +26,7 @@ abbr --add v nvim
 alias vim="nvim"
 abbr --add l lsd
 abbr --add b bat
-abbr --add hc habito checkin
+abbr --add s kitten ssh
 
 function take
   mkdir $argv
