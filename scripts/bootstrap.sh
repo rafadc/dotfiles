@@ -53,6 +53,7 @@ echo "Setting up window management"
 ln -fs ~/.dotfiles/config/xmonad ~/.xmonad
 ln -fs ~/.dotfiles/config/xmonad/xmonad-custom.desktop ~/.local/share/applications/
 ln -fs ~/.dotfiles/config/dunst ~/.config/dunst
+ln -fs ~/.dotfiles/config/picom ~/.config/picom
 
 echo "Setting up programming config files"
 ln -fs ~/.dotfiles/tool-versions ~/.tool-versions
