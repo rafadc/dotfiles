@@ -14,6 +14,12 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   { "catppuccin/nvim", as = "catppuccin" },
   { "shatur/neovim-ayu", as = "ayu" },
+  -- Mason for dependencies
+  {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  },
 
   -- UI
   { 'ray-x/guihua.lua', run = 'cd lua/fzy && make'},
@@ -97,6 +103,16 @@ require("lazy").setup({
   -- Debugging
   { "mfussenegger/nvim-dap" },
   { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} },
+
+
+  -- Comment
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+        -- add any options here
+    },
+    lazy = false,
+  },
 
   -- Go
   { 'ray-x/go.nvim' },
