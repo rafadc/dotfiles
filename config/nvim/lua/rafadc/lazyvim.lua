@@ -22,7 +22,7 @@ require("lazy").setup({
   },
 
   -- UI
-  { 'ray-x/guihua.lua', run = 'cd lua/fzy && make'},
+  { 'ray-x/guihua.lua', build = 'cd lua/fzy && make'},
   { 'theHamsta/nvim-dap-virtual-text' },
 
   { 'goolord/alpha-nvim' },
@@ -62,7 +62,7 @@ require("lazy").setup({
 
   {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+    build = ':TSUpdate'
   },
 
   { 'p00f/nvim-ts-rainbow', requires = { 'nvim-treesitter/nvim-treesitter' }},
