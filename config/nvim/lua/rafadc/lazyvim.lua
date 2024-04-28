@@ -102,7 +102,14 @@ require("lazy").setup({
 
   -- Debugging
   { "mfussenegger/nvim-dap" },
-  { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} },
+  { "nvim-neotest/nvim-nio" },
+  { "rcarriga/nvim-dap-ui",
+    requires =
+    {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio"
+    }
+  },
 
 
   -- Comment
