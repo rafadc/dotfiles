@@ -72,12 +72,10 @@ bsp =
 
 full = renamed [XLR.Replace "Full"] $ noBorders Full
 
-sf = renamed [XLR.Replace "Float"] $ noBorders simplestFloat
-
 myLayout = toggleLayouts (noBorders Full) (myTiled ||| myTabbed)
   where
     myTiled = boringWindows
-      (ifWider 1080 (tall ||| bsp) (column ||| accordion) ||| sf ||| full)
+      (ifWider 1080 (tall ||| bsp) (column ||| accordion) ||| full)
     myTabbed = noBorders $ tabbedAlways shrinkText myTabConfig
 
 myLayoutHook =
