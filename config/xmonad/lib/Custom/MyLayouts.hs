@@ -54,28 +54,12 @@ column =
             mySpacing 7 $
               Column 1.0
 
-accordion =
-  renamed [XLR.Replace "Accordion"] $
-    avoidStruts $
-      windowNavigation $
-        addTabs shrinkText myTabConfig $
-          subLayout [] tabs $
-            mySpacing 7 Accordion
-
-bsp =
-  renamed [XLR.Replace "BSP"] $
-    avoidStruts $
-      windowNavigation $
-        addTabs shrinkText myTabConfig $
-          subLayout [] tabs $
-            mySpacing 7 emptyBSP
-
 full = renamed [XLR.Replace "Full"] $ noBorders Full
 
 myLayout = toggleLayouts (noBorders Full) (myTiled ||| myTabbed)
   where
     myTiled = boringWindows
-      (ifWider 1080 (tall ||| bsp) (column ||| accordion) ||| full)
+      (ifWider 1080 (tall ||| column) full)
     myTabbed = noBorders $ tabbedAlways shrinkText myTabConfig
 
 myLayoutHook =
