@@ -10,3 +10,4 @@ golang 1.17.3
 crystal 1.1.1
 dart 2.8.4
 scala 3.2.2
+action-validator 0.6.0
