@@ -22,6 +22,7 @@ import XMonad.Layout.SubLayouts
 import XMonad.Layout.Tabbed
 import XMonad.Layout.ToggleLayouts (ToggleLayout(..), toggleLayouts)
 import XMonad.Layout.WindowNavigation
+import XMonad.Layout.ThreeColumns
 
 mySpacing i = spacingRaw False (Border 10 10 30 30) True (Border i i i i) True
 
@@ -54,12 +55,21 @@ column =
             mySpacing 7 $
               Column 1.0
 
+threeColumns =
+  renamed [XLR.Replace "ThreeCol"] $
+    avoidStruts $
+      windowNavigation $
+        addTabs shrinkText myTabConfig $
+          subLayout [] tabs $
+            mySpacing 7 $
+              ThreeColMid 1 (3 / 100) (1 / 2)
+
 full = renamed [XLR.Replace "Full"] $ noBorders Full
 
 myLayout = toggleLayouts (noBorders Full) (myTiled ||| myTabbed)
   where
     myTiled = boringWindows
-      (ifWider 1080 (tall ||| column) full)
+      (ifWider 1080 (tall ||| column ||| threeColumns) (full))
     myTabbed = noBorders $ tabbedAlways shrinkText myTabConfig
 
 myLayoutHook =
