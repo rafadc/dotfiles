@@ -13,5 +13,5 @@ myKeys =
   , ("M-y", spawn "rofimoji")
   , ("M-f", sendMessage (Toggle "Full"))
   , ("M-n", spawn "kitty --name vifm -e vifm")
-  , ("M-p", spawn "rofi -show run")
+  , ("M-p", spawn "ulauncher-toggle")
   ]
