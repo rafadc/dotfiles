@@ -1,3 +1,5 @@
+require("rafadc.help")
+
 require("rafadc.lazyvim")
 require("rafadc.set")
 
