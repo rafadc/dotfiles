@@ -7,3 +7,4 @@ prompt-history
 config/nvim/plugin/packer_compiled.lua
 config/fish/fish_variables
 dist-newstyle
+config/zed/.tmp*
