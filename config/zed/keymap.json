@@ -8,12 +8,21 @@
 [
   {
     "context": "Workspace",
-    "bindings": {}
+    "bindings": {
+      "ctrl-y": "workspace::CloseAllDocks"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-y": "workspace::CloseAllDocks"
+    }
   },
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       "space l f": "editor::Format",
+      "space a": "assistant::ToggleFocus",
       "space d": "diagnostics::Deploy",
       "space f f": "file_finder::Toggle",
       "space o": "tab_switcher::Toggle",
@@ -21,7 +30,6 @@
       "space /": "workspace::NewSearch",
       "n": "search::SelectNextMatch",
       "shift-n": "search::SelectPrevMatch",
-      "space t": "workspace::NewCenterTerminal",
       "g b": "editor::ToggleComments",
       "+ +": "workspace::Save",
       "space c": "pane::CloseActiveItem",
@@ -31,7 +39,7 @@
   {
     "context": "ProjectPanel",
     "bindings": {
-      "space f t": "workspace::CloseAllDocks"
+      "space f t": ["project_panel::ToggleFocus", "project_panel::Close"]
     }
   },
   {
