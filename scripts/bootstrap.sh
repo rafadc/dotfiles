@@ -72,6 +72,7 @@ ln -fs ~/.dotfiles/config/nvim ~/.config/nvim
 ln -fs ~/.dotfiles/config/paru ~/.config/paru
 ln -fs ~/.dotfiles/config/feh ~/.config/feh
 ln -fs ~/.dotfiles/config/ulauncher ~/.config/ulauncher
+ln -fs ~/.dotfiles/config/zed ~/.config/zed
 
 echo "Creating user services. They are not enabled by default"
 ln -fs ~/.dotfiles/systemd/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
