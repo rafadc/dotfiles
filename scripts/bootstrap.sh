@@ -93,3 +93,6 @@ wget -O ~/.fonts/vscode.ttf https://github.com/Canop/broot/blob/master/resources
 echo "Setting global gitignore"
 ln -fs ~/.dotfiles/global_gitignore ~/.global_gitignore
 git config --global core.excludesfile ~/.global_gitignore
+
+echo "Setting up gnome settings"
+source .dotfiles/scripts/gnome-settings.sh
