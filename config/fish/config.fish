@@ -27,6 +27,8 @@ alias vim="nvim"
 abbr --add l lsd
 abbr --add b bat
 abbr --add s kitten ssh
+abbr --add zed zeditor
+abbr --add zj zellij
 
 function take
   mkdir $argv
@@ -99,4 +101,3 @@ else
     end
 end
 # <<< conda initialize <<<
-
