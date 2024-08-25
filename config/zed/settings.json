@@ -20,7 +20,7 @@
   "theme": {
     "mode": "system",
     "light": "Catppuccin Mocha",
-    "dark": "One Dark"
+    "dark": "Night Owl Dark"
   },
   "scrollbar": {
     "show": "never"
