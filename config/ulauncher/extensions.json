@@ -19,5 +19,19 @@
         "updated_at": "2024-06-08T16:26:54.020738",
         "last_commit": "827cfe5e1d2f89f742f811f981759787b0654fa9",
         "last_commit_time": "2023-11-04T18:37:13"
+    },
+    "com.github.pywkm.ulauncher-spotify": {
+        "id": "com.github.pywkm.ulauncher-spotify",
+        "url": "https://github.com/pywkm/ulauncher-spotify",
+        "updated_at": "2024-08-23T08:49:05.917419",
+        "last_commit": "89d9b02316aaccea0d70b458bb97b3976287f03e",
+        "last_commit_time": "2020-02-17T16:20:21"
+    },
+    "com.github.elken.terminal-runner": {
+        "id": "com.github.elken.terminal-runner",
+        "url": "https://github.com/elken/Terminal-Runner",
+        "updated_at": "2024-08-23T08:50:09.036689",
+        "last_commit": "6807ebe6047462bcce6063c63228eddcb8c6b481",
+        "last_commit_time": "2020-02-22T23:04:04"
     }
 }
