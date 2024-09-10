@@ -11,13 +11,6 @@ chpwd() {
   l
 }
 
-j() {
-    if [[ "$#" -ne 0 ]]; then
-        cd $(autojump $@)
-        return
-    fi
-    cd "$(autojump -s | gsed '/_____/Q; s/^[0-9,.:]*\s*//' |  fzf --height 40% --reverse --inline-info)"
-}
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias flushdns="sudo killall -HUP mDNSResponder"
@@ -42,4 +35,3 @@ fkill() {
 alias icat="kitty +kitten icat"
 
 alias cdr="cd \`git rev-parse --show-toplevel\`"
-

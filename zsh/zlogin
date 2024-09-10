@@ -1,8 +1,5 @@
 #
 # Executes commands at login post-zshrc.
-#
-
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # Aliases
 for f in ~/.dotfiles/zsh/aliases/*; do source $f; done
