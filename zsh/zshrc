@@ -89,9 +89,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-source /home/rafadc/.config/broot/launcher/bash/br
+source ~/.config/broot/launcher/bash/br
 
 source ~/.dotfiles/zsh/init/conda.zsh
 
 eval "$(starship init zsh)"
-
