@@ -40,12 +40,11 @@ path=(
   $path
 )
 
-# Making libssl availabe on mac
 if [[ "$OSTYPE" == darwin* ]]; then
-  export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
-  export LD_LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib"
-  export LDFLAGS="-L/usr/local/opt/openssl/lib"
-  export CPPFLAGS="-I/usr/local/opt/openssl/include"
+    path=(
+    /opt/homebrew/bin
+    $path
+    )
 fi
 
 # -------------
@@ -96,4 +95,3 @@ bindkey '^[[1;9C' forward-word
 #
 # We make it use ripgreap instead of grep so it is a bit faster
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
-
