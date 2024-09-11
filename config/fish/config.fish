@@ -54,7 +54,6 @@ set fzf_fd_opts --hidden --exclude=.git
 # Kubernetes
 alias k="kubectl"
 alias ka="kubectl apply"
-fish_add_path $HOME/.krew/bin
 
 # Ruby
 alias be="bundle exec"
@@ -65,12 +64,6 @@ fish_add_path $HOME/.ghcup/bin
 
 # Rust
 fish_add_path $HOME/.cargo/bin
-
-# Google cloud SDK
-fish_add_path $HOME/bin/google-cloud-sdk/bin
-
-# Krew
-fish_add_path $HOME/.krew/bin
 
 # Nim
 fish_add_path $HOME/.nimble/bin
