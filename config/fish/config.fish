@@ -1,3 +1,7 @@
+if test (uname) = "Darwin"
+    fish_add_path /opt/homebrew/bin
+end
+
 function fish_greeting
   cat ~/.dotfiles/terminal_welcome.txt | lolcat -f | boxes -d parchment
 end
