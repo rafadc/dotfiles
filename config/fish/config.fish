@@ -4,8 +4,6 @@ end
 
 zoxide init fish | source
 
-. /usr/share/autojump/autojump.fish
-
 if test -e ~/.asdf/asdf.fish
   source ~/.asdf/asdf.fish
 else
@@ -99,4 +97,3 @@ else
     end
 end
 # <<< conda initialize <<<
-
