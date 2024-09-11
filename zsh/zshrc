@@ -33,26 +33,6 @@ unsetopt AUTO_NAME_DIRS
 
 fpath=(/usr/local/share/zsh-completions $HOME/.dotfiles/zsh/completions $fpath)
 
-source "$HOME/.zplugin/bin/zplugin.zsh"
-
-zplugin ice wait'0a' lucid blockf
-zplugin load zsh-users/zsh-completions
-
-zplugin ice wait'2' lucid blockf
-zplugin load "zsh-users/zsh-history-substring-search"
-
-zplugin ice atinit"zpcompinit; zpcdreplay"
-zplugin light "zdharma/fast-syntax-highlighting"
-
-zplugin ice as"docker-completion"
-zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-
-zplugin ice as"docker-compose-completion"
-zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
-
-zplugin ice as"docker-machine-completion"
-zplugin snippet https://github.com/docker/machine/blob/master/contrib/completion/zsh/_docker-machine
-
 if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
@@ -63,7 +43,7 @@ if [ -f ~/.tnsrc ]; then
 fi
 ###-tns-completion-end-###
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # Pyenv changes
 export PATH="$HOME/.pyenv/bin:$PATH"
@@ -76,8 +56,7 @@ eval "$(direnv hook zsh)"
 # Asdf
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  . $(brew --prefix asdf)/asdf.sh
-  . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
 fi
 
 if [[ "$OSTYPE" == "linux"* ]]; then
@@ -86,11 +65,15 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
+autoload -Uz _zplug
+(( ${+_comps} )) && _comps[zp lug]=_zplug
 
 source ~/.config/broot/launcher/bash/br
 
 source ~/.dotfiles/zsh/init/conda.zsh
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 eval "$(starship init zsh)"
