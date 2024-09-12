@@ -15,7 +15,9 @@ else
   source /usr/share/fish/vendor_completions.d/asdf.fish
 end
 
-set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+if test (uname) = "Linux"
+  set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+end
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
 
@@ -29,6 +31,7 @@ alias vim="nvim"
 abbr --add l lsd
 abbr --add b bat
 abbr --add s kitten ssh
+abbr --add zj zellij
 
 function take
   mkdir $argv
@@ -72,6 +75,10 @@ fish_add_path $HOME/.nimble/bin
 set -gx GOPATH $HOME/go
 set -gx GOBIN $HOME/go/bin
 fish_add_path $HOME/go/bin
+
+# Android
+set -x ANDROID_SDK_ROOT $HOME/Library/Android/Sdk
+fish_add_path  $ANDROID_SDK_ROOT/emulator  $ANDROID_SDK_ROOT/platform-tools
 
 # Appimages
 fish_add_path $HOME/appimages
