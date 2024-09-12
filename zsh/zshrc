@@ -57,13 +57,12 @@ eval "$(direnv hook zsh)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   . /opt/homebrew/opt/asdf/libexec/asdf.sh
+  test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
 
 if [[ "$OSTYPE" == "linux"* ]]; then
   . ~/.asdf/asdf.sh
 fi
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 autoload -Uz _zplug
 (( ${+_comps} )) && _comps[zp lug]=_zplug
