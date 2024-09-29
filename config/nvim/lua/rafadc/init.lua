@@ -10,7 +10,6 @@ require("rafadc.marks")
 require("rafadc.completion")
 require("rafadc.neotree")
 require("rafadc.neodev")
-require("rafadc.obsidian")
 
 require("rafadc.git")
 require("rafadc.debugger")

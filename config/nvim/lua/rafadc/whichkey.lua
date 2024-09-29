@@ -1,6 +1,6 @@
 local whichkey = require("which-key")
 
-whichkey.register({
+whichkey.add({
     { "<leader>a",  group = "navigate" },
     { "<leader>f",  group = "file" },
     { "<leader>ff", desc = "find" },
@@ -13,3 +13,4 @@ whichkey.register({
     { "<leader>sh", desc = "help" },
     { "<leader>u",  group = "undotree" },
 })
+

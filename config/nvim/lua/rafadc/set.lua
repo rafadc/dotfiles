@@ -29,8 +29,6 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.o.completeopt="menu,menuone,noinsert,noselect"
 
-vim.opt.conceallevel = 1 -- Required for Obsidian
-
 -- Block mode edit
 vim.opt.virtualedit = "block"
 
