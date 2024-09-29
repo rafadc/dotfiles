@@ -23,8 +23,6 @@ set -gx VISUAL "nvim"
 
 starship init fish | source
 
-alias cp=xcp
-
 abbr --add g gitui
 abbr --add v nvim
 alias vim="nvim"
@@ -50,6 +48,11 @@ direnv hook fish | source
 
 fish_add_path $HOME/bin/
 fish_add_path $HOME/.local/bin/
+
+# VSCode
+if test uname = "Darwin"
+  fish_add_path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+end
 
 # FZF
 set fzf_fd_opts --hidden --exclude=.git
