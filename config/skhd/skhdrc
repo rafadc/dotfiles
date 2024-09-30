@@ -29,10 +29,10 @@ shift + alt - m : yabai -m window --toggle zoom-fullscreen
 shift + alt - e : yabai -m space --balance
 
 # swap windows
-shift + alt - down : yabai -m window --swap south
-shift + alt - up : yabai -m window --swap north
-shift + alt - left : yabai -m window --swap west
-shift + alt - right : yabai -m window --swap east
+cmd + shift - j: yabai -m window --swap south
+cmd + shift - k : yabai -m window --swap north
+cmd + shift - h : yabai -m window --swap west
+cmd + shift - l : yabai -m window --swap east
 
 # move window and split
 ctrl + alt - down : yabai -m window --warp south
