@@ -2,13 +2,34 @@
 #yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 #sudo yabai --load-sa
 
+MONITORS=$(yabai -m query --displays | jq '.[].index')
+
+debug() {
+  echo "$@" 1>&2;
+}
+delete_all_spaces() {
+  for monitor in ${MONITORS[@]}; do
+    local FOCUS_SPACE=$(yabai -m query --spaces --display $monitor | jq '.[0].index')
+    debug "Focusing space $FOCUS_SPACE"
+    yabai -m space --focus "$FOCUS_SPACE"
+    while [ $(yabai -m query --spaces --display $monitor | jq '. | length') -ne 1 ]; do
+      local SPACE_ID=$(yabai -m query --spaces --display $monitor | jq '.[-1].index')
+      debug "Deleting space $SPACE_ID"
+      yabai -m space --destroy "$SPACE_ID"
+    done
+  done
+}
+
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
 # bsp, stack or float
 yabai -m config layout bsp
 
 yabai -m config window_placement second_child
 
 # padding
-yabai -m config top_padding 40
+yabai -m config top_padding 15
 yabai -m config bottom_padding 15
 yabai -m config left_padding 15
 yabai -m config right_padding 15
