@@ -50,7 +50,7 @@ fish_add_path $HOME/bin/
 fish_add_path $HOME/.local/bin/
 
 # VSCode
-if test uname = "Darwin"
+if test (uname) = "Darwin"
   fish_add_path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 end
 
@@ -63,6 +63,7 @@ alias ka="kubectl apply"
 
 # Ruby
 alias be="bundle exec"
+set -gx RUBY_CONFIGURE_OPTS --enable-yjit
 
 # Haskell
 fish_add_path $HOME/.cabal/bin
@@ -70,6 +71,9 @@ fish_add_path $HOME/.ghcup/bin
 
 # Rust
 fish_add_path $HOME/.cargo/bin
+if test (uname) = "Darwin"
+  fish_add_path /opt/homebrew/opt/rustup/bin
+end
 
 # Nim
 fish_add_path $HOME/.nimble/bin
