@@ -61,6 +61,11 @@ if [[ "$OSTYPE" == "linux"* ]]; then
     ln -fs ~/.dotfiles/config/ulauncher ~/.config/ulauncher
 fi
 
+if [[ "$OSTYPE" == "Darwin*" ]]; then
+    ln -fs ~/.dotfiles/config/yabai ~/.config/yabai
+    ln -fs ~/.dotfiles/config/skhd ~/.config/skhd
+fi
+
 ln -fs ~/.dotfiles/config/starship.toml ~/.config/starship.toml
 ln -fs ~/.dotfiles/config/fish ~/.config/fish
 ln -fs ~/.dotfiles/config/kitty ~/.config/kitty
