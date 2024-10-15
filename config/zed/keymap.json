@@ -22,7 +22,7 @@
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       "space l f": "editor::Format",
-      "space a": "assistant::ToggleFocus",
+      "space a a": "assistant::ToggleFocus",
       "space d": "diagnostics::Deploy",
       "space f f": "file_finder::Toggle",
       "space o": "tab_switcher::Toggle",
@@ -33,13 +33,22 @@
       "g b": "editor::ToggleComments",
       "+ +": "workspace::Save",
       "space c": "pane::CloseActiveItem",
-      "space f t": "project_panel::ToggleFocus"
+      "space f t": "project_panel::ToggleFocus",
+      "space f j": "workspace::ToggleZoom"
     }
   },
   {
-    "context": "ProjectPanel",
+    "context": "ProjectPanel && not_editing",
     "bindings": {
-      "space f t": ["project_panel::ToggleFocus", "project_panel::Close"]
+      "space f t": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "AssistantPanel",
+    "bindings": {
+      "space a a": "workspace::ToggleRightDock",
+      "space a c": "assistant::NewContext",
+      "space a w": "pane::CloseActiveItem"
     }
   },
   {
