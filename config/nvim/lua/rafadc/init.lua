@@ -12,7 +12,6 @@ require("rafadc.marks")
 require("rafadc.completion")
 require("rafadc.neotree")
 require("rafadc.neodev")
-require("rafadc.obsidian")
 
 require("rafadc.git")
 require("rafadc.debugger")
@@ -26,4 +25,3 @@ require("rafadc.trouble")
 require("rafadc.treesitter")
 
 require("rafadc.lang")
-
