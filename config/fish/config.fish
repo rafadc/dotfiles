@@ -1,10 +1,19 @@
+if test (uname) = "Darwin"
+    fish_add_path /opt/homebrew/bin
+end
+
 function fish_greeting
   cat ~/.dotfiles/terminal_welcome.txt | lolcat -f | boxes -d parchment
 end
 
 zoxide init fish | source
 
-. /usr/share/autojump/autojump.fish
+
+if test (uname) = "Darwin"
+  [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
+else
+  . /usr/share/autojump/autojump.fish
+end
 
 if test -e ~/.asdf/asdf.fish
   source ~/.asdf/asdf.fish
