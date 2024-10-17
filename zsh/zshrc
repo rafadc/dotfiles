@@ -33,26 +33,6 @@ unsetopt AUTO_NAME_DIRS
 
 fpath=(/usr/local/share/zsh-completions $HOME/.dotfiles/zsh/completions $fpath)
 
-source "$HOME/.zplugin/bin/zplugin.zsh"
-
-zplugin ice wait'0a' lucid blockf
-zplugin load zsh-users/zsh-completions
-
-zplugin ice wait'2' lucid blockf
-zplugin load "zsh-users/zsh-history-substring-search"
-
-zplugin ice atinit"zpcompinit; zpcdreplay"
-zplugin light "zdharma/fast-syntax-highlighting"
-
-zplugin ice as"docker-completion"
-zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-
-zplugin ice as"docker-compose-completion"
-zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
-
-zplugin ice as"docker-machine-completion"
-zplugin snippet https://github.com/docker/machine/blob/master/contrib/completion/zsh/_docker-machine
-
 if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
@@ -84,8 +64,6 @@ if [[ "$OSTYPE" == "linux"* ]]; then
   . ~/.asdf/asdf.sh
 fi
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
@@ -94,4 +72,3 @@ source /home/rafadc/.config/broot/launcher/bash/br
 source ~/.dotfiles/zsh/init/conda.zsh
 
 eval "$(starship init zsh)"
-

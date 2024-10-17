@@ -18,6 +18,11 @@ export CLICOLOR=1
 
 export PATH=$HOME/bin:$PATH:/usr/local/share/npm/bin:$HOME/.cargo/bin:$HOME/anaconda3/bin
 
+# Homebrew
+if [[ `uname` == "Darwin"* ]]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
+
 # To enable syntax highlight in less first you need to brew install source-highlight
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=" -R "
