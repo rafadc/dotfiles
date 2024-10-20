@@ -2,4 +2,10 @@
 
 Tiny Vim config. It is still early stages since I am no power user at all.
 
+Features:
+
+- Telescope with smart file ordering
+- Arrow
+
+
 

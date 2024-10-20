@@ -20,6 +20,8 @@ require("rafadc.hugo")
 
 require("rafadc.trouble")
 
+require("rafadc.avante")
+
 -- Programming languages
 require("rafadc.treesitter")
 
