@@ -31,7 +31,17 @@ require("lazy").setup({
     'nvim-telescope/telescope.nvim',
     dependencies = { {'nvim-lua/plenary.nvim'} }
   },
-
+  {
+    "danielfalk/smart-open.nvim",
+    config = function()
+      require("telescope").load_extension("smart_open")
+    end,
+    dependencies = {
+      "kkharji/sqlite.lua",
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+      { "nvim-telescope/telescope-fzy-native.nvim" },
+    },
+  },
   {
     "folke/which-key.nvim",
     config = function()
