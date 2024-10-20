@@ -15,7 +15,6 @@ require("rafadc.neodev")
 
 require("rafadc.git")
 require("rafadc.debugger")
-require("rafadc.harpoon")
 
 require("rafadc.hugo")
 

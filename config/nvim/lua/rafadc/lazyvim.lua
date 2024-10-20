@@ -39,14 +39,17 @@ require("lazy").setup({
       vim.o.timeoutlen = 300
     end
   },
-
   {
-    'ThePrimeagen/harpoon',
-     dependencies = {
-       'nvim-lua/plenary.nvim',
-     },
+    "otavioschwanck/arrow.nvim",
+    dependencies = {
+      { "nvim-tree/nvim-web-devicons" },
+    },
+    opts = {
+      show_icons = true,
+      leader_key = ';', -- Recommended to be a single key
+      buffer_leader_key = 'm', -- Per Buffer Mappings
+    }
   },
-
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
