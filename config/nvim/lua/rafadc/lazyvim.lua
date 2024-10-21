@@ -32,6 +32,10 @@ require("lazy").setup({
     dependencies = { {'nvim-lua/plenary.nvim'} }
   },
   {
+    'nvim-pack/nvim-spectre',
+    dependencies = { {'nvim-lua/plenary.nvim'} }
+  },
+  {
     "danielfalk/smart-open.nvim",
     config = function()
       require("telescope").load_extension("smart_open")
