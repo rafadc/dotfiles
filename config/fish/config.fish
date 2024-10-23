@@ -26,7 +26,9 @@ else
   source /usr/share/fish/vendor_completions.d/asdf.fish
 end
 
-set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+if test (uname) = "Linux"
+  set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+end
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
 
@@ -77,6 +79,10 @@ fish_add_path $HOME/.cabal/bin
 fish_add_path $HOME/.ghcup/bin
 
 # Rust
+if test (uname) = "Darwin"
+  fish_add_path /opt/homebrew/opt/rustup/bin
+end
+
 fish_add_path $HOME/.cargo/bin
 
 # Google cloud SDK
@@ -92,6 +98,11 @@ fish_add_path $HOME/.nimble/bin
 set -gx GOPATH $HOME/go
 set -gx GOBIN $HOME/go/bin
 fish_add_path $HOME/go/bin
+
+# Python
+if test (uname) = "Darwin"
+  fish_add_path /opt/homebrew/anaconda3/bin
+end
 
 # Appimages
 fish_add_path $HOME/appimages
