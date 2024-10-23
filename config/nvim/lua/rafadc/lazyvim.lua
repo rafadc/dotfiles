@@ -29,7 +29,10 @@ require("lazy").setup({
   -- Navigation
   {
     'nvim-telescope/telescope.nvim',
-    dependencies = { {'nvim-lua/plenary.nvim'} }
+    dependencies = {
+      {'nvim-lua/plenary.nvim'},
+      {'noib3/nvim-oxi'}
+    }
   },
   {
     'nvim-pack/nvim-spectre',

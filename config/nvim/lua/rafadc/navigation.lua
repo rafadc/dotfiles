@@ -9,7 +9,13 @@ vim.keymap.set('n', '<leader>fr', builtin.oldfiles)
 
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, {})
 
-require('spectre').setup()
+require('spectre').setup({
+    default = {
+        replace = {
+            cmd = "oxi"
+       }
+    }
+})
 
 vim.keymap.set('n', '<leader>sg', '<cmd>Spectre<CR>', { noremap = true, silent = true })
 
