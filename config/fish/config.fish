@@ -63,6 +63,10 @@ direnv hook fish | source
 fish_add_path $HOME/bin/
 fish_add_path $HOME/.local/bin/
 
+if test (uname) = "Darwin"
+  fish_add_path /usr/local/texlive/2024/bin/universal-darwin
+end
+
 # FZF
 set fzf_fd_opts --hidden --exclude=.git
 
