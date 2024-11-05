@@ -9,6 +9,8 @@ vim.keymap.set('n', '<leader>fr', builtin.oldfiles)
 
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, {})
 
+vim.keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>")
+
 require('spectre').setup({
     default = {
         replace = {
