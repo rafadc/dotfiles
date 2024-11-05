@@ -145,15 +145,6 @@ require("lazy").setup({
   { 'ray-x/go.nvim' },
   { 'leoluz/nvim-dap-go' },
 
-  -- Haskell
-  {
-    'MrcJkb/haskell-tools.nvim',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-    },
-  },
-  { 'sdiehl/vim-ormolu' },
-
   -- Plant UML
   {
     'javiorfo/nvim-soil',
