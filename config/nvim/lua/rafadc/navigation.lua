@@ -21,4 +21,5 @@ require('spectre').setup({
 
 vim.keymap.set('n', '<leader>sg', '<cmd>Spectre<CR>', { noremap = true, silent = true })
 
+vim.keymap.set('n', '<leader>fu', '<cmd>UndotreeToggle<CR>', { noremap = true, silent = true })
 
