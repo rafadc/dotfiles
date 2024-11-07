@@ -29,6 +29,11 @@ end
 if test (uname) = "Linux"
   set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 end
+
+if test (uname) = "Darwin"
+  set -x DBUS_SESSION_BUS_ADDRESS "unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
+end
+
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
 
