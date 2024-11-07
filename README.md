@@ -2,6 +2,8 @@
 
 My humble dotfiles
 
+I self host this in forgejo but GitHub is a mirror so maybe weird things happen. :D
+
 Just clone and setup with
 
 ``` shell
