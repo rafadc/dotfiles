@@ -6,12 +6,15 @@ if test -f ~/.config/fish/secrets.fish
     source ~/.config/fish/secrets.fish
 end
 
+if status is-interactive
+    eval (zellij setup --generate-auto-start fish | string collect)
+end
+
 function fish_greeting
   cat ~/.dotfiles/terminal_welcome.txt | lolcat -f | boxes -d parchment
 end
 
 zoxide init fish | source
-
 
 if test (uname) = "Darwin"
   [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
