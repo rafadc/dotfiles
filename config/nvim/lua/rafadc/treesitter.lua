@@ -15,7 +15,6 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
 
-    disable = { "c" },
     -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
     disable = function(lang, buf)
         local max_filesize = 100 * 1024 -- 100 KB
@@ -30,5 +29,13 @@ require'nvim-treesitter.configs'.setup {
 
   indent = {
     enable = true,
+  },
+
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      node_incremental = "v",
+      node_decremental = "V",
+    },
   },
 }
