@@ -104,16 +104,6 @@ require("lazy").setup({
 
   { "folke/neodev.nvim", opts = {} },
 
-  {
-    "epwalsh/obsidian.nvim",
-    version = "*",  -- recommended, use latest release instead of latest commit
-    lazy = true,
-    ft = "markdown",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-  },
-
   -- Git
   { 'aspeddro/gitui.nvim' },
 
@@ -157,7 +147,7 @@ require("lazy").setup({
   },
 
   -- Mini
- 	{ 'echasnovski/mini.nvim', version = '*' },
+  { 'echasnovski/mini.nvim', lazy = false, version = '*' },
 
   -- AI Assistant
   {
