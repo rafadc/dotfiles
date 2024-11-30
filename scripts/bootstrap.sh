@@ -11,6 +11,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
    ln -s ~/.dotfiles/config/nushell '/Users/rafaeldecastro/Library/Application Support/nushell'
 fi
 
+if [[ "$OSTYPE" == "Linux"* ]]; then
+   ln -s ~/.dotfiles/config/nushell ~/.config/nushell
+fi
+
 echo "Installing krew"
 # See https://krew.sigs.k8s.io/docs/user-guide/setup/install/ to see if this is still relevant
 (
