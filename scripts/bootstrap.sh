@@ -4,10 +4,11 @@ echo "Linking binaries"
 mkdir -p ~/bin
 ln -s ~/.dotfiles/bin/* ~/bin/
 
-echo "Setting up zsh..."
+echo "Setting up shells..."
 if [[ "$OSTYPE" == "darwin"* ]]; then
-   brew tap d12frosted/emacs-plus
-   brew install git zsh boxes figlet tmux lsd fzf go-jira emacs-plus vim gnu-sed diff-so-fancy jq shellcheck highlight bat graphviz
+   brew install git zsh boxes figlet tmux lsd fzf neovim gnu-sed diff-so-fancy jq shellcheck highlight bat graphviz
+
+   ln -s ~/.dotfiles/config/nushell '/Users/rafaeldecastro/Library/Application Support/nushell'
 fi
 
 echo "Installing krew"
