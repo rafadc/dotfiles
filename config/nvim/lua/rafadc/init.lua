@@ -1,8 +1,8 @@
-require("rafadc.help")
-
-require("rafadc.statusline")
-
 require("rafadc.lazyvim")
+
+require("rafadc.visuals")
+
+require("rafadc.help")
 require("rafadc.set")
 
 require("rafadc.alphanvim")
