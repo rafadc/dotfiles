@@ -145,16 +145,6 @@ require("lazy").setup({
   { 'ray-x/go.nvim' },
   { 'leoluz/nvim-dap-go' },
 
-  -- Plant UML
-  {
-    'javiorfo/nvim-soil',
-    lazy = true,
-    ft = "plantuml",
-    config = function()
-        -- If you want to change default configurations
-    end
-  },
-
   -- Latex
 
   {
