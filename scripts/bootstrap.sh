@@ -78,6 +78,7 @@ ln -fs ~/.dotfiles/config/paru ~/.config/paru
 ln -fs ~/.dotfiles/config/feh ~/.config/feh
 ln -fs ~/.dotfiles/config/ulauncher ~/.config/ulauncher
 ln -fs ~/.dotfiles/config/zed ~/.config/zed
+ln -fs ~/.dotfiles/config/zellij ~/.config/zellij
 
 echo "Creating user services. They are not enabled by default"
 ln -fs ~/.dotfiles/systemd/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
