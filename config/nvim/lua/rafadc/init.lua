@@ -1,5 +1,7 @@
 require("rafadc.help")
 
+require("rafadc.statusline")
+
 require("rafadc.lazyvim")
 require("rafadc.set")
 

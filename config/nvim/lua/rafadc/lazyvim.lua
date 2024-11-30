@@ -156,6 +156,9 @@ require("lazy").setup({
     end
   },
 
+  -- Mini
+ 	{ 'echasnovski/mini.nvim', version = '*' },
+
   -- AI Assistant
   {
     "yetone/avante.nvim",
