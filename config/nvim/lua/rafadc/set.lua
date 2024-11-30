@@ -1,7 +1,6 @@
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
-vim.opt.relativenumber = true
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
@@ -42,3 +41,5 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     end,
 })
 
+-- Parentheses management
+require('mini.pairs').setup()
