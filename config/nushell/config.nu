@@ -2,6 +2,12 @@
 #
 # version = "0.100.0"
 
+alias l = ls
+
+alias v = nvim
+
+alias g = gitui
+
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html
 # And here is the theme collection

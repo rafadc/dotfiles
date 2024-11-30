@@ -2,6 +2,8 @@
 #
 # version = "0.100.0"
 
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
+
 def create_left_prompt [] {
     let dir = match (do --ignore-shell-errors { $env.PWD | path relative-to $nu.home-path }) {
         null => $env.PWD
