@@ -2,6 +2,10 @@
 #
 # version = "0.100.0"
 
+use ~/.config/nushell/nu_scripts/modules/virtual_environments/conda.nu
+
+alias zj = zellij attach -c
+
 alias l = ls
 
 alias v = nvim
@@ -906,4 +910,9 @@ $env.config = {
             event: { edit: selectall }
         }
     ]
+}
+
+if $nu.os-info.name == "macos" {
+  $env.ASDF_DIR = (brew --prefix asdf | str trim | into string | path join 'libexec')
+  source /opt/homebrew/opt/asdf/libexec/asdf.nu
 }
