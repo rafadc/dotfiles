@@ -4,6 +4,7 @@
 
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/anaconda3/bin')
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/usr/local/texlive/2024/bin/universal-darwin')
 
 $env.CONDA_NO_PROMPT = true # Disable conda's prompt so starship can handle it
 $env.STARSHIP_SHELL = "nu"
