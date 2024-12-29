@@ -11,6 +11,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
    ln -s ~/.dotfiles/config/nushell '/Users/rafaeldecastro/Library/Application Support/nushell'
 fi
 
+echo "Setting up window manager"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  ln -s ~/.dotfiles/hammerspoon ~/.hammerspoon
+fi
+
 # For convenience we will have this is Mac and Linux
 ln -s ~/.dotfiles/config/nushell ~/.config/nushell
 
