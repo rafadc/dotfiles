@@ -37,11 +37,20 @@ if test (uname) = "Darwin"
   set -x DBUS_SESSION_BUS_ADDRESS "unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
 end
 
+# EDITORS
+
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
 
+if test (uname) = "Darwin"
+  fish_add_path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+end
+
+# SHELL
+
 starship init fish | source
 
+# ALIASES
 alias cp=xcp
 
 abbr --add g gitui
@@ -127,13 +136,16 @@ end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/rafadc/anaconda3/bin/conda
-    eval /home/rafadc/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+if test -f /opt/homebrew/anaconda3/bin/conda
+    eval /opt/homebrew/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 else
-    if test -f "/home/rafadc/anaconda3/etc/fish/conf.d/conda.fish"
-        . "/home/rafadc/anaconda3/etc/fish/conf.d/conda.fish"
+    if test -f "/opt/homebrew/anaconda3/etc/fish/conf.d/conda.fish"
+        . "/opt/homebrew/anaconda3/etc/fish/conf.d/conda.fish"
     else
-        set -x PATH "/home/rafadc/anaconda3/bin" $PATH
+        set -x PATH "/opt/homebrew/anaconda3/bin" $PATH
     end
 end
 # <<< conda initialize <<<
+
+# uv
+fish_add_path "/Users/rafaeldecastro/.local/bin"
