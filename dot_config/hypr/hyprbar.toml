@@ -1,0 +1,35 @@
+# Hyprbar Configuration
+
+[general]
+# Bar height
+height = 20
+# Bar position (top, bottom)
+position = "top"
+# Background color (RGBA)
+background_color = "rgba(0, 0, 0, 0.8)"
+# Text color
+text_color = "rgba(255, 255, 255, 1.0)"
+
+[modules]
+# Enable/disable modules
+workspaces = true
+window = true
+cpu = false
+memory = false
+battery = false  # This disables the battery
+network = true
+clock = true
+
+[workspaces]
+# Workspace module configuration
+show_empty = false
+show_numbers = true
+
+[window]
+# Window title module
+max_length = 50
+show_class = false
+
+[clock]
+# Clock format
+format = "%H:%M %d/%m/%Y"
