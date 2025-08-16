@@ -8,6 +8,7 @@
 {{ end }}
 
 {{ if not .is_termux }}
+.shortcuts/
 {{ end }}
 
 {{ if not .is_mac }}
