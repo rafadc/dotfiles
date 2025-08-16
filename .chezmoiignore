@@ -3,6 +3,7 @@
 {{ $isMac := eq .chezmoi.os "darwin" }}
 
 .config/fish/secrets.fish
+.config/fish/fish_variables
 
 {{ if not $isLinux }}
 .config/dunst/
