@@ -141,4 +141,4 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 # Emacs
-fish_add_path $HOME/.config/emacs/bin
+fish_add_path $HOME/.emacs.d/bin
