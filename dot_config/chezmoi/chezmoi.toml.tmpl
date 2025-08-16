@@ -1,6 +1,9 @@
 [data]
     email = "rafael@micubiculo.com"
     name = "Rafa de Castro"
+    is_termux = {{ if stat "/data/data/com.termux" }}true{{ else }}false{{ end }}
+    is_mac = {{ if eq .chezmoi.os "darwin" }}true{{ else }}false{{ end }}
+    is_linux = {{ if and (eq .chezmoi.os "linux") (not is_termux) }}true{{ else }}false{{ end }}
 
 [diff]
     command = "code"

@@ -1,4 +1,4 @@
-{{ if ne .chezmoi.os "linux" }}
+{{ if not .is_linux }}
 .config/dunst/
 .config/hypr/
 .config/hyprpanel/
@@ -7,14 +7,12 @@
 .config/ulauncher/
 {{ end }}
 
-{{ if ne .chezmoi.os "darwin" }}
+{{ if not .is_termux }}
+{{ end }}
+
+{{ if not .is_mac }}
 .config/skhd/
 .config/yabai/
 .config/aerospace/
 Library/
-{{ end }}
-
-{{ if ne .chezmoi.os "windows" }}
-AppData/
-Documents/PowerShell/
 {{ end }}
