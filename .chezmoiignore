@@ -1,4 +1,8 @@
-{{ if not .is_linux }}
+{{ $isTermux := stat "/data/data/com.termux" }}
+{{ $isLinux := and (eq .chezmoi.os "linux") (not $isTermux) }}
+{{ $isMac := eq .chezmoi.os "darwin" }}
+
+{{ if not $isLinux }}
 .config/dunst/
 .config/hypr/
 .config/hyprpanel/
@@ -7,11 +11,11 @@
 .config/ulauncher/
 {{ end }}
 
-{{ if not .is_termux }}
+{{ if not $isTermux }}
 .shortcuts/
 {{ end }}
 
-{{ if not .is_mac }}
+{{ if not $isMac }}
 .config/skhd/
 .config/yabai/
 .config/aerospace/
