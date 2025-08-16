@@ -2,6 +2,8 @@
 {{ $isLinux := and (eq .chezmoi.os "linux") (not $isTermux) }}
 {{ $isMac := eq .chezmoi.os "darwin" }}
 
+.config/fish/secrets.fish
+
 {{ if not $isLinux }}
 .config/dunst/
 .config/hypr/
