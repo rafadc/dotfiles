@@ -18,12 +18,6 @@ end
 
 zoxide init fish | source
 
-if test (uname) = "Darwin"
-  [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
-else
-  . /usr/share/autojump/autojump.fish
-end
-
 if test -e ~/.asdf/asdf.fish
   source ~/.asdf/asdf.fish
 else
@@ -148,4 +142,3 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 # Emacs
 fish_add_path $HOME/.config/emacs/bin
-
