@@ -198,5 +198,12 @@
   ],
   "bar.customModules.storage.paths": [
     "/"
-  ]
+  ],
+  "menus.clock.time.military": true,
+  "menus.clock.weather.unit": "metric",
+  "menus.clock.weather.location": "Gijon, Spain",
+  "theme.bar.enableShadow": true,
+  "menus.transitionTime": 150,
+  "bar.battery.label": false,
+  "menus.dashboard.shortcuts.enabled": false
 }
