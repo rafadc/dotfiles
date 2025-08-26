@@ -75,5 +75,47 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 ;;
+
+(setq select-enable-clipboard t
+      select-enable-primary t
+      mouse-yank-at-point t)
+
+(when (fboundp 'set-clipboard-coding-system)
+  (set-clipboard-coding-system 'utf-8))
+
 (after! treemacs
   (setq treemacs-position 'right))
+
+(after! lsp-mode
+  (setq lsp-completion-enable t
+        lsp-completion-show-detail t
+        lsp-completion-show-kind t
+        lsp-completion-enable-additional-text-edit t
+        lsp-idle-delay 0.5              ; Slightly faster response
+        lsp-signature-auto-activate t   ; Show function signatures
+        lsp-signature-render-documentation t))
+
+(after! python
+  ;; Ensure LSP starts automatically in Python mode
+  (add-hook! 'python-mode-hook #'lsp-deferred)
+  ;; Enable completion at point
+  (add-hook! 'python-mode-hook
+    (setq-local completion-at-point-functions
+                (list (cape-capf-super
+                       #'lsp-completion-at-point
+                       #'cape-dabbrev
+                       #'cape-file)))))
+
+;; Corfu completion settings (since we're using corfu, not company)
+(after! corfu
+  (setq corfu-auto t                    ; Enable auto completion
+        corfu-auto-delay 0.2            ; Faster completion
+        corfu-auto-prefix 2             ; Start after 2 characters
+        corfu-preview-current t         ; Enable current candidate preview
+        corfu-quit-no-match t))         ; Automatically quit if no match
+
+;; Cape provides additional completion backends for corfu
+(after! cape
+  ;; Add useful cape completion functions
+  (add-to-list 'completion-at-point-functions #'cape-file)
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev))
