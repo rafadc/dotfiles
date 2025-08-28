@@ -18,5 +18,15 @@
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1717844269.6485083
+    },
+    "75cb6444-8bb7-4907-bc3b-f87776277cfc": {
+        "id": "75cb6444-8bb7-4907-bc3b-f87776277cfc",
+        "name": "Unity (scaled)",
+        "keyword": "Unity",
+        "cmd": "GDK_SCALE=2 GDK_DPI_SCALE=0.5 /home/rafadc/Unity/Hub/Editor/6000.2.1f1/Editor/Unity",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1756194624.9111853
     }
 }
