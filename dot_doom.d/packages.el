@@ -5,7 +5,15 @@
 ;; on the command line, then restart Emacs for the changes to take effect -- or
 ;; Add the VC package declaration
 (package! claude-code
-  :recipe (:host github :repo "stevemolitor/claude-code.el"))
+  :recipe (:host github
+           :repo "stevemolitor/claude-code.el"
+           :branch "main"
+           :files ("*.el" (:exclude "images/*"))))
+
+;; Optional: Monet for IDE integration
+(package! monet
+  :recipe (:host github
+           :repo "stevemolitor/monet"))
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)

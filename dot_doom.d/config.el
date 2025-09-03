@@ -121,37 +121,90 @@
   (add-to-list 'completion-at-point-functions #'cape-dabbrev))
 
 
-;; Configure claude-code
+;; Claude Code Configuration
 (use-package! claude-code
-  :after (eat vterm)  ; Load after terminal backends
   :config
-  ;; Optional IDE integration with Monet (if you're using it)
-  (when (featurep 'monet)
+  ;; Use vterm as terminal backend
+  (setq claude-code-terminal-backend 'vterm)
+
+  ;; Optional: IDE integration with Monet
+  (when (featurep! :tools monet)
     (add-hook 'claude-code-process-environment-functions #'monet-start-server-function)
     (monet-mode 1))
+
+  ;; Start the server for emacsclient (needed for hooks)
+  (server-start)
 
   ;; Enable claude-code-mode
   (claude-code-mode)
 
-  ;; Keybinding using Doom's map! macro
-  (map! :leader
-        :prefix ("c c" . "claude-code")
-        :desc "Claude Code" "c" claude-code-command-map)
+  ;; Optional customizations
+  (setq claude-code-enable-notifications t
+        claude-code-confirm-kill t
+        claude-code-optimize-window-resize t
+        claude-code-startup-delay 0.1)
 
-  ;; Alternative: bind to C-c c directly (outside leader key)
-  (map! "C-c c" claude-code-command-map)
+  ;; Configure JuliaMono font for Claude buffers
+  (add-hook 'claude-code-start-hook
+            (lambda ()
+              ;; Use JuliaMono font in Claude buffers
+              (setq-local buffer-face-mode-face '(:family "JuliaMono"))
+              (buffer-face-mode 1)
+              ;; Reduce line spacing for better vertical bar display
+              (setq-local line-spacing 0.1)
+              ;; Increase vterm scrollback for long conversations
+              (setq-local vterm-max-scrollback 100000))))
 
-  ;; Repeat map for cycling modes
-  (map! :map claude-code-command-map
-        :desc "Cycle mode" "M" #'claude-code-cycle-mode))
+;; Configure Claude window to appear on the right and receive focus
+(set-popup-rule! "^\\*claude"
+  :side 'right
+  :size 0.33  ; 33% of frame width
+  :select t   ; Select the window when it opens (gives focus)
+  :quit nil
+  :ttl nil)
 
-;; If you need the repeat map functionality specifically
+;; Define all keybindings under SPC c A
+(map! :leader
+      (:prefix ("c A" . "claude-code")
+       :desc "Start Claude"                    "c" #'claude-code
+       :desc "Start in directory"              "d" #'claude-code-start-in-directory
+       :desc "Continue previous conversation"  "C" #'claude-code-continue
+       :desc "Resume session"                  "R" #'claude-code-resume
+       :desc "New instance"                    "i" #'claude-code-new-instance
+       :desc "Kill Claude"                     "k" #'claude-code-kill
+       :desc "Kill all instances"              "K" #'claude-code-kill-all
+
+       (:prefix ("s" . "send")
+        :desc "Send command"                   "s" #'claude-code-send-command
+        :desc "Send with context"              "x" #'claude-code-send-command-with-context
+        :desc "Send region"                    "r" #'claude-code-send-region
+        :desc "Send file"                      "f" #'claude-code-send-file
+        :desc "Send buffer file"               "b" #'claude-code-send-buffer-file
+        :desc "Fix error at point"             "e" #'claude-code-fix-error-at-point)
+
+       (:prefix ("r" . "response")
+        :desc "Send return (yes)"              "y" #'claude-code-send-return
+        :desc "Send escape (no)"               "n" #'claude-code-send-escape
+        :desc "Send 1"                          "1" #'claude-code-send-1
+        :desc "Send 2"                          "2" #'claude-code-send-2
+        :desc "Send 3"                          "3" #'claude-code-send-3)
+
+       (:prefix ("w" . "window")
+        :desc "Toggle window"                  "t" #'claude-code-toggle
+        :desc "Switch to buffer"               "b" #'claude-code-switch-to-buffer
+        :desc "Select buffer (all instances)"  "B" #'claude-code-select-buffer
+        :desc "Toggle read-only"               "z" #'claude-code-toggle-read-only-mode)
+
+       :desc "Transient menu"                  "m" #'claude-code-transient
+       :desc "Fork conversation"               "f" #'claude-code-fork
+       :desc "Slash commands"                  "/" #'claude-code-slash-commands
+       :desc "Cycle mode"                      "M" #'claude-code-cycle-mode))
+
+;; Optional: Add a repeat map for mode cycling
 (after! claude-code
-  (defvar my-claude-code-map
+  (defvar claude-code-mode-repeat-map
     (let ((map (make-sparse-keymap)))
       (define-key map "M" #'claude-code-cycle-mode)
-      map))
-
-  (map! :map my-claude-code-map
-        :repeat t
-        "M" #'claude-code-cycle-mode))
+      map)
+    "Repeat map for cycling Claude modes.")
+  (put 'claude-code-cycle-mode 'repeat-map 'claude-code-mode-repeat-map))
