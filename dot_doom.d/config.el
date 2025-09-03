@@ -119,3 +119,39 @@
   ;; Add useful cape completion functions
   (add-to-list 'completion-at-point-functions #'cape-file)
   (add-to-list 'completion-at-point-functions #'cape-dabbrev))
+
+
+;; Configure claude-code
+(use-package! claude-code
+  :after (eat vterm)  ; Load after terminal backends
+  :config
+  ;; Optional IDE integration with Monet (if you're using it)
+  (when (featurep 'monet)
+    (add-hook 'claude-code-process-environment-functions #'monet-start-server-function)
+    (monet-mode 1))
+
+  ;; Enable claude-code-mode
+  (claude-code-mode)
+
+  ;; Keybinding using Doom's map! macro
+  (map! :leader
+        :prefix ("c c" . "claude-code")
+        :desc "Claude Code" "c" claude-code-command-map)
+
+  ;; Alternative: bind to C-c c directly (outside leader key)
+  (map! "C-c c" claude-code-command-map)
+
+  ;; Repeat map for cycling modes
+  (map! :map claude-code-command-map
+        :desc "Cycle mode" "M" #'claude-code-cycle-mode))
+
+;; If you need the repeat map functionality specifically
+(after! claude-code
+  (defvar my-claude-code-map
+    (let ((map (make-sparse-keymap)))
+      (define-key map "M" #'claude-code-cycle-mode)
+      map))
+
+  (map! :map my-claude-code-map
+        :repeat t
+        "M" #'claude-code-cycle-mode))
