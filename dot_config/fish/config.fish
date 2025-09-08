@@ -12,6 +12,24 @@ function bw-unlock
     echo "Bitwarden session unlocked"
 end
 
+# SSH
+if command -v keychain > /dev/null
+    # Determine SSH key location
+    set -l ssh_key
+    if test -f ~/.ssh/id_ed25519
+        set ssh_key ~/.ssh/id_ed25519
+    else if test -f ~/.ssh/id_rsa
+        set ssh_key ~/.ssh/id_rsa
+    else if test -f ~/.ssh/id_ecdsa
+        set ssh_key ~/.ssh/id_ecdsa
+    end
+
+    if test -n "$ssh_key"
+        keychain --eval --quiet $ssh_key | source
+    end
+end
+
+
 function fish_greeting
   cat ~/.dotfiles/terminal_welcome.txt | lolcat -f | boxes -d parchment
 end
@@ -143,4 +161,5 @@ set --export PATH $BUN_INSTALL/bin $PATH
 # Emacs
 fish_add_path $HOME/.emacs.d/bin
 
+# Claude
 alias claude="/home/rafadc/.claude/local/claude"
