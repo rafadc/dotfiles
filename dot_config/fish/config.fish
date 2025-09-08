@@ -143,4 +143,4 @@ set --export PATH $BUN_INSTALL/bin $PATH
 # Emacs
 fish_add_path $HOME/.emacs.d/bin
 
-fish_add_path $HOME/.claude/local
+alias claude="/home/rafadc/.claude/local/claude"
