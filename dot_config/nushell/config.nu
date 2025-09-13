@@ -7,7 +7,7 @@
 # (or import) custom commands, or run any other startup tasks.
 # See https://www.nushell.sh/book/configuration.html
 #
-# Nushell sets "sensible defaults" for most configuration settings, 
+# Nushell sets "sensible defaults" for most configuration settings,
 # so your `config.nu` only needs to override these defaults if desired.
 #
 # You can open this file in your default editor using:
@@ -17,7 +17,18 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
-# Add Homebrew to PATH only on macOS
-if (sys host | get name) == "Darwin" {
-    $env.PATH = ($env.PATH | split row (char esep) | prepend "/opt/homebrew/bin" | prepend "/usr/local/bin")
+$env.config.buffer_editor = "nvim"
+
+
+# Aliases
+alias l = ls
+alias v = nvim
+alias g = gitui
+
+def --env mkcd [dir: string] {
+    mkdir $dir
+    cd $dir
 }
+
+# startup
+source ~/.zoxide.nu
