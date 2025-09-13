@@ -20,10 +20,27 @@
 $env.config.buffer_editor = "nvim"
 
 
+# Direnv
+$env.config = {
+  hooks: {
+    pre_prompt: [{ ||
+      if (which direnv | is-empty) {
+        return
+      }
+
+      direnv export json | from json | default {} | load-env
+      if 'ENV_CONVERSIONS' in $env and 'PATH' in $env.ENV_CONVERSIONS {
+        $env.PATH = do $env.ENV_CONVERSIONS.PATH.from_string $env.PATH
+      }
+    }]
+  }
+}
+
 # Aliases
 alias l = ls
 alias v = nvim
 alias g = gitui
+alias zj = zellij
 
 def --env mkcd [dir: string] {
     mkdir $dir
@@ -31,4 +48,8 @@ def --env mkcd [dir: string] {
 }
 
 # startup
-source ~/.zoxide.nu
+mkdir ($nu.data-dir | path join "vendor/autoload")
+
+zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
+mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")

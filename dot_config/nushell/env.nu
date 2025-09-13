@@ -22,5 +22,4 @@ if (sys host | get name) == "Darwin" {
     $env.PATH = ($env.PATH | split row (char esep) | prepend "/opt/homebrew/bin" | prepend "/usr/local/bin")
 }
 
-zoxide init nushell | save -f ~/.zoxide.nu
 
