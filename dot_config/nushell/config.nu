@@ -17,8 +17,11 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
+$env.config.show_banner = false
+
 $env.config.buffer_editor = "nvim"
 
+$env.SSH_AUTH_SOCK = $"/Users/($env.USER)/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
 
 # Direnv
 $env.config = {
@@ -41,6 +44,7 @@ alias l = ls
 alias v = nvim
 alias g = gitui
 alias zj = zellij
+alias cm = chezmoi
 
 def --env mkcd [dir: string] {
     mkdir $dir
