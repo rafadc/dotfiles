@@ -8,6 +8,11 @@ after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = []
 
+# Set workspace 11 to vertical layout when switching to it
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'if [ "$AEROSPACE_FOCUSED_WORKSPACE" = "11" ]; then aerospace layout vertical; fi'
+]
+
 # Start AeroSpace at login
 start-at-login = true
 
@@ -88,7 +93,7 @@ outer.right = 5
 # end tell'
 # '''
 
-cmd-enter = 'exec-and-forget open -a kitty'
+cmd-enter = 'exec-and-forget kitty --single-instance=no'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
