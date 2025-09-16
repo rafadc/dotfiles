@@ -20,6 +20,9 @@
 $env.config.show_banner = false
 
 $env.config.buffer_editor = "nvim"
+$env.EDITOR = "nvim"
+$env.VISUAL = "nvim"
+
 
 $env.SSH_AUTH_SOCK = $"/Users/($env.USER)/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
 
