@@ -22,4 +22,7 @@ if (sys host | get name) == "Darwin" {
     $env.PATH = ($env.PATH | split row (char esep) | prepend "/opt/homebrew/bin" | prepend "/usr/local/bin")
 }
 
+# Add .local/bin to PATH
+$env.PATH = ($env.PATH | split row (char esep) | prepend ($env.HOME | path join ".local/bin"))
+
 
