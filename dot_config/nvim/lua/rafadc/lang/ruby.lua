@@ -1,9 +1,3 @@
-require('lspconfig').solargraph.setup{}
-
-require('lspconfig')['ruby_lsp'].setup {
-    capabilities = capabilities
-}
-
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "ruby",
   callback = function()
