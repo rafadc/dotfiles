@@ -1,6 +1,4 @@
 require("rafadc.lang.ruby")
-require("rafadc.lang.go")
-require("rafadc.lang.lua")
 require("rafadc.lang.css")
 require("rafadc.lang.tex")
 require("rafadc.lang.python")

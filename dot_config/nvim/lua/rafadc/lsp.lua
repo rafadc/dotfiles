@@ -1,6 +1,6 @@
 require('mason').setup({})
 require("mason-lspconfig").setup {
-    ensure_installed = { "rust_analyzer", "tsserver", "pyright", "gopls", "sumneko_lua", "solargraph", "sqls", "unocss", "tailwindcss" },
+    ensure_installed = { "tsserver", "pyright", "sumneko_lua", "solargraph", "sqls", "unocss", "tailwindcss" },
 }
 
 local lsp_zero = require('lsp-zero')

@@ -1,17 +1,4 @@
-local lspconfig = require('lspconfig')
-
-lspconfig.pyright.setup {
-    capabilities = capabilities,
-    settings = {
-        python = {
-            analysis = {
-                autoSearchPaths = true,
-                diagnosticMode = "openFilesOnly",
-                useLibraryCodeForTypes = true
-            }
-        }
-    }
-}
+vim.lsp.enable('pyright')
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.py",

@@ -1,4 +1,4 @@
-require('lspconfig').tailwindcss.setup{
+vim.lsp.config.tailwindcss = {
   settings = {
     tailwindCSS = {
       experimental = {
@@ -7,4 +7,3 @@ require('lspconfig').tailwindcss.setup{
     }
   }
 }
-
