@@ -48,6 +48,8 @@ alias v = nvim
 alias g = nvim -c "lua require('neogit').open()" -c "autocmd TabClosed * if tabpagenr('$') == 1 | quit | endif"
 alias zj = zellij
 alias cm = chezmoi
+alias cms = chezmoi status
+alias cma = chezmoi add
 
 def --env mkcd [dir: string] {
     mkdir $dir
