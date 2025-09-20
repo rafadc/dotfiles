@@ -45,7 +45,7 @@ $env.config = {
 # Aliases
 alias l = ls
 alias v = nvim
-alias g = nvim -c "lua require('neogit').open()"
+alias g = nvim -c "lua require('neogit').open()" -c "autocmd TabClosed * if tabpagenr('$') == 1 | quit | endif"
 alias zj = zellij
 alias cm = chezmoi
 
