@@ -45,7 +45,7 @@ $env.config = {
 # Aliases
 alias l = ls
 alias v = nvim
-alias g = gitui
+alias g = nvim -c "lua require('neogit').open()"
 alias zj = zellij
 alias cm = chezmoi
 
