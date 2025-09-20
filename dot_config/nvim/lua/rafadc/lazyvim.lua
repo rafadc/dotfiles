@@ -35,8 +35,7 @@ require("lazy").setup({
     }
   },
   {
-    'nvim-pack/nvim-spectre',
-    dependencies = { {'nvim-lua/plenary.nvim'} }
+    'MagicDuck/grug-far.nvim',
   },
   {
     "danielfalk/smart-open.nvim",
@@ -105,8 +104,16 @@ require("lazy").setup({
   { "folke/neodev.nvim", opts = {} },
 
   -- Git
-  { 'aspeddro/gitui.nvim' },
+  {
+  "NeogitOrg/neogit",
+  dependencies = {
+    "nvim-lua/plenary.nvim",         -- required
+    "sindrets/diffview.nvim",        -- optional - Diff integration
 
+    -- Only one of these is needed.
+    "nvim-telescope/telescope.nvim", -- optional
+    },
+  },
 
   -- Debugging
   { "mfussenegger/nvim-dap" },

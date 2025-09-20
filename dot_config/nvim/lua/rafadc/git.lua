@@ -1,3 +1,3 @@
-local gitui = require('gitui')
+local neogit = require('neogit')
 
-vim.keymap.set('n', '<leader>gg', gitui.open)
+vim.keymap.set('n', '<leader>gg', neogit.open)
