@@ -24,7 +24,11 @@ $env.EDITOR = "nvim"
 $env.VISUAL = "nvim"
 
 
-$env.SSH_AUTH_SOCK = $"/Users/($env.USER)/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+$env.SSH_AUTH_SOCK = if ($nu.os-info.name == "macos") {
+  $"/Users/($env.USER)/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+} else {
+  $"($env.HOME)/.bitwarden-ssh-agent.sock"
+}
 
 # Direnv
 $env.config = {
@@ -47,6 +51,7 @@ alias l = ls
 alias v = nvim
 alias g = nvim -c "lua require('neogit').open()" -c "autocmd TabClosed * if tabpagenr('$') == 1 | quit | endif"
 alias zj = zellij
+alias k = kubectl
 alias cm = chezmoi
 alias cms = chezmoi status
 alias cma = chezmoi add
