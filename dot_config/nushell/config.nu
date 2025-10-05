@@ -18,6 +18,7 @@
 #     config nu --doc | nu-highlight | less -R
 
 $env.config.show_banner = false
+#$env.config.shell_integration = true
 
 $env.config.buffer_editor = "nvim"
 $env.EDITOR = "nvim"
