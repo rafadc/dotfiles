@@ -99,7 +99,7 @@ outer.right = 5
 # end tell'
 # '''
 
-cmd-enter = 'exec-and-forget kitty --detach --working-directory $HOME'
+cmd-enter = 'exec-and-forget kitty --working-directory $HOME'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
