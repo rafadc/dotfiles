@@ -1,7 +1,8 @@
 [tools]
 java = "17"
 node = "24"
-python = ["3.10", "3.13"]
+poetry = { version="latest", pyproject="{{ config_root }}/pyproject.toml" }
+python = "3.11"
 usage = "latest"
 
 [settings]
